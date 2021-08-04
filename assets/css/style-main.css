@@ -290,6 +290,7 @@ a {
 .home_content_lineopener {
   background: #000;
   height: 5px;
+  width: 20%;
   border-radius: 30px;
   top: 50vh;
   position: absolute;
