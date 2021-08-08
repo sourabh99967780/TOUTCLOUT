@@ -288,7 +288,7 @@ a {
 }
 
 .home_content_lineopener {
-  height: 5px;
+  height: 2vh;
   top: 50vh;
   position: absolute;
   left: 0;

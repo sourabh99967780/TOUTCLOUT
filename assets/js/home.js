@@ -113,7 +113,7 @@ setTimeout(() => {
   var home_content_lineopener = document.querySelector('.home_content_lineopener');
   home_content_lineopener.classList.remove('home_content_lineopener--squiggle');
   home_content_lineopener.classList.add('home_content_lineopener--straight');
-}, 2000)
+}, 2500)
 
 // control animations on page load
 $(document).ready(() => {
