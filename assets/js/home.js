@@ -2,10 +2,6 @@ $(".menu-opener").click(function () {
   $(".menu-opener, .menu-opener-inner, .menu").toggleClass("active");
 });
 
-// animation
-// document on load
-// define page element delays
-
 //animation for line opener
 var homePageOpeningAnimation = anime.timeline({
   easing: "easeOutExpo",
@@ -31,36 +27,21 @@ var textLetterAnimation = anime({
 
 homePageOpeningAnimation
   .add({
-    targets: ".home_content_lineopener",
-    opacity: {
-      value: [1, 0],
-      delay: 3000,
-      duration: 1000,
-    },
-    delay: 1000,
-  })
-  .add({
-    targets: ".left_img",
-    delay: 5500,
-    opacity: [0, 1],
-  })
-  .add({
-    targets: ".right_img",
+    targets: ".left_img, .right_img",
+    delay: 16000,
+    duration: 3000,
     opacity: [0, 1],
   })
   .add({
     targets: ".menu-logo",
     opacity: [0, 1],
     translateY: ["-100%", 0],
-  })
-  .add({
-    targets: ".home_page",
-    // backgroundColor: ["rgb(0,0,0)", "rgb(72,76,80)"],
+    duration: 3000
   });
 
 var fontColorAnimationTimeline = anime.timeline({
   easing: "easeOutExpo",
-  duration: 1000,
+  duration: 10000,
 });
 
 fontColorAnimationTimeline.add({
@@ -76,24 +57,23 @@ fontColorAnimationTimeline.add({
 var homePageOpacity = anime({
   targets: ".home_page",
   opacity: [0, 1],
-  duration: 1000,
-  easing: animationEasing,
-  delay: 3000,
+  duration: 2000,
+  easing: "easeInExpo",
 });
 
 var discoverVideoHide = anime({
   targets: ".discover_video",
   opacity: [1, 0],
-  duration: 4000,
-  delay: 3000,
-  easing: animationEasing,
+  duration: 3000,
+  delay: 12000,
+  easing: "easeOutExpo",
 });
 
 // bring the video in the frame
 var homePageVideo = document.querySelector(".half-part_video");
 setTimeout(() => {
-  homePageVideo.classList.remove("half-part_video--hidden");
-}, 3000);
+  homePageVideo.play();
+}, 7000);
 
 // remove the video after its work is done
 setTimeout(() => {
@@ -107,13 +87,13 @@ var italicised_string = `<span class="letter" style="opacity: 1;">G</span><span 
 
 setTimeout(() => {
   home_content_title.innerHTML = italicised_string;
-}, 6000);
+}, 16000);
 
-setTimeout(() => {
-  var home_content_lineopener = document.querySelector('.home_content_lineopener');
-  home_content_lineopener.classList.remove('home_content_lineopener--squiggle');
-  home_content_lineopener.classList.add('home_content_lineopener--straight');
-}, 2500)
+// setTimeout(() => {
+//   var home_content_lineopener = document.querySelector('.home_content_lineopener');
+//   home_content_lineopener.classList.remove('home_content_lineopener--squiggle');
+//   home_content_lineopener.classList.add('home_content_lineopener--straight');
+// }, 2500)
 
 // control animations on page load
 $(document).ready(() => {

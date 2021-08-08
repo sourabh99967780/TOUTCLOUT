@@ -327,7 +327,7 @@ a {
 
 .home_page .flex_item .left_img {
   position: absolute;
-  transform: translateX(-35%);
+  transform: translateX(-40%);
   left: 0px;
   bottom: 0px;
   width: 50vmin;
@@ -337,7 +337,7 @@ a {
 
 .home_page .flex_item .right_img {
   position: absolute;
-  transform: translateX(35%);
+  transform: translateX(40%);
   right: 0px;
   bottom: 0px;
   width: 70vmin;
