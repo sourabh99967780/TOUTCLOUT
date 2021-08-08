@@ -21,83 +21,72 @@ textWrapper.innerHTML = textWrapper.textContent.replace(
 
 var animationEasing = "cubicBezier(.5, .05, .1, .3)";
 
-$(document).ready(() => {
-  anime.timeline().add({
-    targets: ".home_content_title .letter",
+var textLetterAnimation = anime({
+  targets: ".home_content_title .letter",
+  opacity: [0, 1],
+  easing: animationEasing,
+  duration: 2250,
+  delay: (el, i) => 150 * (i + 12),
+});
+
+homePageOpeningAnimation
+  .add({
+    targets: ".home_content_lineopener",
+    opacity: {
+      value: [1, 0],
+      delay: 3000,
+      duration: 1000,
+    },
+    delay: 1000,
+  })
+  .add({
+    targets: ".left_img",
+    delay: 5500,
     opacity: [0, 1],
-    easing: animationEasing,
-    duration: 2250,
-    delay: (el, i) => 150 * (i + 12),
-  });
-});
-
-$(document).ready(() => {
-  homePageOpeningAnimation
-    .add({
-      targets: ".home_content_lineopener",
-      easing: "easeInOutSine",
-      top: {
-        value: ["50vh", "25vh"],
-        duration: 1000,
-        delay: 2000,
-      },
-      delay: 1000,
-    })
-    .add({
-      targets: ".home_content_lineopener",
-      opacity: [1, 0],
-    })
-    .add({
-      targets: ".left_img",
-      delay: 3500,
-      opacity: [0, 1],
-    })
-    .add({
-      targets: ".right_img",
-      opacity: [0, 1],
-    })
-    .add({
-      targets: ".menu-logo",
-      opacity: [0, 1],
-      translateY: ["-100%", 0],
-    })
-    .add({
-      targets: ".home_page",
-      // backgroundColor: ["rgb(0,0,0)", "rgb(72,76,80)"],
-    });
-});
-
-$(document).ready(() => {
-  var fontColorAnimationTimeline = anime.timeline({
-    easing: "easeOutExpo",
-    duration: 1000,
-  });
-
-  fontColorAnimationTimeline.add({
-    targets: ".home_content_title",
-    color: "#DDD",
-    delay: 6500,
-  });
-  fontColorAnimationTimeline.add({
-    targets: ".home_content_subtitle",
-    color: "#DDD",
-  });
-
-  anime({
+  })
+  .add({
+    targets: ".right_img",
+    opacity: [0, 1],
+  })
+  .add({
+    targets: ".menu-logo",
+    opacity: [0, 1],
+    translateY: ["-100%", 0],
+  })
+  .add({
     targets: ".home_page",
-    opacity: [0, 1],
-    duration: 1000,
-    easing: animationEasing,
-    delay: 3000,
+    // backgroundColor: ["rgb(0,0,0)", "rgb(72,76,80)"],
   });
 
-  anime({
-    targets: ".discover_video",
-    opacity: [1, 0],
-    duration: 4000,
-    delay: 3000,
-    easing: animationEasing,
-  });
+var fontColorAnimationTimeline = anime.timeline({
+  easing: "easeOutExpo",
+  duration: 1000,
+});
+
+fontColorAnimationTimeline.add({
+  targets: ".home_content_title",
+  color: "#DDD",
+  delay: 6500,
+});
+fontColorAnimationTimeline.add({
+  targets: ".home_content_subtitle",
+  color: "#DDD",
+});
+
+var homePageOpacity = anime({
+  targets: ".home_page",
+  opacity: [0, 1],
+  duration: 1000,
+  easing: animationEasing,
+  delay: 3000,
+});
+
+var discoverVideoHide = anime({
+  targets: ".discover_video",
+  opacity: [1, 0],
+  duration: 4000,
+  delay: 3000,
+  easing: animationEasing,
 });
 
 // bring the video in the frame
@@ -119,3 +108,18 @@ var italicised_string = `<span class="letter" style="opacity: 1;">G</span><span 
 setTimeout(() => {
   home_content_title.innerHTML = italicised_string;
 }, 6000);
+
+setTimeout(() => {
+  var home_content_lineopener = document.querySelector('.home_content_lineopener');
+  home_content_lineopener.classList.remove('home_content_lineopener--squiggle');
+  home_content_lineopener.classList.add('home_content_lineopener--straight');
+}, 2000)
+
+// control animations on page load
+$(document).ready(() => {
+  homePageOpeningAnimation.play();
+  homePageOpacity.play();
+  textLetterAnimation.play();
+  discoverVideoHide.play();
+  fontColorAnimationTimeline.play();
+})
