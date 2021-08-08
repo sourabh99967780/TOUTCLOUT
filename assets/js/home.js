@@ -21,64 +21,83 @@ textWrapper.innerHTML = textWrapper.textContent.replace(
 
 var animationEasing = "cubicBezier(.5, .05, .1, .3)";
 
-anime.timeline().add({
-  targets: ".home_content_title .letter",
-  opacity: [0, 1],
-  easing: animationEasing,
-  duration: 2250,
-  delay: (el, i) => 150 * (i + 12),
+$(document).ready(() => {
+  anime.timeline().add({
+    targets: ".home_content_title .letter",
+    opacity: [0, 1],
+    easing: animationEasing,
+    duration: 2250,
+    delay: (el, i) => 150 * (i + 12),
+  });
 });
 
-homePageOpeningAnimation
-  .add({
-    targets: ".home_content_lineopener",
-    width: ["0%", "20%"],
-    top: {
-      value: ["50vh", "25vh"],
-      duration: 1000,
-      delay: 2000,
-    },
-    delay: 1000,
-  })
-  .add({
-    targets: ".home_content_lineopener",
-    opacity: [1, 0],
-  })
-  .add({
-    targets: ".home_content_title",
-    color: "#DDD",
-    delay: 3350,
-  })
-  .add({
-    targets: ".home_content_subtitle",
-    color: "#DDD",
-  })
-  .add({
-    targets: ".left_img",
-    opacity: [0, 1],
-    translateX: ["-100%", "-40%"],
-  })
-  .add({
-    targets: ".right_img",
-    opacity: [0, 1],
-    translateX: ["100%", "40%"],
-  })
-  .add({
-    targets: ".menu-logo",
-    opacity: [0, 1],
-    translateY: ["-100%", 0],
-  })
-  .add({
-    targets: ".home_page",
-    backgroundColor: ["rgb(0,0,0)", "rgb(72,76,80)"],
+$(document).ready(() => {
+  homePageOpeningAnimation
+    .add({
+      targets: ".home_content_lineopener",
+      easing: "easeInOutSine",
+      top: {
+        value: ["50vh", "25vh"],
+        duration: 1000,
+        delay: 2000,
+      },
+      delay: 1000,
+    })
+    .add({
+      targets: ".home_content_lineopener",
+      opacity: [1, 0],
+    })
+    .add({
+      targets: ".left_img",
+      delay: 3500,
+      opacity: [0, 1],
+    })
+    .add({
+      targets: ".right_img",
+      opacity: [0, 1],
+    })
+    .add({
+      targets: ".menu-logo",
+      opacity: [0, 1],
+      translateY: ["-100%", 0],
+    })
+    .add({
+      targets: ".home_page",
+      // backgroundColor: ["rgb(0,0,0)", "rgb(72,76,80)"],
+    });
+});
+
+$(document).ready(() => {
+  var fontColorAnimationTimeline = anime.timeline({
+    easing: "easeOutExpo",
+    duration: 1000,
   });
 
-anime({
-  targets: ".home_page",
-  opacity: [0, 1],
-  duration: 1000,
-  easing: animationEasing,
-  delay: 3000,
+  fontColorAnimationTimeline.add({
+    targets: ".home_content_title",
+    color: "#DDD",
+    delay: 6500,
+  });
+  fontColorAnimationTimeline.add({
+    targets: ".home_content_subtitle",
+    color: "#DDD",
+  });
+
+  anime({
+    targets: ".home_page",
+    opacity: [0, 1],
+    duration: 1000,
+    easing: animationEasing,
+    delay: 3000,
+  });
+
+  anime({
+    targets: ".discover_video",
+    opacity: [1, 0],
+    duration: 4000,
+    delay: 3000,
+    easing: animationEasing,
+  });
 });
 
 // bring the video in the frame
@@ -90,7 +109,7 @@ setTimeout(() => {
 // remove the video after its work is done
 setTimeout(() => {
   homePageVideo.classList.add("half-part_video--hidden");
-}, 8000);
+}, 22000);
 
 // convert the part idea to italics
 var home_content_title = document.querySelector(".home_content_title");
@@ -99,4 +118,4 @@ var italicised_string = `<span class="letter" style="opacity: 1;">G</span><span 
 
 setTimeout(() => {
   home_content_title.innerHTML = italicised_string;
-}, 8000);
+}, 6000);

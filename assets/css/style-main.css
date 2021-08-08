@@ -132,7 +132,7 @@ a {
   width: 100%;
   visibility: visible;
   pointer-events: auto;
-  background: #484c50;
+  background: #262728;
   z-index: 2;
 }
 .menu.active .menu-link {
@@ -261,6 +261,7 @@ a {
   height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  background-color: #262728;
 }
 .home_page .container-fluid {
   height: 100%;
@@ -288,15 +289,15 @@ a {
 }
 
 .home_content_lineopener {
-  background: #000;
+  background: #262728;
   height: 5px;
-  width: 20%;
   border-radius: 30px;
   top: 50vh;
   position: absolute;
   left: 0;
   right: 0;
   margin: auto;
+  opacity: 0;
 }
 
 .home_page .home_content h2 {
@@ -312,7 +313,7 @@ a {
 
 .home_page .flex_item .left_img {
   position: absolute;
-  transform: translateX(-40%);
+  transform: translateX(-35%);
   left: 0px;
   bottom: 0px;
   width: 50vmin;
@@ -321,10 +322,10 @@ a {
 
 .home_page .flex_item .right_img {
   position: absolute;
-  transform: translateX(40%);
+  transform: translateX(35%);
   right: 0px;
   bottom: 0px;
-  width: 50vmin;
+  width: 70vmin;
   height: auto;
 }
 
