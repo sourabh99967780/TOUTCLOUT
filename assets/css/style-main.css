@@ -256,14 +256,12 @@ a {
 }
 
 .menu-opener {
-  position: absolute;
-  right: 0px;
-  top: 50%;
   transform: translateY(-50%);
   z-index: 3;
+  padding-right: 1em;
 }
 .home_page {
-  background-color: #484c50;
+  background-color: #262728;
   position: relative;
   height: 100vh;
   width: 100%;
@@ -276,17 +274,20 @@ a {
   justify-content: center;
   text-align: center;
   align-items: center;
-  height: calc(100vh - 76px);
+  height: 100vh;
   position: relative;
 }
 .home_page .home_content {
   position: relative;
   z-index: 1;
 }
-.home_page .home_content h2,
-.home_page .home_content h4 {
-  color: #dddddd;
+
+.home_content_title,
+.home_content_subtitle {
+  transition: all ease-in 200ms;
+  color: #fff;
 }
+
 .home_page .home_content h2 {
   font-size: 40px;
 }
@@ -297,88 +298,25 @@ a {
 .home_page .home_content h2 i {
   font-weight: 900;
 }
-.home_page .flex_item .left_img img:first-child {
+
+.home_page .flex_item .left_img {
   position: absolute;
-  left: 3%;
-  width: 6%;
-  top: 15%;
-}
-.home_page .flex_item .left_img img:nth-child(5) {
-  position: absolute;
-  bottom: 0;
-  left: -3%;
-  width: 18%;
-}
-.home_page .flex_item .left_img img:nth-child(4) {
-  position: absolute;
-  left: -10%;
-  bottom: 40px;
-  width: 15%;
-}
-.home_page .flex_item .left_img img:nth-child(2) {
-  width: 5%;
-  position: absolute;
-  left: 2%;
-  bottom: 40%;
-}
-.home_page .flex_item .left_img img:nth-child(3) {
-  width: 22%;
-  position: absolute;
-  left: -8%;
-  bottom: 28%;
-  z-index: 1;
-  transform: rotate(-15deg);
+  transform: translateX(-40%) translateY(3%);
+  left: 0px;
+  bottom: 0px;
+  width: 50vmin;
+  height: auto;
+  opacity: 1;
 }
 
-.home_page .flex_item .right_img img:nth-child(1) {
+.home_page .flex_item .right_img {
   position: absolute;
-  right: -2%;
-  bottom: -4px;
-  width: 20%;
-}
-.home_page .flex_item .right_img img:nth-child(2) {
-  position: absolute;
-  right: 15%;
-  bottom: 15px;
-  width: 6%;
-}
-.home_page .flex_item .right_img img:nth-child(3) {
-  position: absolute;
-  right: 11%;
-  bottom: 23%;
-  width: 7%;
-}
-.home_page .flex_item .right_img img:nth-child(4) {
-  position: absolute;
-  right: 16%;
-  bottom: 29%;
-  width: 3%;
-}
-.home_page .flex_item .right_img img:nth-child(5) {
-  position: absolute;
-  right: -16%;
-  bottom: 30%;
-  width: 20%;
-}
-.home_page .flex_item .right_img img:nth-child(6) {
-  width: 21%;
-  position: absolute;
-  right: -8%;
-  bottom: 50%;
-  z-index: 1;
-  transform: rotate(-10deg);
-}
-.home_page .flex_item .right_img img:nth-child(7) {
-  position: absolute;
-  right: 3%;
-  top: 25%;
-  width: 2%;
-}
-.home_page .flex_item .right_img img:nth-child(8) {
-  position: absolute;
-  right: 7%;
-  top: 17%;
-  width: 5%;
+  transform: translateX(40%) translateY(3%);
+  right: 0px;
+  bottom: 0px;
+  width: 70vmin;
+  height: auto;
+  opacity: 1;
 }
 
 .home_page .menu li {
@@ -423,6 +361,22 @@ a {
   height: 100vh;
   padding-top: 30vh;
 }
+
+.discover_video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-width: 100vw;
+  height: 50vh;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.half-part_video--hidden {
+  display: none;
+}
+
 .home_page li.dropdown-toggle::after {
   border-top: 0.3em solid #ddd;
   margin-top: 7px;
@@ -800,9 +754,6 @@ a {
   text-align: center;
   margin: 0;
   width: 70%;
-}
-#digital_box .icon-box.active {
-  background-color: ;
 }
 #digital_box .icon-box {
   background-color: #f4f4f4;
@@ -1544,4 +1495,58 @@ a {
   .approach_contant {
     padding-bottom: 0;
   }
+}
+
+/* Animation CSS */
+/* Who we are */
+.innovation,
+.simplicity,
+.integration,
+.agility,
+.integrity,
+.curiosity,
+.discovery,
+.creation,
+.ignition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.innovation__anim {
+  width: 10em;
+  margin-bottom: 1em;
+}
+
+.simplicity__anim {
+  width: 12em;
+}
+
+.integration__anim {
+  width: 10.5em;
+}
+
+.agility__anim {
+  width: 9em;
+  margin-bottom: 1em;
+}
+
+.integrity__anim {
+  width: 13em;
+}
+
+.curiosity__anim,
+.discovery__anim,
+.creation__anim,
+.ignition__anim {
+  width: 12em;
+  margin-bottom: 1.5em;
+}
+
+.creation__anim {
+  margin-bottom: 2.2em;
+}
+
+.ignition__anim {
+  margin-bottom: 3.5em;
 }
