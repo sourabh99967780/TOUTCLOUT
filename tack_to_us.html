@@ -16,6 +16,7 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link rel="icon" href="../touch/assets/img/toutefavicon.png" type="image/svg+xml">
 
   <!-- Main CSS File -->
   <link href="assets/css/style-main.css" rel="stylesheet">
@@ -25,14 +26,17 @@
 </head>
 
 <body>
-
-
   <section class="contact_us">
     <div class="container">
       <div class="menu-logo">
         <a href="index.html"><img src="assets/img/white_logo.svg" class="img-fluid"></a>
         <nav class="menu-opener">
           <div class="menu-opener-inner"></div>
+          <div class="hamburger" id="hamburger-1">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+          </div>
         </nav>
       </div>
       <nav class="menu">
@@ -43,13 +47,13 @@
           <li class="dropdown dropdown-toggle" id="dropdownMenuButton">
             <a href="#" class="menu-link">What we do</a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="index-new.html">Branding</a>
+              <a class="dropdown-item " href="branding.html">Branding</a>
               <a class="dropdown-item" href="website_design.html">Website</a>
               <a class="dropdown-item" href="digital.html">Digital</a>
             </div>
           </li>
           <li>
-            <a href="tack_to_us.html" class="menu-link">Talk to us</a>
+            <a href="tack_to_us.html" class="menu-link active-link">Talk to us</a>
           </li>
 
           <!-- <a href="#" class="menu-link">
@@ -132,10 +136,18 @@
   <script src="assets/vendor/venobox/venobox.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script>
-    $(".menu-opener").click(function () {
-      $(".menu-opener, .menu-opener-inner, .menu").toggleClass("active");
-    });
-  </script>
+        $(".menu-opener").click(function () {
+          $(".menu-opener, .menu-opener-inner, .menu").toggleClass("active");
+          if($("body,html").hasClass("overhide")) 
+          {
+            $("body,html").removeClass("overhide");
+          }
+          else
+          {
+            $("body,html").addClass("overhide");
+          }     
+        });
+    </script>
 
 </body>
 

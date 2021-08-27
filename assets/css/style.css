@@ -378,6 +378,7 @@ section{
   .about h4 br{display: none;}
   .about .content img{margin-top: 50px;} 
   #our_process .col-md-4:nth-child(3) .pro_content .icon:before{display: none;}
+  .d-unset {display: block !important;}
 }
 
 
