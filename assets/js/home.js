@@ -11,6 +11,12 @@ $(".menu-opener").click(function () {
 var homePageOpeningAnimation = anime.timeline({
   easing: "easeOutExpo",
   duration: 1000,
+  complete: function (anim) {
+    if (anim.completed) {
+      // stop the animation
+      homePageOpeningAnimation.pause();
+    }
+  }
 });
 
 // text animation for home page title
@@ -28,6 +34,13 @@ var textLetterAnimation = anime({
   easing: animationEasing,
   duration: 2250,
   delay: (el, i) => 150 * (i + 12),
+  // stop animation once complete
+  complete: function (anim) {
+    if (anim.completed) {
+      // stop the animation
+      textLetterAnimation.pause();
+    }
+  }
 });
 
 homePageOpeningAnimation
@@ -47,6 +60,12 @@ homePageOpeningAnimation
 var fontColorAnimationTimeline = anime.timeline({
   easing: "easeOutExpo",
   duration: 10000,
+  complete: function (anim) {
+    if (anim.completed) {
+      // stop the animation
+      fontColorAnimationTimeline.pause();
+    }
+  }
 });
 
 fontColorAnimationTimeline.add({
@@ -64,6 +83,12 @@ var homePageOpacity = anime({
   opacity: [0, 1],
   duration: 2000,
   easing: "easeInExpo",
+  complete: function (anim) {
+    if (anim.completed) {
+      // stop the animation
+      homePageOpacity.pause();
+    }
+  }
 });
 
 var discoverVideoHide = anime({
@@ -72,6 +97,12 @@ var discoverVideoHide = anime({
   duration: 3000,
   delay: 12000,
   easing: "easeOutExpo",
+  complete: function (anim) {
+    if (anim.completed) {
+      // stop the animation
+      discoverVideoHide.pause();
+    }
+  }
 });
 
 // bring the video in the frame
@@ -93,18 +124,3 @@ var italicised_string = `<span class="letter" style="opacity: 1;">G</span><span 
 setTimeout(() => {
   home_content_title.innerHTML = italicised_string;
 }, 16000);
-
-// setTimeout(() => {
-//   var home_content_lineopener = document.querySelector('.home_content_lineopener');
-//   home_content_lineopener.classList.remove('home_content_lineopener--squiggle');
-//   home_content_lineopener.classList.add('home_content_lineopener--straight');
-// }, 2500)
-
-// control animations on page load
-$(document).ready(() => {
-  homePageOpeningAnimation.play();
-  homePageOpacity.play();
-  textLetterAnimation.play();
-  discoverVideoHide.play();
-  fontColorAnimationTimeline.play();
-});
