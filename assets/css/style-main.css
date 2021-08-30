@@ -270,6 +270,9 @@ a {
   width: 100%;
   overflow: hidden;
 }
+.home_page--hidden {
+  display: none;
+}
 .home_page .container-fluid {
   height: 100%;
 }
@@ -783,9 +786,6 @@ a {
   text-align: center;
   margin: 0;
   width: 70%;
-}
-#digital_box .icon-box.active {
-  background-color: ;
 }
 #digital_box .icon-box {
   background-color: #f4f4f4;

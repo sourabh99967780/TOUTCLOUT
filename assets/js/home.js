@@ -7,6 +7,9 @@ $(".menu-opener").click(function () {
   }
 });
 
+// home page reference
+var homePage = document.querySelector(".home_page");
+
 //animation for line opener
 var homePageOpeningAnimation = anime.timeline({
   easing: "easeOutExpo",
@@ -64,6 +67,9 @@ var homePageOpacity = anime({
   opacity: [0, 1],
   duration: 2000,
   easing: "easeInExpo",
+  begin: function () {
+    homePage.classList.remove("home_page--hidden");
+  },
 });
 
 var discoverVideoHide = anime({
