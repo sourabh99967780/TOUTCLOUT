@@ -1849,3 +1849,9 @@ ul.brand-listing li {
 .discovery__anim {
   margin-top: -0.6em;
 }
+
+.digital__graphic,
+.branding__graphic {
+  width: 400px;
+  height: auto;
+}
