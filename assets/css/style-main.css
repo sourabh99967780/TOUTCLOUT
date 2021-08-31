@@ -1851,12 +1851,8 @@ ul.brand-listing li {
 }
 
 .digital__graphic,
-.branding__graphic {
-  width: 500px;
-  height: auto;
-}
-
-.website__graphic {
+.branding__graphic,
+.web__graphic {
   width: 500px;
   height: auto;
 }
