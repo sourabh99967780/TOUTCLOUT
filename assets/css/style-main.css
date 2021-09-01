@@ -784,7 +784,7 @@ a {
   width: 70%;
 }
 #digital_box .icon-box {
-  background-color: #f4f4f4;
+  background-color: hsl(0, 0%, 98%);
 }
 
 #digital_box .flipper {
