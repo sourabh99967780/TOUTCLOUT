@@ -294,6 +294,10 @@ a {
   color: #fff;
 }
 
+.home_content_title {
+  margin-bottom: 0.3em;
+}
+
 .home_page .home_content h2 {
   font-size: 40px;
 }
@@ -1849,6 +1853,6 @@ ul.brand-listing li {
 .digital__graphic,
 .branding__graphic,
 .web__graphic {
-  width: 500px;
+  width: 27.25em;
   height: auto;
 }
