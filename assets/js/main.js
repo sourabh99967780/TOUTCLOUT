@@ -53,113 +53,80 @@ $(function()
     });
     });
 
-/*-----Smooth scrolling js----*/
+/*for inquiry form popup view*/
+jQuery(".EnquiryMain").click(function(){
+    jQuery(".EnquiryMain").toggleClass("open");
+});
+jQuery(".EnquiryForm").click(function(){
+  jQuery(".EnquiryMain").toggleClass("open");
+  
+});
+jQuery(".enq-close-button").click(function(){
+  jQuery(".EnquiryMain").removeClass("open");
+  
+});
+$(document).ready(function(){
+jQuery(".select2-choice").removeAttr("href");
+});
 
-// $(document).ready(function(){
-//             // $fn.scrollSpeed(step, speed, easing);
-//             jQuery.scrollSpeed(200, 800);
-// });
+/*for inquiry form input view*/
+$('.EnquiryMain input').focus(function(){
+  $(this).parents('.form-group').addClass('focused');
+});
 
-// // Custom scrolling speed with jQuery
-// // Source: github.com/ByNathan/jQuery.scrollSpeed
-// // Version: 1.0.2
+$('.EnquiryMain input').blur(function(){
+  var inputValue = $(this).val();
+  if ( inputValue == "" ) {
+    $(this).removeClass('filled');
+    $(this).parents('.form-group').removeClass('focused');  
+  } else {
+    $(this).addClass('filled');
+  }
+})
 
-// (function($) {
+
+// set the starting position of the cursor outside of the screen
+var clientX = -300,
+    clientY = -300,
+// elements 
+    outerCursor = document.querySelector(".cursor--outer"),
+    innerCursor = document.querySelector(".cursor--inner"),
+    link = document.querySelector(".link")
+
+var initCursor = function() {
+  // add listener to track the current mouse position
+  document.addEventListener("mousemove", function(e) {
+    clientX = e.clientX
+    clientY = e.clientY
+  });
+  
+  var render = function() {
+    TweenMax.set(outerCursor, {
+      x: clientX,
+      y: clientY,
+      delay: .08,
+      ease: Power1.easeOut
+    });
     
-//     jQuery.scrollSpeed = function(step, speed, easing) {
-        
-//         var $document = $(document),
-//             $window = $(window),
-//             $body = $('html, body'),
-//             option = easing || 'default',
-//             root = 0,
-//             scroll = false,
-//             scrollY,
-//             scrollX,
-//             view;
-            
-//         if (window.navigator.msPointerEnabled)
-        
-//             return false;
-            
-//         $window.on('mousewheel DOMMouseScroll', function(e) {
-            
-//             var deltaY = e.originalEvent.wheelDeltaY,
-//                 detail = e.originalEvent.detail;
-//                 scrollY = $document.height() > $window.height();
-//                 scrollX = $document.width() > $window.width();
-//                 scroll = true;
-            
-//             if (scrollY) {
-                
-//                 view = $window.height();
-                    
-//                 if (deltaY < 0 || detail > 0)
-            
-//                     root = (root + view) >= $document.height() ? root : root += step;
-                
-//                 if (deltaY > 0 || detail < 0)
-            
-//                     root = root <= 0 ? 0 : root -= step;
-                
-//                 $body.stop().animate({
-            
-//                     scrollTop: root
-                
-//                 }, speed, option, function() {
-            
-//                     scroll = false;
-                
-//                 });
-//             }
-            
-//             if (scrollX) {
-                
-//                 view = $window.width();
-                    
-//                 if (deltaY < 0 || detail > 0)
-            
-//                     root = (root + view) >= $document.width() ? root : root += step;
-                
-//                 if (deltaY > 0 || detail < 0)
-            
-//                     root = root <= 0 ? 0 : root -= step;
-                
-//                 $body.stop().animate({
-            
-//                     scrollLeft: root
-                
-//                 }, speed, option, function() {
-            
-//                     scroll = false;
-                
-//                 });
-//             }
-            
-//             return false;
-            
-//         }).on('scroll', function() {
-            
-//             if (scrollY && !scroll) root = $window.scrollTop();
-//             if (scrollX && !scroll) root = $window.scrollLeft();
-            
-//         }).on('resize', function() {
-            
-//             if (scrollY && !scroll) view = $window.height();
-//             if (scrollX && !scroll) view = $window.width();
-            
-//         });       
-//     };
+     TweenMax.set(innerCursor, {
+      x: clientX,
+      y: clientY
+    });
     
-//     jQuery.easing.default = function (x,t,b,c,d) {
-    
-//         return -c * ((t=t/d-1)*t*t*t - 1) + b;
-//     };
-    
-// })(jQuery);
+    requestAnimationFrame(render);
+  };
+  
+  requestAnimationFrame(render);
+};
 
+initCursor();
 
-
-
-
-
+function growOnHover() {
+link.addEventListener("mouseenter", function() {
+    TweenMax.to(outerCursor, 1, {scale: 2})
+});
+link.addEventListener("mouseleave", function() {
+    TweenMax.to(outerCursor, 1, {scale: 1})
+});
+}
+growOnHover();

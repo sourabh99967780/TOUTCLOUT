@@ -13,7 +13,7 @@
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link rel="icon" href="assets/img/toutefavicon.png" type="image/svg+xml">
+    <link rel="icon" href="../touch/assets/img/toutefavicon.png" type="image/svg+xml">
 
     <!-- Slick Slider Stylesheets -->
     <link rel="stylesheet" href="assets/css/slick.css">
@@ -25,6 +25,9 @@
 </head>
 
 <body>
+    <!-- cursor elements -->
+    <div class="cursor cursor--outer"><span></span></div>
+    <div class="cursor cursor--inner"><span></span></div>
     <main>
 
         <div class="top_header">
@@ -87,7 +90,7 @@
                         </p>
                     </div>
                     <div class="col-lg-6 text-lg-right text-md-center text-sm-center text-center ">
-                        <lottie-player src='assets/json/branding/graphic.json' background="transparent" speed="1" loop autoplay class="branding__graphic"></lottie-player>
+                        <img src="../touch/assets/img/about_right.png" class="img-fluid d-unset">
                     </div>
                 </div>
             </div>
@@ -102,7 +105,7 @@
                         <div class="flipper">
                             <div class="main_box">
                                 <div class="icon-box">
-                                    <img src="assets/img/about/service_front_1.svg" class="img-fluid">
+                                    <img src="../touch/assets/img/about/service_front_1.svg" class="img-fluid">
                                     <h4>Brand Strategy</h4>
                                     <p>With powerful storytelling, crafting
                                         strategies that inspire, communicate
@@ -111,7 +114,7 @@
                                     </p>
                                 </div>
                                 <div class="back_content">
-                                    <img src="assets/img/about/service.png" class="img-fluid">
+                                    <img src="../touch/assets/img/about/service.png" class="img-fluid">
                                     <h4>Brand Strategy</h4>
                                     <p>
                                         <ul class="brand-listing">
@@ -129,14 +132,14 @@
                         <div class="flipper">
                             <div class="main_box">
                                 <div class="icon-box">
-                                    <img src="assets/img/about/service_front_2.svg" class="img-fluid">
+                                    <img src="../touch/assets/img/about/service_front_2.svg" class="img-fluid">
                                     <h4>Brand Identity</h4>
                                     <p>
                                         Weaving the elements to create unified, coherent and memorable image that communicate the brand value to the target audience effectively
                                     </p>
                                 </div>
                                 <div class="back_content">
-                                    <img src="assets/img/about/services_2.png" class="img-fluid">
+                                    <img src="../touch/assets/img/about/services_2.png" class="img-fluid">
                                     <h4>Brand Identity</h4>
                                     <p>
                                         <ul class="brand-listing">
@@ -154,12 +157,12 @@
                         <div class="flipper">
                             <div class="main_box">
                                 <div class="icon-box">
-                                    <img src="assets/img/about/service_front_3.svg" class="img-fluid">
+                                    <img src="../touch/assets/img/about/service_front_3.svg" class="img-fluid">
                                     <h4>Brand Activation</h4>
                                     <p>Transforming strategies and ideas into business realties by generating awareness and building meaningful connections to drive consumer action and engagement </p> 
                                 </div>
                                 <div class="back_content">
-                                    <img src="assets/img/about/services_3.png" class="img-fluid">
+                                    <img src="../touch/assets/img/about/services_3.png" class="img-fluid">
                                     <h4>Brand Activation</h4>
                                     <p>
                                         <ul class="brand-listing">
@@ -177,6 +180,11 @@
             </div>
         </section>
         <!-- section end -->
+
+
+        
+
+
         <!-- ======= Footer ======= -->
         <footer id="footer">
             <div class="footer-top">
@@ -220,10 +228,10 @@
                 </div>
 
                 <div class="foote_img">
-                    <img src="assets/img/footer_big_circle.svg">
-                    <img src="assets/img/light_half_circle.png">
-                    <img src="assets/img/footer_circle.svg">
-                    <img src="assets/img/footer_img.png">
+                    <img src="../touch/assets/img/footer_big_circle.svg">
+                    <img src="../touch/assets/img/light_half_circle.png">
+                    <img src="../touch/assets/img/footer_circle.svg">
+                    <img src="../touch/assets/img/footer_img.png">
                 </div>
                 <div class="container">
                     <div class="footer_copyright">
@@ -237,17 +245,64 @@
             </div>
     </main>
     </footer><!-- End Footer -->
+
+
+    <!-------Inquiry form----------->
+                <div class="EnquiryMain" id="equiryform">
+                    <div class="EnquiryTab">
+                      <h5>Enquiry Form</h5>   
+                    </div>
+                    <div class="EnquiryForm scrollbar" id="style-3">
+                      <form name="enqform" id="enqform" action="" method="post">
+                        <div class="innerCon">
+                          <p>Fill in the details below and one of our executives will get back to you shortly.</p>
+                        </div>
+                        <div class="container form-pad">
+                          <div class="row">
+                            <div class="col-12 form-group">
+                              <label class="form-label" for="name">Name*</label>
+                              <input id="name" class="form-input" type="text" required="" />
+                            </div>
+                            <div class="col-12 form-group">
+                              <label class="form-label" for="email">Email*</label>
+                              <input id="email" class="form-input" type="email" required="" />
+                            </div>
+                            <div class="col-12 form-group">
+                              <label class="form-label" for="no">10 Digit Mobile*</label>
+                              <input id="no" class="form-input" type="text" required="" />
+                            </div>
+                            <div class="col-12 form-group">
+                              <label class="form-label" for="city">City*</label>
+                              <input id="city" class="form-input" type="text" required="" />
+                            </div>
+                            <div class="col-12 form-group">
+                              <input name="enq_submit" type="submit" id="enq_submit" value="Submit">
+                            </div>
+                        </div>
+                      </div>
+                      </form>
+
+                      <div class="enq-closewrp">
+                          <a class="enq-close-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path fill="#292F33" d="M22.238 18.004l9.883-9.883c1.172-1.171 1.172-3.071 0-4.243-1.172-1.171-3.07-1.171-4.242 0l-9.883 9.883-9.883-9.882c-1.171-1.172-3.071-1.172-4.243 0-1.171 1.171-1.171 3.071 0 4.243l9.883 9.882-9.907 9.907c-1.171 1.171-1.171 3.071 0 4.242.585.586 1.354.879 2.121.879s1.536-.293 2.122-.879l9.906-9.906 9.882 9.882c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879c1.172-1.171 1.172-3.071 0-4.242l-9.881-9.883z"/></svg> 
+                          </a>
+                      </div>
+                    </div>
+                  </div>
+        <!-------Inquiry form End----------->
+
+
     <!-- <div id="preloader"></div> -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/venobox/venobox.min.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/main.js"></script>
     <!-------Slick slider js---------> 
     <script type="text/javascript" src="assets/js/slick.min.js"></script>
-    <script src="assets/js/main.js"></script>
     <script>
         $(".menu-opener").click(function () {
           $(".menu-opener, .menu-opener-inner, .menu").toggleClass("active");

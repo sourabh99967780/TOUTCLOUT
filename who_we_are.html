@@ -5,17 +5,20 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Who we are ?</title>
+    <title>who we are</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-
-
-
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link rel="icon" href="../touch/assets/img/toutefavicon.png" type="image/svg+xml">
+
+    <!-- Slick Slider Stylesheets -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+
 
     <!-- Main CSS File -->
     <link href="assets/css/style-main.css" rel="stylesheet">
@@ -24,24 +27,34 @@
 </head>
 
 <body>
-
+    <!-- cursor elements -->
+    <div class="cursor cursor--outer"><span></span></div>
+    <div class="cursor cursor--inner"><span></span></div>
     <div class="top_header">
         <div class="container">
             <div class="menu-logo">
-                <a href="index.html"><img src="assets/img/black_logo.svg" class="img-fluid"></a>
+                <a href="index.html">
+                    <img src="assets/img/black_logo.svg" class="img-fluid logo1">
+                    <img src="assets/img/light_logo.svg" class="img-fluid logo2">
+                </a>
                 <nav class="menu-opener">
                     <div class="menu-opener-inner"></div>
+                    <div class="hamburger" id="hamburger-1">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
                 </nav>
             </div>
             <nav class="menu">
                 <ul class="menu-inner">
                     <li>
-                        <a href="who_we_are.html" class="menu-link">Who we are</a>
+                        <a href="who_we_are.html" class="menu-link active-link">Who we are</a>
                     </li>
                     <li class="dropdown dropdown-toggle" id="dropdownMenuButton">
                         <a href="#" class="menu-link">What we do</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="index-new.html">Branding</a>
+                            <a class="dropdown-item" href="branding.html">Branding</a>
                             <a class="dropdown-item" href="website_design.html">Website</a>
                             <a class="dropdown-item" href="digital.html">Digital</a>
                         </div>
@@ -49,16 +62,16 @@
                     <li>
                         <a href="tack_to_us.html" class="menu-link">Talk to us</a>
                     </li>
-
+                    
                 </ul>
-            </nav>
+            </nav>            
         </div>
     </div>
     <!-- End #main -->
 
     <section class="img_text_container">
         <div class="container">
-            <div class="heading">
+            <div class="heading" >
                 <h1>We build powerful brand ecosystems<br> that help businesses to evolve and thrive</h1>
                 <h3>Based in one of India’s most exciting cities - Gurgaon, TOUTCLOUT is a fully integrated branding and
                     digital agency.</h3>
@@ -66,7 +79,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="left_part">
-                        <img src="assets/img/about_left.png" />
+                        <img src="../touch/assets/img/about_left.png" />
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -88,12 +101,10 @@
             <div class="title">
                 <h2>values</h2>
             </div>
-            <div class="row">
+            <div class="row mobile_slider">
                 <div class="col-md-4 col-sm-6">
-                    <div class="content innovation">
-                        <lottie-player src="assets/json/aboutUs/innovation.json" background="transparent" speed="1"
-                            class="innovation__anim" hover>
-                        </lottie-player>
+                    <div class="content">
+                        <img src="../touch/assets/img/value_1.svg" />
                         <div class="description">
                             <h4>INNOVATION</h4>
                             <p>Discover <br> the unthinkable</p>
@@ -101,10 +112,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <div class="content simplicity">
-                        <lottie-player src="assets/json/aboutUs/simplicity.json" background="transparent" speed="1.3"
-                            class="simplicity__anim" hover>
-                        </lottie-player>
+                    <div class="content">
+                        <img src="../touch/assets/img/value_2.svg" />
                         <div class="description">
                             <h4>SIMPLICITY</h4>
                             <p>Everything <br> that is profound is simple</p>
@@ -112,36 +121,30 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <div class="content integration">
-                        <lottie-player src="assets/json/aboutUs/integration.json" background="transparent" speed="1"
-                            class="integration__anim" hover>
-                        </lottie-player>
+                    <div class="content">
+                        <img src="../touch/assets/img/value_3.svg" />
                         <div class="description">
                             <h4>INTEGRATION</h4>
                             <p>Strong cross-functional<br>
                                 collaboration to work together<br>
-                                towards a common goal</p>
+                                towards a common goal<br> and to unify all the aspects</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <div class="content agility">
-                        <lottie-player src="assets/json/aboutUs/agility.json" background="transparent" speed="1"
-                            class="agility__anim" hover>
-                        </lottie-player>
+                    <div class="content">
+                        <img src="../touch/assets/img/value_4.svg" />
                         <div class="description">
                             <h4>AGILITY</h4>
                             <p>Constantly assess and<br>
                                 fearlessly adapt to master the<br>
-                                fast-changing environment</p>
+                                fast-changing and highly uncertain environment</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <div class="content integrity">
-                        <lottie-player src="assets/json/aboutUs/integrity.json" background="transparent" speed="1"
-                            class="integrity__anim" hover>
-                        </lottie-player>
+                    <div class="content">
+                        <img src="../touch/assets/img/value_5.svg" />
                         <div class="description">
                             <h4>INTEGRITY</h4>
                             <p>Relentless pursuit of honesty and<br>
@@ -159,12 +162,10 @@
             <div class="title">
                 <h2>Our Approach</h2>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="content curiosity">
-                        <lottie-player src="assets/json/aboutUs/curiosity.json" background="transparent" speed="1"
-                            class="curiosity__anim" loop hover>
-                        </lottie-player>
+            <div class="row mobile_slider">
+                <div class="col-lg-3 col-md-6 col-sm-6 ">
+                    <div class="content">
+                        <img src="../touch/assets/img/approach_1.svg" />
                         <div class="description">
                             <h4>CURIOSITY</h4>
                             <p>Gaining context and
@@ -174,11 +175,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="content discovery">
-                        <lottie-player src="assets/json/aboutUs/discovery.json" background="transparent" speed="1"
-                            class="discovery__anim" loop hover>
-                        </lottie-player>
+                <div class="col-lg-3 col-md-6 col-sm-6 ">
+                    <div class="content">
+                        <img src="../touch/assets/img/approach_2.svg" />
                         <div class="description">
                             <h4>DISCOVERY</h4>
                             <p>Conducting rigorous research
@@ -188,11 +187,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="content creation">
-                        <lottie-player src="assets/json/aboutUs/creation.json" background="transparent" speed="1"
-                            class="creation__anim" loop hover>
-                        </lottie-player>
+                <div class="col-lg-3 col-md-6 col-sm-6 ">
+                    <div class="content">
+                        <img src="../touch/assets/img/approach_3.svg" />
                         <div class="description">
                             <h4>CREATION</h4>
                             <p>Developing strategies
@@ -203,11 +200,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="content ignition">
-                        <lottie-player src="assets/json/aboutUs/ignition.json" background="transparent" speed="1"
-                            class="ignition__anim" loop hover>
-                        </lottie-player>
+                <div class="col-lg-3 col-md-6 col-sm-6 ">
+                    <div class="content">
+                        <img src="../touch/assets/img/approach_4.svg" />
                         <div class="description">
                             <h4>IGNITION</h4>
                             <p>Initiating a program
@@ -232,12 +227,12 @@
                     forming strategic collaboration with
                     companies to provide specialized services, and we gradually evolved into TOUTCLOUT.</p>
             </div>
-            <div class="row">
+            <div class="row mobile_slider">
                 <div class="col-md-4">
                     <div class="content">
-                        <img src="assets/img/white_img.png" />
+                        <img src="../touch/assets/img/white_img.png" />
                         <div class="description">
-                            <h4>Deepeshwari </h4>
+                            <h4>Deepeshwari Beniwal</h4>
                             <p>Lorem ipsum dolor sit amet, sectetuer adipiscing elit, sed diam
                                 nonummy nibh euismod tincidunt
                                 ut laoreet dolore </p>
@@ -246,9 +241,9 @@
                 </div>
                 <div class="col-md-4">
                     <div class="content">
-                        <img src="assets/img/white_img.png" />
+                        <img src="../touch/assets/img/white_img.png" />
                         <div class="description">
-                            <h4>Pankaj </h4>
+                            <h4>Vasundra Beniwal</h4>
                             <p>Lorem ipsum dolor sit amet, sectetuer adipiscing elit, sed diam
                                 nonummy nibh euismod tincidunt
                                 ut laoreet dolore </p>
@@ -257,9 +252,9 @@
                 </div>
                 <div class="col-md-4">
                     <div class="content">
-                        <img src="assets/img/white_img.png" />
+                        <img src="../touch/assets/img/white_img.png" />
                         <div class="description">
-                            <h4>Vasundra </h4>
+                            <h4>Pankaj Soni</h4>
                             <p>Lorem ipsum dolor sit amet, sectetuer adipiscing elit, sed diam
                                 nonummy nibh euismod tincidunt
                                 ut laoreet dolore </p>
@@ -290,9 +285,9 @@
                             <div class="col-md-4">
                                 <h4 class="what-we-do">What we do</h4>
                                 <ul>
-                                    <li><a href="#">Branding</a></li>
-                                    <li> <a href="#">Website</a></li>
-                                    <li><a href="#"> Digital</a></li>
+                                    <li><a href="branding.html">Branding</a></li>
+                                    <li> <a href="website_design.html">Website</a></li>
+                                    <li><a href="digital.html"> Digital</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-4">
@@ -302,7 +297,7 @@
                     </div>
                     <div class="col-lg-3 col-md-6 footer-links footer-inner">
                         <h4>Follow Us</h4>
-                        <div class="social-links mt-3">
+                        <div class="social-links">
                             <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
                             <a href="#" class="facebook"><i class="bx bxl-instagram"></i></a>
                             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -313,13 +308,13 @@
             </div>
 
             <div class="foote_img">
-                <img src="assets/img/footer_big_circle.svg">
-                <img src="assets/img/light_half_circle.png">
-                <img src="assets/img/footer_circle.svg">
-                <img src="assets/img/footer_img.png">
+                <img src="../touch/assets/img/footer_big_circle.svg">
+                <img src="../touch/assets/img/light_half_circle.png">
+                <img src="../touch/assets/img/footer_circle.svg">
+                <img src="../touch/assets/img/footer_img.png">
             </div>
             <div class="container">
-                <div class="footer_copyright">
+            <div class="footer_copyright">
                     <ul class="d-flex">
                         <li><a href="#" class="">Terms & Conditions</a></li>
                         <li><a href="#" class="">Privacy Policy</a></li>
@@ -331,6 +326,50 @@
         </main>
     </footer>
 
+    <!-------Inquiry form----------->
+                <div class="EnquiryMain" id="equiryform">
+                    <div class="EnquiryTab">
+                      <h5>Enquiry Form</h5>   
+                    </div>
+                    <div class="EnquiryForm scrollbar" id="style-3">
+                      <form name="enqform" id="enqform" action="" method="post">
+                        <div class="innerCon">
+                          <p>Fill in the details below and one of our executives will get back to you shortly.</p>
+                        </div>
+                        <div class="container form-pad">
+                          <div class="row">
+                            <div class="col-12 form-group">
+                              <label class="form-label" for="name">Name*</label>
+                              <input id="name" class="form-input" type="text" required="" />
+                            </div>
+                            <div class="col-12 form-group">
+                              <label class="form-label" for="email">Email*</label>
+                              <input id="email" class="form-input" type="email" required="" />
+                            </div>
+                            <div class="col-12 form-group">
+                              <label class="form-label" for="no">10 Digit Mobile*</label>
+                              <input id="no" class="form-input" type="text" required="" />
+                            </div>
+                            <div class="col-12 form-group">
+                              <label class="form-label" for="city">City*</label>
+                              <input id="city" class="form-input" type="text" required="" />
+                            </div>
+                            <div class="col-12 form-group">
+                              <input name="enq_submit" type="submit" id="enq_submit" value="Submit">
+                            </div>
+                        </div>
+                      </div>
+                      </form>
+
+                      <div class="enq-closewrp">
+                          <a class="enq-close-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path fill="#292F33" d="M22.238 18.004l9.883-9.883c1.172-1.171 1.172-3.071 0-4.243-1.172-1.171-3.07-1.171-4.242 0l-9.883 9.883-9.883-9.882c-1.171-1.172-3.071-1.172-4.243 0-1.171 1.171-1.171 3.071 0 4.243l9.883 9.882-9.907 9.907c-1.171 1.171-1.171 3.071 0 4.242.585.586 1.354.879 2.121.879s1.536-.293 2.122-.879l9.906-9.906 9.882 9.882c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879c1.172-1.171 1.172-3.071 0-4.242l-9.881-9.883z"/></svg> 
+                          </a>
+                      </div>
+                    </div>
+                  </div>
+        <!-------Inquiry form End----------->
+
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -339,25 +378,28 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/venobox/venobox.min.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="assets/vendor/anime.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
+    <!-------Slick slider js---------> 
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/main.js"></script>
     <script>
         $(".menu-opener").click(function () {
-                $(".menu-opener, .menu-opener-inner, .menu").toggleClass("active");
-                if ($("body,html").hasClass("overhide")) {
-                    $("body,html").removeClass("overhide");
-                    $(".logo2").removeClass("over_show");
-                    $(".logo1").removeClass("over_hide");
+          $(".menu-opener, .menu-opener-inner, .menu").toggleClass("active");
+          if($("body,html").hasClass("overhide")) 
+          {
+            $("body,html").removeClass("overhide");
+            $(".logo2").removeClass("over_show");
+            $(".logo1").removeClass("over_hide");
+            
+          }
+          else
+          {
+            $("body,html").addClass("overhide");
+            $(".logo2").addClass("over_show");
+            $(".logo1").addClass("over_hide");
+          }     
+        });
 
-                }
-                else {
-                    $("body,html").addClass("overhide");
-                    $(".logo2").addClass("over_show");
-                    $(".logo1").addClass("over_hide");
-                }
-            });
     </script>
 </body>
 

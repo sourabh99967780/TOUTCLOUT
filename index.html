@@ -2,36 +2,40 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Home page</title>
-  <meta content="" name="description" />
-  <meta content="" name="keywords" />
-
+  <meta content="" name="description">
+  <meta content="" name="keywords">
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet" />
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link rel="icon" href="../touch/assets/img/toutefavicon.png" type="image/svg+xml">
 
   <!-- Main CSS File -->
-  <link href="assets/css/style-main.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" />
+  <link href="assets/css/style-main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
 </head>
-
 <body>
-  <section class="home_page home_page--hidden">
+
+<!-- cursor elements -->
+<div class="cursor cursor--outer"><span></span></div>
+<div class="cursor cursor--inner"><span></span></div>
+
+<section class="home_page">
     <div class="container-fluid">
-      <div class="discover_video">
-        <video muted class="half-part_video">
-          <source src="assets/videos/splash_original.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div class="menu-logo">
-        <a href="index.html"><img src="assets/img/white_logo.svg" class="img-fluid" /></a>
+      <div class="menu-logo container">
+        <a href="index.html"><img src="assets/img/white_logo.svg" class="img-fluid"></a>
         <nav class="menu-opener">
           <div class="menu-opener-inner"></div>
+            <!-- <div class="hamburger" id="hamburger-1">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </div>  -->      
         </nav>
       </div>
       <nav class="menu">
@@ -42,7 +46,7 @@
           <li class="dropdown dropdown-toggle" id="dropdownMenuButton">
             <a href="#" class="menu-link">What we do</a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="index-new.html">Branding</a>
+              <a class="dropdown-item" href="branding.html">Branding</a>
               <a class="dropdown-item" href="website_design.html">Website</a>
               <a class="dropdown-item" href="digital.html">Digital</a>
             </div>
@@ -61,22 +65,83 @@
       </nav>
       <div class="d-flex flex_item">
         <div class="home_content">
-          <h2 class="home_content_title">Great <i>idea</i> is yet to be</h2>
-          <h4 class="home_content_subtitle">DISCOVERED</h4>
+          <h2>Great <i>idea</i> is yet to be</h2>
+          <h4>DISCOVERED</h4>
         </div>
         <div class="site_container">
-          <lottie-player src="assets/json/home/left.json" background="transparent" speed="1" class="left_img" loop
-            autoplay>
-          </lottie-player>
+          <div class="left_img">
+            <img src="../touch/assets/img/circle.svg" />
+            <img src="../touch/assets/img/dark_gary.svg" />
+            <img src="../touch/assets/img/half_circle.svg" />
+            <img src="../touch/assets/img/gray_circle.svg" />
+            <img src="../touch/assets/img/borderred_circle.svg" />
+          </div>
 
-          <lottie-player src="assets/json/home/right.json" background="transparent" speed="1" class="right_img" loop
-            autoplay>
-          </lottie-player>
+          <div class="right_img">
+             <img src="../touch/assets/img/leaf.svg" />
+             <img src="../touch/assets/img/gry_border.svg" />
+             <img src="../touch/assets/img/rotate_half.svg" />
+             <img src="../touch/assets/img/black.svg" />
+            <img src="../touch/assets/img/black.svg" />
+            <img src="../touch/assets/img/half_circle.svg" />
+            <img src="../touch/assets/img/small_circle.svg" />
+            <img src="../touch/assets/img/dark_gary.svg" />
+          </div>
         </div>
+
+
       </div>
     </div>
+
+
+  <!-------Inquiry form----------->
+  <div class="EnquiryMain" id="equiryform">
+    <div class="EnquiryTab">
+      <h5>Enquiry Form</h5>   
+    </div>
+    <div class="EnquiryForm scrollbar" id="style-3">
+      <form name="enqform" id="enqform" action="" method="post">
+        <div class="innerCon">
+          <p>Fill in the details below and one of our executives will get back to you shortly.</p>
+        </div>
+        <div class="container form-pad">
+          <div class="row">
+            <div class="col-12 form-group">
+              <label class="form-label" for="name">Name*</label>
+              <input id="name" class="form-input" type="text" required="" />
+            </div>
+            <div class="col-12 form-group">
+              <label class="form-label" for="email">Email*</label>
+              <input id="email" class="form-input" type="email" required="" />
+            </div>
+            <div class="col-12 form-group">
+              <label class="form-label" for="no">10 Digit Mobile*</label>
+              <input id="no" class="form-input" type="text" required="" />
+            </div>
+            <div class="col-12 form-group">
+              <label class="form-label" for="city">City*</label>
+              <input id="city" class="form-input" type="text" required="" />
+            </div>
+            <div class="col-12 form-group">
+              <input name="enq_submit" type="submit" id="enq_submit" value="Submit">
+            </div>
+        </div>
+      </div>
+      </form>
+
+      <div class="enq-closewrp">
+          <a class="enq-close-button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path fill="#292F33" d="M22.238 18.004l9.883-9.883c1.172-1.171 1.172-3.071 0-4.243-1.172-1.171-3.07-1.171-4.242 0l-9.883 9.883-9.883-9.882c-1.171-1.172-3.071-1.172-4.243 0-1.171 1.171-1.171 3.071 0 4.243l9.883 9.882-9.907 9.907c-1.171 1.171-1.171 3.071 0 4.242.585.586 1.354.879 2.121.879s1.536-.293 2.122-.879l9.906-9.906 9.882 9.882c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879c1.172-1.171 1.172-3.071 0-4.242l-9.881-9.883z"/></svg> 
+          </a>
+      </div>
+    </div>
+  </div>
+  <!-------Inquiry form End----------->
+
   </section>
   <!-- End #main -->
+
+
 
   <!-- <div id="preloader"></div> -->
 
@@ -86,11 +151,23 @@
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <script src="assets/vendor/anime.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/js/home.js"></script>
-</body>
+  <script src="assets/js/TweenMax.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  
+  <script>
+        $(".menu-opener").click(function () {
+          $(".menu-opener, .menu-opener-inner, .menu").toggleClass("active");
+          if($("body,html").hasClass("overhide")) 
+          {
+            $("body,html").removeClass("overhide");
+          }
+          else
+          {
+            $("body,html").addClass("overhide");
+          }     
+        });
+  </script>
 
+</body>
 </html>
