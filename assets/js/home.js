@@ -86,6 +86,34 @@ setTimeout(() => {
   homePageVideo.play();
 }, 7000);
 
+// play video even when the page is not in focus
+var hidden, visibilityChange; 
+if (typeof document.hidden !== "undefined") {  
+  hidden = "hidden";
+  visibilityChange = "visibilitychange";
+} else if (typeof document.msHidden !== "undefined") {
+  hidden = "msHidden";
+  visibilityChange = "msvisibilitychange";
+} else if (typeof document.webkitHidden !== "undefined") {
+  hidden = "webkitHidden";
+  visibilityChange = "webkitvisibilitychange";
+}
+
+var videoElement = document.querySelector(".half-part_video");
+
+function handleVisibilityChange() {
+  if (document[hidden] && videoElement.style.display != 'none') {
+    videoElement.play();
+  }
+}
+
+if (typeof document.addEventListener === "undefined" || hidden === undefined) {
+  console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+} else {
+  // Handle page visibility change   
+  document.addEventListener(visibilityChange, handleVisibilityChange, false);
+}
+
 // remove the video after its work is done
 setTimeout(() => {
   homePageVideo.classList.add("half-part_video--hidden");
