@@ -1,10 +1,7 @@
-$(".menu-opener").click(function () {
-  $(".menu-opener, .menu-opener-inner, .menu").toggleClass("active");
-  if ($("body,html").hasClass("overhide")) {
-    $("body,html").removeClass("overhide");
-  } else {
-    $("body,html").addClass("overhide");
-  }
+var hamburgerMenu = document.querySelector('#btnHamburger');
+hamburgerMenu.addEventListener('click', function () {
+  hamburgerMenu.classList.toggle('menu__active');
+  $('.menu').toggleClass("active");
 });
 
 // home page reference
