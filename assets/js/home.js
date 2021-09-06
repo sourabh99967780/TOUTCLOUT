@@ -1,8 +1,39 @@
 var hamburgerMenu = document.querySelector('#btnHamburger');
+var upperBurger = document.querySelector('.upperBurger');
+var lowerBurgerFirstHalf = document.querySelector('.lowerBurger__firstHalf');
+var lowerBurgerSecondHalf = document.querySelector('.lowerBurger__secondHalf');
+var lowerBurgerThirdHalf = document.querySelector('.lowerBurger__thirdHalf');
+
 hamburgerMenu.addEventListener('click', function () {
   hamburgerMenu.classList.toggle('menu__active');
+  upperBurger.style.width = "26px";
+  lowerBurgerThirdHalf.classList.toggle('display-none');
   $('.menu').toggleClass("active");
 });
+
+hamburgerMenu.addEventListener('mouseover', function () {
+  if (hamburgerMenu.classList.contains('menu__active')) {
+    lowerBurgerFirstHalf.style.width = "8px";
+    lowerBurgerSecondHalf.style.width = "2px";
+    lowerBurgerThirdHalf.style.width = "8px";
+  } else {
+    upperBurger.style.width = "20px";
+    lowerBurgerFirstHalf.style.width = "2px";
+    lowerBurgerSecondHalf.style.width = "20px";
+  }
+})
+
+hamburgerMenu.addEventListener('mouseout', function () {
+  if (hamburgerMenu.classList.contains('menu__active')) {
+    lowerBurgerThirdHalf.style.width = "0px";
+    lowerBurgerFirstHalf.style.width = "20px";
+    lowerBurgerSecondHalf.style.width = "2px";
+  } else {
+    upperBurger.style.width = "26px";
+    lowerBurgerFirstHalf.style.width = "20px";
+    lowerBurgerSecondHalf.style.width = "2px";
+  }
+})
 
 // home page reference
 var homePage = document.querySelector(".home_page");
