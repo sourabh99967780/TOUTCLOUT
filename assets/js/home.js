@@ -11,12 +11,15 @@ var lowerBurgerFirstHalf = document.querySelector('.lowerBurger__firstHalf');
 var lowerBurgerSecondHalf = document.querySelector('.lowerBurger__secondHalf');
 var lowerBurgerThirdHalf = document.querySelector('.lowerBurger__thirdHalf');
 
+var menuEmail = document.querySelector('.menu__email');
+
 // handle click event on hamburger menu
 hamburgerMenu.addEventListener('click', function () {
   hamburgerMenu.classList.toggle('menu__active');
   upperBurger.style.width = "26px";
   lowerBurgerThirdHalf.classList.toggle('display-none');
   $('.menu').toggleClass("active");
+  $('.menu__email').toggleClass('menu__hidden');
 });
 
 // handle hover event on hamburger menu

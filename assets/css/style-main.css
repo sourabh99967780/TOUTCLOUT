@@ -12,15 +12,6 @@ html {
   box-sizing: border-box;
 }
 
-/* body {
-  background: url(../img/Home\ -1.png);
-  background-size:cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height:100vh;
-  background-position: center;
-} */
-
 @font-face {
   font-family: "Playfair Display";
   src: url(assets/Fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf);
@@ -36,10 +27,14 @@ body {
 
 a {
   display: block;
-  /* width: 100%;
-  height: 100%; */
   text-decoration: none;
   cursor: none !important;
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
 }
 
 body,
@@ -1941,4 +1936,25 @@ ul.brand-listing li {
   border-radius: 50%;
   border: 1px solid #dbdbdb;
   background-color: #dbdbdb;
+}
+
+/* Temporary home page release changes */
+.menu {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+.menu__email {
+  color: #dddddd;
+  font-size: 2.5rem;
+  opacity: 1;
+  transform: translateY(0%);
+  transition: all ease-in 200ms;
+}
+.menu__email:hover {
+  color: rgba(221, 221, 221, 0.5);
+}
+.menu__hidden {
+  opacity: 0;
+  transform: translateY(50%);
 }
