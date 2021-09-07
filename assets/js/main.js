@@ -8,6 +8,13 @@ $(window).on("load", function () {
   aos_init();
 });
 
+if (isAMobileDevice) {
+  const innerCursor = document.querySelector(".cursor--small");
+  const cursorCanvas = document.querySelector(".cursor--canvas");
+  innerCursor.style.display = "none";
+  cursorCanvas.style.display = "none";
+}
+
 // cursor effects
 // set the starting position of the cursor outside of the screen
 let clientX = -100;
