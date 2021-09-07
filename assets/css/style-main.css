@@ -1958,3 +1958,8 @@ ul.brand-listing li {
   opacity: 0;
   transform: translateY(50%);
 }
+@media screen and (max-width: 768px) {
+  .menu__email {
+    font-size: 2rem;
+  }
+}
