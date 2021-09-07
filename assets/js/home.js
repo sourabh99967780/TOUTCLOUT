@@ -11,6 +11,7 @@ var lowerBurgerFirstHalf = document.querySelector('.lowerBurger__firstHalf');
 var lowerBurgerSecondHalf = document.querySelector('.lowerBurger__secondHalf');
 var lowerBurgerThirdHalf = document.querySelector('.lowerBurger__thirdHalf');
 
+// handle click event on hamburger menu
 hamburgerMenu.addEventListener('click', function () {
   hamburgerMenu.classList.toggle('menu__active');
   upperBurger.style.width = "26px";
@@ -18,6 +19,7 @@ hamburgerMenu.addEventListener('click', function () {
   $('.menu').toggleClass("active");
 });
 
+// handle hover event on hamburger menu
 hamburgerMenu.addEventListener('mouseover', function () {
   if (!window.mobileCheck()) {
     if (hamburgerMenu.classList.contains('menu__active')) {
@@ -32,6 +34,7 @@ hamburgerMenu.addEventListener('mouseover', function () {
   }
 })
 
+// handle mouseout event on hamburger menu
 hamburgerMenu.addEventListener('mouseout', function () {
   if (!window.mobileCheck()) {
     if (hamburgerMenu.classList.contains('menu__active')) {
@@ -166,12 +169,6 @@ var italicised_string = `<span class="letter" style="opacity: 1;">G</span><span 
 setTimeout(() => {
   home_content_title.innerHTML = italicised_string;
 }, 16000);
-
-// setTimeout(() => {
-//   var home_content_lineopener = document.querySelector('.home_content_lineopener');
-//   home_content_lineopener.classList.remove('home_content_lineopener--squiggle');
-//   home_content_lineopener.classList.add('home_content_lineopener--straight');
-// }, 2500)
 
 // control animations on page load
 $(document).ready(() => {
