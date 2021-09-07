@@ -1952,7 +1952,7 @@ ul.brand-listing li {
   transition: all ease-in 200ms;
 }
 .menu__email:hover {
-  color: rgba(221, 221, 221, 0.5);
+  color: #eaad67;
 }
 .menu__hidden {
   opacity: 0;
