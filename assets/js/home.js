@@ -34,27 +34,27 @@ if (!isAMobileDevice) {
   // handle hover event on hamburger menu
   hamburgerMenu.addEventListener("mouseover", function () {
     if (hamburgerMenu.classList.contains("menu__active")) {
-        lowerBurgerFirstHalf.style.width = "8px";
-        lowerBurgerSecondHalf.style.width = "2px";
-        lowerBurgerThirdHalf.style.width = "8px";
+      lowerBurgerFirstHalf.style.width = "8px";
+      lowerBurgerSecondHalf.style.width = "2px";
+      lowerBurgerThirdHalf.style.width = "8px";
     } else {
-        upperBurger.style.width = "20px";
-        lowerBurgerFirstHalf.style.width = "2px";
-        lowerBurgerSecondHalf.style.width = "20px";
-      }
+      upperBurger.style.width = "20px";
+      lowerBurgerFirstHalf.style.width = "2px";
+      lowerBurgerSecondHalf.style.width = "20px";
+    }
   });
 
   // handle mouseout event on hamburger menu
   hamburgerMenu.addEventListener("mouseout", function () {
     if (hamburgerMenu.classList.contains("menu__active")) {
-        lowerBurgerThirdHalf.style.width = "0px";
-        lowerBurgerFirstHalf.style.width = "20px";
-        lowerBurgerSecondHalf.style.width = "2px";
+      lowerBurgerThirdHalf.style.width = "0px";
+      lowerBurgerFirstHalf.style.width = "20px";
+      lowerBurgerSecondHalf.style.width = "2px";
     } else {
-        upperBurger.style.width = "26px";
-        lowerBurgerFirstHalf.style.width = "20px";
-        lowerBurgerSecondHalf.style.width = "2px";
-      }
+      upperBurger.style.width = "26px";
+      lowerBurgerFirstHalf.style.width = "20px";
+      lowerBurgerSecondHalf.style.width = "2px";
+    }
   });
 }
 
@@ -82,7 +82,7 @@ async function textLetterAnimationPromise() {
     opacity: [0, 1],
     easing: animationEasing,
     duration: 2250,
-    delay: (el, i) => 150 * (i + 12),
+    delay: (el, i) => 150 * (i + 2),
   });
   await Promise.resolve(textLetterAnimation.finished);
 }
@@ -140,18 +140,21 @@ homePageOpacityPromise().then(() => {
     homePageVideo.play();
     setInterval(() => {
       const percentageCompletion = Math.round(
-        homePageVideo.currentTime / homePageVideo.duration * 100
-      )
+        (homePageVideo.currentTime / homePageVideo.duration) * 100
+      );
+      if (homePageVideo.paused && percentageCompletion != 100) {
+        homePageVideo.play();
+      }
       if (percentageCompletion === 38) {
         discoverVideoHidePromise().then(() => {
           homePageOpeningAnimationPromise().then(() => {
             fontColorAnimationPromise().then(() => {
               home_content_title.innerHTML = italicised_string;
               homePageVideo.classList.add("half-part_video--hidden");
-            })
-          })
-        })
+            });
+          });
+        });
       }
-    })
-  })
-})
+    });
+  });
+});
