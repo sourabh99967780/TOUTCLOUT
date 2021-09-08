@@ -95,6 +95,7 @@ body a {
   top: 0;
   right: 0;
   left: 0;
+  transform: translateY(-100%);
 }
 .menu-logo img {
   width: 100%;
@@ -344,6 +345,10 @@ body a {
   margin-bottom: 0.3em;
 }
 
+.home_content_title span {
+  opacity: 0;
+}
+
 .home_content_subtitle {
   margin-top: -0.3em;
 }
@@ -373,7 +378,7 @@ body a {
   bottom: 0px;
   width: 50vmin;
   height: auto;
-  opacity: 1;
+  opacity: 0;
 }
 
 .home_page .flex_item .right_img {
@@ -383,7 +388,7 @@ body a {
   bottom: 0px;
   width: 70vmin;
   height: auto;
-  opacity: 1;
+  opacity: 0;
 }
 
 .home_page .menu li {
