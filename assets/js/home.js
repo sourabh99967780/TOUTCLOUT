@@ -31,7 +31,7 @@ if (!isAMobileDevice) {
         lowerBurgerFirstHalf.style.width = "8px";
         lowerBurgerSecondHalf.style.width = "2px";
         lowerBurgerThirdHalf.style.width = "8px";
-      } else {
+    } else {
         upperBurger.style.width = "20px";
         lowerBurgerFirstHalf.style.width = "2px";
         lowerBurgerSecondHalf.style.width = "20px";
@@ -44,7 +44,7 @@ if (!isAMobileDevice) {
         lowerBurgerThirdHalf.style.width = "0px";
         lowerBurgerFirstHalf.style.width = "20px";
         lowerBurgerSecondHalf.style.width = "2px";
-      } else {
+    } else {
         upperBurger.style.width = "26px";
         lowerBurgerFirstHalf.style.width = "20px";
         lowerBurgerSecondHalf.style.width = "2px";
@@ -52,13 +52,19 @@ if (!isAMobileDevice) {
   });
 }
 
+var animationEasing = "cubicBezier(.5, .05, .1, .3)";
+
 // home page reference
 var homePage = document.querySelector(".home_page");
 
-//animation for line opener
-var homePageOpeningAnimation = anime.timeline({
-  easing: "easeOutExpo",
-  duration: 1000,
+var homePageOpacity = anime({
+  targets: ".home_page",
+  opacity: [0, 1],
+  duration: 2000,
+  easing: "easeInExpo",
+  begin: function () {
+    homePage.classList.remove("home_page--hidden");
+  },
 });
 
 // text animation for home page title
@@ -68,8 +74,6 @@ textWrapper.innerHTML = textWrapper.textContent.replace(
   "<span class='letter'>$&</span>"
 );
 
-var animationEasing = "cubicBezier(.5, .05, .1, .3)";
-
 var textLetterAnimation = anime({
   targets: ".home_content_title .letter",
   opacity: [0, 1],
@@ -78,6 +82,11 @@ var textLetterAnimation = anime({
   delay: (el, i) => 150 * (i + 12),
 });
 
+//animation for line opener
+var homePageOpeningAnimation = anime.timeline({
+  easing: "easeOutExpo",
+  duration: 1000,
+});
 homePageOpeningAnimation
   .add({
     targets: ".left_img, .right_img",
@@ -105,16 +114,6 @@ fontColorAnimationTimeline.add({
 fontColorAnimationTimeline.add({
   targets: ".home_content_subtitle",
   color: "#DDD",
-});
-
-var homePageOpacity = anime({
-  targets: ".home_page",
-  opacity: [0, 1],
-  duration: 2000,
-  easing: "easeInExpo",
-  begin: function () {
-    homePage.classList.remove("home_page--hidden");
-  },
 });
 
 var discoverVideoHide = anime({

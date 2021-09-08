@@ -52,8 +52,8 @@ body a {
 .cursor--small {
   width: 7px;
   height: 7px;
-  left: -2.5px;
-  top: -2.5px;
+  left: -3px;
+  top: -3px;
   border-radius: 50%;
   z-index: 11000;
   background: #dddddd;
@@ -342,6 +342,10 @@ body a {
 
 .home_content_title {
   margin-bottom: 0.3em;
+}
+
+.home_content_subtitle {
+  margin-top: -0.3em;
 }
 
 .home_content_title::selection,
