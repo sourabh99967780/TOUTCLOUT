@@ -20,7 +20,7 @@ var textWrapper = document.querySelector(".home_content_title");
 var home_content_title = document.querySelector(".home_content_title");
 
 var animationEasing = "cubicBezier(.5, .05, .1, .3)";
-var italicised_string = `<span class="letter" style="opacity: 1;">G</span><span class="letter" style="opacity: 1;">r</span><span class="letter" style="opacity: 1;">e</span><span class="letter" style="opacity: 1;">a</span><span class="letter" style="opacity: 1;">t</span> <i><span class="letter" style="opacity: 1;">i</span><span class="letter" style="opacity: 1;">d</span><span class="letter" style="opacity: 1;">e</span><span class="letter" style="opacity: 1;">a</span></i> <span class="letter" style="opacity: 1;">i</span><span class="letter" style="opacity: 1;">s</span> <span class="letter" style="opacity: 1;">y</span><span class="letter" style="opacity: 1;">e</span><span class="letter" style="opacity: 1;">t</span> <span class="letter" style="opacity: 1;">t</span><span class="letter" style="opacity: 1;">o</span> <span class="letter" style="opacity: 1;">b</span><span class="letter" style="opacity: 1;">e</span>`;
+var italicised_string = `<h2 class="home_content_title">Great <i>idea</i> is yet to be</h2>`;
 
 // handle click event on hamburger menu
 hamburgerMenu.addEventListener("click", function () {
