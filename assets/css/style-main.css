@@ -179,11 +179,10 @@ body a {
   top: 0;
 }
 .menu.active {
-  width: -webkit-calc(100% - 2rem);
-  width: 100%;
+  width: 101vw;
+  height: 101vh;
   visibility: visible;
   pointer-events: auto;
-  /*background: rgba(72,76,80,.9);*/
   background-color: rgb(38, 39, 40, 1);
   z-index: 2;
 }
@@ -247,10 +246,6 @@ body a {
   .menu-link {
     padding: 10px 0;
     font-size: 1.2em;
-  }
-  .menu.active {
-    width: -webkit-calc(100% - 0.5rem);
-    width: calc(100% - 0.5rem);
   }
 }
 @media screen and (max-width: 768px) {
@@ -342,7 +337,8 @@ body a {
 }
 
 .home_content_title {
-  margin-bottom: 0.3em;
+  font-size: 2.5vmax;
+  margin-bottom: 0.5em;
 }
 
 .home_content_title span {
@@ -350,6 +346,8 @@ body a {
 }
 
 .home_content_subtitle {
+  font-size: 1.5vmax;
+  letter-spacing: 5px;
   margin-top: -0.3em;
 }
 
@@ -360,13 +358,6 @@ body a {
   color: #262728;
 }
 
-.home_page .home_content h2 {
-  font-size: 40px;
-}
-.home_page .home_content h4 {
-  font-size: 25px;
-  letter-spacing: 5px;
-}
 .home_page .home_content h2 i {
   font-weight: 900;
 }
@@ -1651,11 +1642,7 @@ ul.brand-listing li {
   .menu-logo {
     padding: 1em 1.5em;
   }
-  .home_page .home_content h2 {
-    font-size: 30px;
-  }
   .home_page .home_content h4 {
-    font-size: 20px;
     letter-spacing: 3px;
   }
   .menu-opener {
@@ -1962,7 +1949,7 @@ ul.brand-listing li {
 }
 .menu__email {
   color: #dddddd;
-  font-size: 2rem;
+  font-size: 2vmax;
   opacity: 1;
   transform: translateY(0%);
   transition: all ease-in 200ms;

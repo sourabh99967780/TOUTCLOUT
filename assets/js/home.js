@@ -1,13 +1,14 @@
 // check if it is a mobile screen
 function checkIfItIsMobile() {
-  if (window.matchMedia("(max-width: 767px)").matches) {
+  if (window.matchMedia("(max-width: 767px)").matches || window.matchMedia("(max-width: 1024px)").matches) {
     return true;
   }
   return false;
 }
 const isAMobileDevice = checkIfItIsMobile();
 
-var hamburgerMenu = document.querySelector("#btnHamburger");
+var hamburgerMenu = document.querySelector(".hamburger__menu");
+var hamburgerMenuButton = document.querySelector('#btnHamburger');
 var upperBurger = document.querySelector(".upperBurger");
 var lowerBurgerFirstHalf = document.querySelector(".lowerBurger__firstHalf");
 var lowerBurgerSecondHalf = document.querySelector(".lowerBurger__secondHalf");
@@ -23,9 +24,8 @@ var italicised_string = `<span class="letter" style="opacity: 1;">G</span><span 
 
 // handle click event on hamburger menu
 hamburgerMenu.addEventListener("click", function () {
-  hamburgerMenu.classList.toggle("menu__active");
+  hamburgerMenuButton.classList.toggle("menu__active");
   upperBurger.style.width = "26px";
-  lowerBurgerThirdHalf.classList.toggle("display-none");
   $(".menu").toggleClass("active");
   $(".menu__email").toggleClass("menu__hidden");
 });
@@ -33,10 +33,10 @@ hamburgerMenu.addEventListener("click", function () {
 if (!isAMobileDevice) {
   // handle hover event on hamburger menu
   hamburgerMenu.addEventListener("mouseover", function () {
-    if (hamburgerMenu.classList.contains("menu__active")) {
-      lowerBurgerFirstHalf.style.width = "8px";
-      lowerBurgerSecondHalf.style.width = "2px";
-      lowerBurgerThirdHalf.style.width = "8px";
+    if (hamburgerMenuButton.classList.contains("menu__active")) {
+      upperBurger.style.width = "26px";
+      lowerBurgerFirstHalf.style.width = "2px";
+      lowerBurgerSecondHalf.style.width = "20px";
     } else {
       upperBurger.style.width = "20px";
       lowerBurgerFirstHalf.style.width = "2px";
@@ -46,8 +46,8 @@ if (!isAMobileDevice) {
 
   // handle mouseout event on hamburger menu
   hamburgerMenu.addEventListener("mouseout", function () {
-    if (hamburgerMenu.classList.contains("menu__active")) {
-      lowerBurgerThirdHalf.style.width = "0px";
+    if (hamburgerMenuButton.classList.contains("menu__active")) {
+      upperBurger.style.width = "26px";
       lowerBurgerFirstHalf.style.width = "20px";
       lowerBurgerSecondHalf.style.width = "2px";
     } else {
@@ -91,12 +91,11 @@ async function homePageOpeningAnimationPromise() {
   //animation for line opener
   var homePageOpeningAnimation = anime.timeline({
     easing: "easeOutExpo",
-    duration: 1000,
   });
   homePageOpeningAnimation
     .add({
       targets: ".left_img, .right_img",
-      duration: 3000,
+      duration: 5000,
       opacity: [0, 1],
     })
     .add({
@@ -131,7 +130,7 @@ async function fontColorAnimationPromise() {
     targets: ".home_content_subtitle",
     color: "#DDD",
   });
-  await Promise.resolve(fontColorAnimation.finished);
+  await Promise.resolve(fontColorAnimationTimeline.finished);
 }
 
 // animation master controller
@@ -149,10 +148,10 @@ homePageOpacityPromise().then(() => {
         discoverVideoHidePromise().then(() => {
           homePageOpeningAnimationPromise().then(() => {
             fontColorAnimationPromise().then(() => {
-              home_content_title.innerHTML = italicised_string;
               homePageVideo.classList.add("half-part_video--hidden");
             });
           });
+          home_content_title.innerHTML = italicised_string;
         });
       }
     });
