@@ -95,7 +95,7 @@ async function homePageOpeningAnimationPromise() {
   homePageOpeningAnimation
     .add({
       targets: ".left_img, .right_img",
-      duration: 5000,
+      duration: 3000,
       opacity: [0, 1],
     })
     .add({

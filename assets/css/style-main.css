@@ -69,9 +69,7 @@ body a {
 .menu-opener.active,
 .menu-opener-inner,
 .menu-opener-inner::before,
-.menu-opener-inner::after,
-.menu,
-.menu.active {
+.menu-opener-inner::after {
   -webkit-transition: 250ms all;
   transition: 250ms all;
 }
@@ -338,7 +336,7 @@ body a {
 
 .home_content_title {
   font-size: 2.5vmax;
-  margin-bottom: 0.5em;
+  margin-top: -0.3em;
 }
 
 .home_content_title span {
@@ -348,7 +346,6 @@ body a {
 .home_content_subtitle {
   font-size: 1.5vmax;
   letter-spacing: 5px;
-  margin-top: -0.3em;
 }
 
 .home_content_title::selection,
