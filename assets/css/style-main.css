@@ -101,6 +101,11 @@ body a {
   z-index: 999;
   height: 2em;
 }
+
+.hamburger__menu {
+  padding: 8px;
+}
+
 .upperBurger,
 .bun {
   display: block;
@@ -341,6 +346,16 @@ body a {
 
 .home_content_title span {
   opacity: 0;
+}
+
+.home_content_title--italic {
+  opacity: 1 !important;
+  font-variation-settings: "wght" 400;
+  transition: all ease-in 200ms;
+}
+
+.home_content_title--italic-active {
+  font-variation-settings: "wght" 700, "ital" 1;
 }
 
 .home_content_subtitle {

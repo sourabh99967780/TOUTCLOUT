@@ -20,7 +20,7 @@ var textWrapper = document.querySelector(".home_content_title");
 var home_content_title = document.querySelector(".home_content_title");
 
 var animationEasing = "cubicBezier(.5, .05, .1, .3)";
-var italicised_string = `<h2 class="home_content_title">Great <i>idea</i> is yet to be</h2>`;
+var italicised_string = `Great <span class="home_content_title--italic">idea</span> is yet to be`;
 
 // handle click event on hamburger menu
 hamburgerMenu.addEventListener("click", function () {
@@ -58,10 +58,7 @@ if (!isAMobileDevice) {
   });
 }
 
-textWrapper.innerHTML = textWrapper.textContent.replace(
-  /\S/g,
-  "<span class='letter'>$&</span>"
-);
+textWrapper.innerHTML = '<span class="letter">G</span><span class="letter">r</span><span class="letter">e</span><span class="letter">a</span><span class="letter">t</span> <i><span class="letter">i</span><span class="letter">d</span><span class="letter">e</span><span class="letter">a</span></i> <span class="letter">i</span><span class="letter">s</span> <span class="letter">y</span><span class="letter">e</span><span class="letter">t</span> <span class="letter">t</span><span class="letter">o</span> <span class="letter">b</span><span class="letter">e</span>';
 
 async function homePageOpacityPromise() {
   var homePageOpacity = anime({
@@ -89,20 +86,20 @@ async function textLetterAnimationPromise() {
 
 async function homePageOpeningAnimationPromise() {
   //animation for line opener
-  var homePageOpeningAnimation = anime.timeline({
-    easing: "easeOutExpo",
-  });
+  var homePageOpeningAnimation = anime.timeline({});
   homePageOpeningAnimation
     .add({
       targets: ".left_img, .right_img",
       duration: 3000,
       opacity: [0, 1],
+      easing: "easeInExpo",
     })
     .add({
       targets: ".menu-logo",
       opacity: [0, 1],
       translateY: ["-100%", 0],
       duration: 3000,
+      easing: "easeOutExpo"
     });
   await Promise.resolve(homePageOpeningAnimation.finished);
 }
@@ -151,7 +148,7 @@ homePageOpacityPromise().then(() => {
               homePageVideo.classList.add("half-part_video--hidden");
             });
           });
-          home_content_title.innerHTML = italicised_string;
+          home_content_title.innerHTML = 'Great <i>idea</i> is yet to be';
         });
       }
     });
