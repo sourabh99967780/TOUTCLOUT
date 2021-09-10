@@ -90,7 +90,7 @@ async function homePageOpeningAnimationPromise() {
   homePageOpeningAnimation
     .add({
       targets: ".left_img, .right_img",
-      duration: 3000,
+      duration: 2000,
       opacity: [0, 1],
       easing: "easeInExpo",
     })
@@ -117,7 +117,7 @@ async function discoverVideoHidePromise() {
 async function fontColorAnimationPromise() {
   var fontColorAnimationTimeline = anime.timeline({
     easing: "easeOutExpo",
-    duration: 10000,
+    duration: 2000,
   });
   fontColorAnimationTimeline.add({
     targets: ".home_content_title",
