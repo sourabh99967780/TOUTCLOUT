@@ -345,8 +345,8 @@ body a {
 }
 
 .home_content_title {
-  font-size: 2.5vmax;
-  margin-top: -0.16em;
+  font-size: 2.4vmax;
+  margin-top: -0.002em;
 }
 
 .home_content_title span {
@@ -364,7 +364,7 @@ body a {
 }
 
 .home_content_subtitle {
-  font-size: 1.5vmax;
+  font-size: 1.4vmax;
   letter-spacing: 5px;
 }
 
