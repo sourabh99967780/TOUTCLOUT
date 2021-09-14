@@ -444,6 +444,7 @@ body a {
   height: 50vh;
   overflow: hidden;
   opacity: 1;
+  background-color: #fff;
 }
 
 .half-part_video--hidden {
