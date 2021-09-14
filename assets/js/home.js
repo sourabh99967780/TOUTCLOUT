@@ -24,6 +24,7 @@ var home_content_title = document.querySelector(".home_content_title");
 
 var animationEasing = "cubicBezier(.5, .05, .1, .3)";
 var italicised_string = `Great <span class="home_content_title--italic">idea</span> is yet to be`;
+var loadingPage = document.querySelector(".loading-page");
 
 // handle click event on hamburger menu
 hamburgerMenu.addEventListener("click", function () {
@@ -134,19 +135,21 @@ async function fontColorAnimationPromise() {
   await Promise.resolve(fontColorAnimationTimeline.finished);
 }
 
-// animation master controller
-homePageOpacityPromise().then(() => {
-  textLetterAnimationPromise().then(() => {
-    homePageVideo.play();
-    setTimeout(() => {
-      discoverVideoHidePromise().then(() => {
-        homePageOpeningAnimationPromise().then(() => {
-          fontColorAnimationPromise().then(() => {
-            homePageVideo.classList.add("half-part_video--hidden");
+window.onload = () => {
+  // animation master controller
+  homePageOpacityPromise().then(() => {
+    textLetterAnimationPromise().then(() => {
+      home_content_title.innerHTML = "Great <i>idea</i> is yet to be";
+      homePageVideo.play();
+      setTimeout(() => {
+        discoverVideoHidePromise().then(() => {
+          homePageOpeningAnimationPromise().then(() => {
+            fontColorAnimationPromise().then(() => {
+              homePageVideo.classList.add("half-part_video--hidden");
+            });
           });
         });
-        home_content_title.innerHTML = "Great <i>idea</i> is yet to be";
-      });
-    }, 4500);
+      }, 4500);
+    });
   });
-});
+};
