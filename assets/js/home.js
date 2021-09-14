@@ -1,6 +1,9 @@
 // check if it is a mobile screen
 function checkIfItIsMobile() {
-  if (window.matchMedia("(max-width: 767px)").matches || window.matchMedia("(max-width: 1024px)").matches) {
+  if (
+    window.matchMedia("(max-width: 767px)").matches ||
+    window.matchMedia("(max-width: 1024px)").matches
+  ) {
     return true;
   }
   return false;
@@ -8,7 +11,7 @@ function checkIfItIsMobile() {
 const isAMobileDevice = checkIfItIsMobile();
 
 var hamburgerMenu = document.querySelector(".hamburger__menu");
-var hamburgerMenuButton = document.querySelector('#btnHamburger');
+var hamburgerMenuButton = document.querySelector("#btnHamburger");
 var upperBurger = document.querySelector(".upperBurger");
 var lowerBurgerFirstHalf = document.querySelector(".lowerBurger__firstHalf");
 var lowerBurgerSecondHalf = document.querySelector(".lowerBurger__secondHalf");
@@ -58,7 +61,8 @@ if (!isAMobileDevice) {
   });
 }
 
-textWrapper.innerHTML = '<span class="letter">G</span><span class="letter">r</span><span class="letter">e</span><span class="letter">a</span><span class="letter">t</span> <i><span class="letter">i</span><span class="letter">d</span><span class="letter">e</span><span class="letter">a</span></i> <span class="letter">i</span><span class="letter">s</span> <span class="letter">y</span><span class="letter">e</span><span class="letter">t</span> <span class="letter">t</span><span class="letter">o</span> <span class="letter">b</span><span class="letter">e</span>';
+textWrapper.innerHTML =
+  '<span class="letter">G</span><span class="letter">r</span><span class="letter">e</span><span class="letter">a</span><span class="letter">t</span> <i><span class="letter">i</span><span class="letter">d</span><span class="letter">e</span><span class="letter">a</span></i> <span class="letter">i</span><span class="letter">s</span> <span class="letter">y</span><span class="letter">e</span><span class="letter">t</span> <span class="letter">t</span><span class="letter">o</span> <span class="letter">b</span><span class="letter">e</span>';
 
 async function homePageOpacityPromise() {
   var homePageOpacity = anime({
@@ -99,7 +103,7 @@ async function homePageOpeningAnimationPromise() {
       opacity: [0, 1],
       translateY: ["-100%", 0],
       duration: 3000,
-      easing: "easeOutExpo"
+      easing: "easeOutExpo",
     });
   await Promise.resolve(homePageOpeningAnimation.finished);
 }
@@ -134,23 +138,15 @@ async function fontColorAnimationPromise() {
 homePageOpacityPromise().then(() => {
   textLetterAnimationPromise().then(() => {
     homePageVideo.play();
-    setInterval(() => {
-      const percentageCompletion = Math.round(
-        (homePageVideo.currentTime / homePageVideo.duration) * 100
-      );
-      if (homePageVideo.paused && percentageCompletion != 100) {
-        homePageVideo.play();
-      }
-      if (percentageCompletion === 38) {
-        discoverVideoHidePromise().then(() => {
-          homePageOpeningAnimationPromise().then(() => {
-            fontColorAnimationPromise().then(() => {
-              homePageVideo.classList.add("half-part_video--hidden");
-            });
+    setTimeout(() => {
+      discoverVideoHidePromise().then(() => {
+        homePageOpeningAnimationPromise().then(() => {
+          fontColorAnimationPromise().then(() => {
+            homePageVideo.classList.add("half-part_video--hidden");
           });
-          home_content_title.innerHTML = 'Great <i>idea</i> is yet to be';
         });
-      }
-    });
+        home_content_title.innerHTML = "Great <i>idea</i> is yet to be";
+      });
+    }, 4500);
   });
 });
