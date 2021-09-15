@@ -103,6 +103,7 @@ async function homePageOpeningAnimationPromise() {
       targets: ".menu-logo",
       opacity: [0, 1],
       translateY: ["-100%", 0],
+      delay: 1500,
       duration: 3000,
       easing: "easeOutExpo",
     });
