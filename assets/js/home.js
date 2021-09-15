@@ -139,11 +139,11 @@ window.onload = () => {
   // animation master controller
   homePageOpacityPromise().then(() => {
     textLetterAnimationPromise().then(() => {
-      home_content_title.innerHTML = "Great <i>idea</i> is yet to be";
       homePageVideo.play();
       setTimeout(() => {
         discoverVideoHidePromise().then(() => {
           homePageOpeningAnimationPromise().then(() => {
+            home_content_title.innerHTML = "Great <i>idea</i> is yet to be";
             fontColorAnimationPromise().then(() => {
               homePageVideo.classList.add("half-part_video--hidden");
             });
