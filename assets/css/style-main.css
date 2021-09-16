@@ -349,6 +349,13 @@ body a {
   margin-top: -0.002em;
 }
 
+@media (min-width: 1920px) {
+  .home_content_title {
+    font-size: 2.4vmax;
+    margin-top: -0.18em;
+  }
+}
+
 .home_content_title span {
   opacity: 0;
 }
