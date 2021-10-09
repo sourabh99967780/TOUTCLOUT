@@ -17,7 +17,6 @@ var lowerBurgerFirstHalf = document.querySelector(".lowerBurger__firstHalf");
 var lowerBurgerSecondHalf = document.querySelector(".lowerBurger__secondHalf");
 var lowerBurgerThirdHalf = document.querySelector(".lowerBurger__thirdHalf");
 var homePageVideo = document.querySelector(".half-part_video");
-var menuEmail = document.querySelector(".menu__email");
 var homePage = document.querySelector(".home_page");
 var textWrapper = document.querySelector(".home_content_title");
 var home_content_title = document.querySelector(".home_content_title");
@@ -31,7 +30,6 @@ hamburgerMenu.addEventListener("click", function () {
   hamburgerMenuButton.classList.toggle("menu__active");
   upperBurger.style.width = "26px";
   $(".menu").toggleClass("active");
-  $(".menu__email").toggleClass("menu__hidden");
 });
 
 if (!isAMobileDevice) {

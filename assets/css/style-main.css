@@ -1484,9 +1484,6 @@ ul.brand-listing li {
   .home_content_subtitle {
     font-size: 22px;
   }
-  .menu__email {
-    font-size: 30px !important;
-  }
 }
 
 @media (max-width: 768px) {
@@ -1511,9 +1508,6 @@ ul.brand-listing li {
   }
   .home_content_subtitle {
     font-size: 20px;
-  }
-  .menu__email {
-    font-size: 24px !important;
   }
   .home_page li.dropdown-toggle:hover .dropdown-menu {
     display: none;
@@ -1973,30 +1967,4 @@ ul.brand-listing li {
   border-radius: 50%;
   border: 1px solid #dbdbdb;
   background-color: #dbdbdb;
-}
-
-/* Temporary home page release changes */
-.menu {
-  display: grid;
-  height: 100vh;
-  place-items: center;
-}
-.menu__email {
-  color: #dddddd;
-  font-size: 2vmax;
-  opacity: 1;
-  transform: translateY(0%);
-  transition: all ease-in 200ms;
-}
-.menu__email:hover {
-  color: #eaad67;
-}
-.menu__hidden {
-  opacity: 0;
-  transform: translateY(50%);
-}
-@media screen and (max-width: 768px) {
-  .menu__email {
-    font-size: 1.5rem;
-  }
 }
