@@ -95,7 +95,6 @@ async function homePageOpeningAnimationPromise() {
   homePageOpeningAnimation
     .add({
       targets: ".left_img, .right_img",
-      delay: 1000,
       duration: 2000,
       opacity: [0, 1],
       easing: "easeInExpo",
@@ -115,7 +114,7 @@ async function discoverVideoHidePromise() {
   var discoverVideoHide = anime({
     targets: ".discover_video",
     opacity: [1, 0],
-    duration: 3000,
+    duration: 2000,
     easing: "easeOutExpo",
   });
   await Promise.resolve(discoverVideoHide.finished);
