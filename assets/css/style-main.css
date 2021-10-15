@@ -61,7 +61,6 @@ body a {
   top: -3px;
   border-radius: 50%;
   z-index: 11000;
-  background: #dddddd;
 }
 .cursor--canvas {
   width: 100vw;
