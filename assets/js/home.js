@@ -1,15 +1,3 @@
-// check if it is a mobile screen
-function checkIfItIsMobile() {
-  if (
-    window.matchMedia("(max-width: 767px)").matches ||
-    window.matchMedia("(max-width: 1024px)").matches
-  ) {
-    return true;
-  }
-  return false;
-}
-const isAMobileDevice = checkIfItIsMobile();
-
 var hamburgerMenu = document.querySelector(".hamburger__menu");
 var hamburgerMenuButton = document.querySelector("#btnHamburger");
 var upperBurger = document.querySelector(".upperBurger");
