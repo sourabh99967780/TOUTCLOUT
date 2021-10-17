@@ -97,6 +97,8 @@ body a {
   top: 0;
   right: 0;
   left: 0;
+}
+.home_page .menu-logo {
   transform: translateY(-100%);
 }
 .menu-logo img {
@@ -114,10 +116,26 @@ body a {
   display: block;
   width: 26px;
   height: 2px;
-  background-color: #dddddd;
   transition: all 300ms ease-in-out;
   transform-origin: 3px 1px;
 }
+
+.home_page .bun,
+.home_page .upperBurger,
+.home_page .lowerBurger__firstHalf,
+.home_page .lowerBurger__secondHalf,
+.home_page .lowerBurger__thirdHalf {
+  background-color: #dddddd;
+}
+
+.who_we_are .bun,
+.who_we_are .upperBurger,
+.who_we_are .lowerBurger__firstHalf,
+.who_we_are .lowerBurger__secondHalf,
+.who_we_are .lowerBurger__thirdHalf {
+  background-color: #262728;
+}
+
 .lowerBurger {
   display: flex;
   justify-content: space-between;
@@ -128,21 +146,18 @@ body a {
 .lowerBurger__firstHalf {
   width: 20px;
   height: 2px;
-  background-color: #dddddd;
   transition: all 300ms ease-in-out;
 }
 
 .lowerBurger__secondHalf {
   width: 2px;
   height: 2px;
-  background-color: #dddddd;
   transition: all 300ms ease-in-out;
 }
 
 .lowerBurger__thirdHalf {
   width: 0px;
   height: 2px;
-  background-color: #dddddd;
   transition: all 300ms ease-in-out;
 }
 
@@ -530,7 +545,7 @@ body a {
 }
 .img_text_container {
   position: relative;
-  bottom: -89px;
+  bottom: -5.5625em;
   z-index: 2;
 }
 

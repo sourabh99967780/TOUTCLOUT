@@ -185,41 +185,6 @@ const initCanvas = () => {
 
 initCanvas();
 
-// handle click event on hamburger menu
-hamburgerMenu.addEventListener("click", function () {
-  hamburgerMenuButton.classList.toggle("menu__active");
-  upperBurger.style.width = "26px";
-  $(".menu").toggleClass("active");
-});
-
-if (!isAMobileDevice) {
-  // handle hover event on hamburger menu
-  hamburgerMenu.addEventListener("mouseover", function () {
-    if (hamburgerMenuButton.classList.contains("menu__active")) {
-      upperBurger.style.width = "26px";
-      lowerBurgerFirstHalf.style.width = "2px";
-      lowerBurgerSecondHalf.style.width = "20px";
-    } else {
-      upperBurger.style.width = "20px";
-      lowerBurgerFirstHalf.style.width = "2px";
-      lowerBurgerSecondHalf.style.width = "20px";
-    }
-  });
-
-  // handle mouseout event on hamburger menu
-  hamburgerMenu.addEventListener("mouseout", function () {
-    if (hamburgerMenuButton.classList.contains("menu__active")) {
-      upperBurger.style.width = "26px";
-      lowerBurgerFirstHalf.style.width = "20px";
-      lowerBurgerSecondHalf.style.width = "2px";
-    } else {
-      upperBurger.style.width = "26px";
-      lowerBurgerFirstHalf.style.width = "20px";
-      lowerBurgerSecondHalf.style.width = "2px";
-    }
-  });
-}
-
 textWrapper.innerHTML =
   '<span class="letter">G</span><span class="letter">r</span><span class="letter">e</span><span class="letter">a</span><span class="letter">t</span> <i><span class="letter">idea</span></i> <span class="letter">i</span><span class="letter">s</span> <span class="letter">y</span><span class="letter">e</span><span class="letter">t</span> <span class="letter">t</span><span class="letter">o</span> <span class="letter">b</span><span class="letter">e</span>';
 

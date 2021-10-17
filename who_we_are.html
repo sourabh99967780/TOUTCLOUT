@@ -24,16 +24,24 @@
     </style>
 </head>
 
-<body>
+<body class="who_we_are">
     <div class="cursor cursor--small"></div>
     <canvas class="cursor cursor--canvas" resize></canvas>
     <div class="top_header">
         <div class="container">
             <div class="menu-logo">
-                <a href="index.html"><img src="assets/img/black_logo.svg" class="img-fluid"></a>
-                <nav class="menu-opener">
-                    <div class="menu-opener-inner"></div>
-                </nav>
+                <a href="index.html"><img src="assets/img/black_logo.svg" class="img-logo" /></a>
+                <div class="hamburger__menu">
+                    <a id="btnHamburger" class="menu__toggle">
+                        <span class="upperBurger"></span>
+                        <span class="bun"></span>
+                        <span class="lowerBurger">
+                            <span class="lowerBurger__firstHalf"></span>
+                            <span class="lowerBurger__secondHalf"></span>
+                            <span class="lowerBurger__thirdHalf display-none"></span>
+                        </span>
+                    </a>
+                </div>
             </div>
             <nav class="menu">
                 <ul class="menu-inner">
