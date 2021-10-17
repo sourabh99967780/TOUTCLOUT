@@ -11,13 +11,11 @@
       rel="stylesheet"
     />
     <style>
-        .triangle_list {
-            list-style-type: none;
-        }
-        .triangle_list li:before {
-            content: "\25B2";
-            margin-right: 1em;
-            font-size: 0.6em;
+        @media (max-width: 600px) {
+            .section_list {
+                flex-direction: column;
+                text-align: center;
+            }
         }
     </style>
     <title>Email Template</title>
@@ -60,6 +58,7 @@
           justify-content: space-between;
           margin-bottom: 4.5em;
         "
+        class="section_list"
       >
         <div>
           <div
@@ -67,11 +66,11 @@
           >
             Branding
           </div>
-          <ul style="font-weight: 400; padding: 0; list-style: none;" class="triangle_list">
-            <li style="display: flex; align-items: center;">Brand Strategy</li>
-            <li style="display: flex; align-items: center;">Brand Identity</li>
-            <li style="display: flex; align-items: center;">Brand Positioning</li>
-            <li style="display: flex; align-items: center;">Brand Activation</li>
+          <ul style="font-weight: 400; padding: 0; list-style-type: circle; padding-left: 1em;" class="triangle_list">
+            <li>Brand Strategy</li>
+            <li>Brand Identity</li>
+            <li>Brand Positioning</li>
+            <li>Brand Activation</li>
           </ul>
         </div>
         <div>
