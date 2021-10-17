@@ -16,7 +16,7 @@
     />
     <style>
       @media (max-width: 600px) {
-        .section_list {
+        .section_list_container {
           flex-direction: column;
           text-align: center;
         }
@@ -29,6 +29,12 @@
         .footer_contact>a:nth-child(1) {
             margin-bottom: 1.5em;
             text-align: center;
+        }
+        .section_list {
+            margin-bottom: 1.5em;
+        }
+        .section_list-title {
+            margin-left: 1em;
         }
       }
       @media (min-width: 600px) {
@@ -92,15 +98,16 @@
           justify-content: space-between;
           margin-bottom: 4.5em;
         "
-        class="section_list"
+        class="section_list_container"
       >
-        <div>
+        <div class="section_list">
           <div
             style="
               text-transform: uppercase;
               font-weight: 400;
               font-size: 1.2rem;
             "
+            class="section_list-title"
           >
             Branding
           </div>
@@ -119,13 +126,14 @@
             <li>Brand Activation</li>
           </ul>
         </div>
-        <div>
+        <div class="section_list">
           <div
             style="
               text-transform: uppercase;
               font-weight: 400;
               font-size: 1.2rem;
             "
+            class="section_list-title"
           >
             Website
           </div>
@@ -136,13 +144,14 @@
             <li>Analytics & Maintainance</li>
           </ul>
         </div>
-        <div>
+        <div class="section_list">
           <div
             style="
               text-transform: uppercase;
               font-weight: 400;
               font-size: 1.2rem;
             "
+            class="section_list-title"
           >
             Digital
           </div>
