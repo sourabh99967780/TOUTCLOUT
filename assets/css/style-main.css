@@ -536,9 +536,9 @@ body a {
 
 .values_contant {
   background: hsl(0, 0%, 97%);
-  padding: 22% 0 100px 0;
+  padding: 17.3125em 0 6.5em 0;
   position: relative;
-  top: 4em;
+  margin-top: 4em;
 }
 .values_contant .title h2 {
   font-style: italic;
@@ -574,8 +574,8 @@ body a {
 }
 
 .approach_contant {
-  padding-top: 0;
-  padding-bottom: 35px;
+  padding-top: 7.5625em;
+  padding-bottom: 9.375em;
 }
 .approach_contant .title h2 {
   font-style: italic;
@@ -628,11 +628,11 @@ body a {
 }
 
 .story_contant {
-  margin-top: 100px;
-  padding: 100px 0;
   background-color: #484c50;
   position: relative;
   z-index: 1;
+  padding-top: 7.5625em;
+  padding-bottom: 9.375em;
 }
 .story_contant .title h2 {
   font-style: italic;
@@ -644,7 +644,7 @@ body a {
   margin-bottom: 20px;
 }
 .story_contant .title p {
-  margin-bottom: 70px;
+  margin-bottom: 6.25em;
   color: #c1c1c1;
   text-align: center;
 }
