@@ -20,6 +20,16 @@
           flex-direction: column;
           text-align: center;
         }
+        .footer_contact {
+            flex-direction: column;
+        }
+        .footer_contact>span {
+            display: none;
+        }
+        .footer_contact>a:nth-child(1) {
+            margin-bottom: 1.5em;
+            text-align: center;
+        }
       }
       @media (min-width: 600px) {
         body {
@@ -237,7 +247,7 @@
         style="text-decoration: none; color: #484c50"
         >www.toutclout.com</a
       >
-      <div style="margin-top: 1.5em; display: flex; justify-content: space-evenly; width: 100%;">
+      <div style="margin: 1.5em auto; display: flex; justify-content: space-between; width: 50%;" class="footer_contact">
         <a
           href="mailto:hello@toutclout.com"
           target="_blank"
@@ -245,7 +255,7 @@
           ><i class="bx bx-mail-send" style="margin-right: 0.5em"></i
           ><span>hello@toutclout.com</span></a
         >
-        |
+        <span>|</span>
         <a
           href="tel:+91 99588 35063"
           style="text-decoration: none; color: #484c50; display: flex; align-items: center;"
