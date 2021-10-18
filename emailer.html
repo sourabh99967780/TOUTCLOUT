@@ -22,6 +22,7 @@
         }
         .footer_contact {
             flex-direction: column;
+            align-items: center;
         }
         .footer_contact>span {
             display: none;
@@ -40,6 +41,15 @@
       @media (min-width: 600px) {
         body {
             max-width: 60%;
+        }
+        .footer_contact {
+          width: 50%;
+        }
+        .section_meta {
+          max-width: 60%;
+        }
+        .footer_text {
+          max-width: 80%;
         }
       }
     </style>
@@ -82,11 +92,11 @@
       >
         <div
           style="
-            max-width: 60%;
             text-align: center;
             font-style: italic;
             font-weight: 700;
           "
+          class="setion_meta"
         >
           In a world of information overload, <br />
           we aim to make meaningful connections through
@@ -210,8 +220,10 @@
           right: 0;
           bottom: 0;
           top: 38%;
-          filter: brightness(0.05);
+          filter: brightness(0);
+          opacity: 0.2;
         "
+        class="footer_sidegraphic"
       />
       <img
         src="assets/img/email/email_footer_smallIcon-01.svg"
@@ -228,8 +240,8 @@
             display: flex;
             flex-direction: column;
             margin-bottom: 2em;
-            max-width: 80%;
           "
+          class="footer_text"
         >
           <div>"We meet you where you are!</div>
           <div>
@@ -256,7 +268,7 @@
         style="text-decoration: none; color: #484c50"
         >www.toutclout.com</a
       >
-      <div style="margin: 1.5em auto; display: flex; justify-content: space-between; width: 50%;" class="footer_contact">
+      <div style="margin: 1.5em auto; display: flex; justify-content: space-between;" class="footer_contact">
         <a
           href="mailto:hello@toutclout.com"
           target="_blank"
