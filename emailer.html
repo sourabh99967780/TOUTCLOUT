@@ -38,6 +38,9 @@
         margin-right: 0.5em;
         line-height: 1.05;
       }
+      .section_icon {
+        width: 12%;
+      }
       @media (max-width: 600px) {
         .section_list_container {
           flex-direction: column;
@@ -69,6 +72,9 @@
         .triangle_list li span {
           flex: 1;
         }
+        .section_icon {
+          width: 20%;
+        }
       }
       @media (min-width: 600px) {
         .container {
@@ -79,6 +85,10 @@
         }
         .footer_text {
           max-width: 80%;
+        }
+        .section_icon_container {
+          padding-left: 4em;
+          padding-right: 4em;
         }
       }
     </style>
@@ -147,6 +157,7 @@
                   text-transform: uppercase;
                   font-weight: 600;
                   font-size: 1.1rem;
+                  padding-left: 2px;;
                 "
                 class="section_list-title"
               >
@@ -204,28 +215,27 @@
               justify-content: space-between;
               gap: 1em;
               margin-bottom: 1.5em;
-              padding-left: 4em;
-              padding-right: 4em;
             "
+            class="section_icon_container"
           >
             <img
               src="assets/img/email/svg/email_section_icon1-01.svg"
-              style="width: 12%"
+              class="section_icon"
               alt=""
             />
             <img
               src="assets/img/email/svg/email_section_icon2-01.svg"
-              style="width: 12%"
+              class="section_icon"
               alt=""
             />
             <img
               src="assets/img/email/svg/email_section_icon3-01.svg"
-              style="width: 12%"
+              class="section_icon"
               alt=""
             />
             <img
               src="assets/img/email/svg/email_section_icon4-01.svg"
-              style="width: 12%"
+              class="section_icon"
               alt=""
             />
           </div>
@@ -329,7 +339,7 @@
               ><span>+919958835063</span></a
             >
           </div>
-          <p style="text-align: center; color: #484c50; padding-top: 1.5em">
+          <p style="text-align: center; color: #484c50; padding-top: 1.5em; margin: 0;">
             <strong>&copy;</strong> <span style="margin-right: 5px;">TOUTCLOUT LLP.</span> All Rights Reserved.
           </p>
         </footer>
