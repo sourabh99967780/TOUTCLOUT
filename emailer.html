@@ -16,8 +16,14 @@
     />
     <style>
       body {
+        padding: 0;
+        margin: 0;
+        font-family: 'Lato', sans-serif;
         font-size: 14px;
         background-color: #e5e5e550;
+      }
+      .container {
+        margin: 0 auto;
       }
       @media (max-width: 600px) {
         .section_list_container {
@@ -45,7 +51,7 @@
         }
       }
       @media (min-width: 600px) {
-        body {
+        .container {
           max-width: 60%;
         }
         .section_meta {
@@ -58,246 +64,166 @@
     </style>
     <title>Email Template</title>
   </head>
-  <body style="padding: 0; margin: 0 auto; font-family: 'Lato', sans-serif">
-    <section style="padding: 3.75em; background-color: #484c50">
-      <img
-        src="assets/img/email/svg/email_head_imae-01.svg"
-        alt="Toutclout Graphic"
-        style="width: 100%; height: 3.125em; margin-bottom: 2.25em"
-      />
-      <img
-        src="assets/img/email/svg/email_head_logo-01.svg"
-        alt="Toutclout"
-        style="width: 100%; height: 1.5625em"
-      />
-    </section>
-    <section
-      style="
-        background-color: #e5e5e5;
-        padding: 2.875em;
-        color: #484c50;
-        position: relative;
-      "
-    >
-      <img
-        src="assets/img/email/svg/email_section_sidegraphic-01.svg"
-        alt=""
-        style="height: 14em; position: absolute; top: 22%; left: 0; bottom: 0"
-      />
-      <div
-        style="display: flex; justify-content: center; padding-bottom: 3.8125em"
-      >
-        <div
-          style="text-align: center; font-style: italic; font-weight: 700"
-          class="setion_meta"
-        >
-          In a world of information overload, <br />
-          we aim to make meaningful connections through
-        </div>
-      </div>
-      <div
-        style="
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 4.5em;
-        "
-        class="section_list_container"
-      >
-        <div class="section_list">
-          <div
-            style="
-              text-transform: uppercase;
-              font-weight: 400;
-              font-size: 1.2rem;
-            "
-            class="section_list-title"
-          >
-            Branding
+  <body style="padding: 0;">
+    <div class="maxWidth-container">
+      <div class="container">
+        <section style="padding: 3.75em; background-color: #484c50">
+          <img src="assets/img/email/svg/email_head_imae-01.svg" alt="Toutclout Graphic"
+            style="width: 100%; height: 3.125em; margin-bottom: 2.25em" />
+          <img src="assets/img/email/svg/email_head_logo-01.svg" alt="Toutclout" style="width: 100%; height: 1.5625em" />
+        </section>
+        <section style="
+                background-color: #e5e5e5;
+                padding: 2.875em;
+                color: #484c50;
+                position: relative;
+              ">
+          <img src="assets/img/email/svg/email_section_sidegraphic-01.svg" alt=""
+            style="height: 14em; position: absolute; top: 22%; left: 0; bottom: 0" />
+          <div style="display: flex; justify-content: center; padding-bottom: 3.8125em">
+            <div style="text-align: center; font-style: italic; font-weight: 700" class="setion_meta">
+              In a world of information overload, <br />
+              we aim to make meaningful connections through
+            </div>
           </div>
-          <ul
-            style="
-              font-weight: 400;
-              padding: 0;
-              list-style-type: circle;
-              padding-left: 1em;
-            "
-            class="triangle_list"
-          >
-            <li>Brand Strategy</li>
-            <li>Brand Identity</li>
-            <li>Brand Positioning</li>
-            <li>Brand Activation</li>
-          </ul>
-        </div>
-        <div class="section_list">
-          <div
-            style="
-              text-transform: uppercase;
-              font-weight: 400;
-              font-size: 1.2rem;
-            "
-            class="section_list-title"
-          >
-            Website
+          <div style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-bottom: 4.5em;
+                " class="section_list_container">
+            <div class="section_list">
+              <div style="
+                      text-transform: uppercase;
+                      font-weight: 400;
+                      font-size: 1.2rem;
+                    " class="section_list-title">
+                Branding
+              </div>
+              <ul style="
+                      font-weight: 400;
+                      padding: 0;
+                      list-style-type: circle;
+                      padding-left: 1em;
+                    " class="triangle_list">
+                <li>Brand Strategy</li>
+                <li>Brand Identity</li>
+                <li>Brand Positioning</li>
+                <li>Brand Activation</li>
+              </ul>
+            </div>
+            <div class="section_list">
+              <div style="
+                      text-transform: uppercase;
+                      font-weight: 400;
+                      font-size: 1.2rem;
+                    " class="section_list-title">
+                Website
+              </div>
+              <ul style="list-style-type: square; padding: 0; padding-left: 1em">
+                <li>UX & UI</li>
+                <li>Content & SEO</li>
+                <li>Design & Development</li>
+                <li>Analytics & Maintainance</li>
+              </ul>
+            </div>
+            <div class="section_list">
+              <div style="
+                      text-transform: uppercase;
+                      font-weight: 400;
+                      font-size: 1.2rem;
+                    " class="section_list-title">
+                Digital
+              </div>
+              <ul style="list-style-type: disc; padding: 0; padding-left: 1em">
+                <li>Social Media Marketing</li>
+                <li>Performance Marketing</li>
+                <li>Content Marketing</li>
+                <li>ORM</li>
+              </ul>
+            </div>
           </div>
-          <ul style="list-style-type: square; padding: 0; padding-left: 1em">
-            <li>UX & UI</li>
-            <li>Content & SEO</li>
-            <li>Design & Development</li>
-            <li>Analytics & Maintainance</li>
-          </ul>
-        </div>
-        <div class="section_list">
-          <div
-            style="
-              text-transform: uppercase;
-              font-weight: 400;
-              font-size: 1.2rem;
-            "
-            class="section_list-title"
-          >
-            Digital
+          <div style="
+                  display: flex;
+                  justify-content: space-between;
+                  gap: 1em;
+                  margin-bottom: 1.5em;
+                ">
+            <img src="assets/img/email/svg/email_section_icon1-01.svg" style="width: 15%" alt="" />
+            <img src="assets/img/email/svg/email_section_icon2-01.svg" style="width: 15%" alt="" />
+            <img src="assets/img/email/svg/email_section_icon3-01.svg" style="width: 15%" alt="" />
+            <img src="assets/img/email/svg/email_section_icon4-01.svg" style="width: 15%" alt="" />
           </div>
-          <ul style="list-style-type: disc; padding: 0; padding-left: 1em">
-            <li>Social Media Marketing</li>
-            <li>Performance Marketing</li>
-            <li>Content Marketing</li>
-            <li>ORM</li>
-          </ul>
-        </div>
-      </div>
-      <div
-        style="
-          display: flex;
-          justify-content: space-between;
-          gap: 1em;
-          margin-bottom: 1.5em;
-        "
-      >
-        <img
-          src="assets/img/email/svg/email_section_icon1-01.svg"
-          style="width: 15%"
-          alt=""
-        />
-        <img
-          src="assets/img/email/svg/email_section_icon2-01.svg"
-          style="width: 15%"
-          alt=""
-        />
-        <img
-          src="assets/img/email/svg/email_section_icon3-01.svg"
-          style="width: 15%"
-          alt=""
-        />
-        <img
-          src="assets/img/email/svg/email_section_icon4-01.svg"
-          style="width: 15%"
-          alt=""
-        />
-      </div>
-    </section>
-    <section
-      style="
-        padding: 3.25em;
-        background-color: #525f83;
-        color: #daae7d;
-        position: relative;
-      "
-    >
-      <img
-        src="assets/img/email/svg/email_footer_sidegraphic-01.svg"
-        alt=""
-        style="
-          position: absolute;
-          height: 9em;
-          right: 0;
-          bottom: 0;
-          top: 38%;
-          filter: brightness(0);
-          opacity: 0.2;
-        "
-        class="footer_sidegraphic"
-      />
-      <img
-        src="assets/img/email/svg/email_footer_smallIcon-01.svg"
-        style="height: 1.125em; width: 100%; margin-bottom: 2em"
-        alt=""
-      />
-      <div style="display: flex; justify-content: center">
-        <div
-          style="
-            text-align: center;
-            font-style: italic;
-            font-size: 1rem;
-            gap: 1em;
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 2em;
-          "
-          class="footer_text"
-        >
-          <div>"We meet you where you are!</div>
-          <div>
-            For us, it’s all about what adds value to a business, which is why
-            we <br />
-            collaborate with you to build powerful brand ecosystem <br />
-            while keeping your roots intact.
+        </section>
+        <section style="
+                padding: 3.25em;
+                background-color: #525f83;
+                color: #daae7d;
+                position: relative;
+              ">
+          <img src="assets/img/email/svg/email_footer_sidegraphic-01.svg" alt="" style="
+                  position: absolute;
+                  height: 9em;
+                  right: 0;
+                  bottom: 0;
+                  top: 38%;
+                  filter: brightness(0);
+                  opacity: 0.2;
+                " class="footer_sidegraphic" />
+          <img src="assets/img/email/svg/email_footer_smallIcon-01.svg" style="height: 1.125em; width: 100%; margin-bottom: 2em"
+            alt="" />
+          <div style="display: flex; justify-content: center">
+            <div style="
+                    text-align: center;
+                    font-style: italic;
+                    font-size: 1rem;
+                    gap: 1em;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 2em;
+                  " class="footer_text">
+              <div>"We meet you where you are!</div>
+              <div>
+                For us, it’s all about what adds value to a business, which is why
+                we <br />
+                collaborate with you to build powerful brand ecosystem <br />
+                while keeping your roots intact.
+              </div>
+              <div>
+                We go above and beyond to deliver bespoke creative solutions <br />
+                that make brands better known, better understood, and truly unique."
+              </div>
+            </div>
           </div>
-          <div>
-            We go above and beyond to deliver bespoke creative solutions <br />
-            that make brands better known, better understood, and truly unique."
+          <img src="assets/img/email/svg/email_footer_bottomicon-01.svg" style="height: 7em; width: 100%; padding-left: 1em"
+            alt="" />
+        </section>
+        <footer style="padding: 3.25em; text-align: center">
+          <a href="https://www.toutclout.com" style="color: #484c50">www.toutclout.com</a>
+          <div style="
+                  display: flex;
+                  justify-content: center;
+                  gap: 1em;
+                  margin: 0.5em 0;
+                  color: #484c50;
+                " class="footer_contact">
+            <a href="mailto:hello@toutclout.com" target="_blank" style="
+                    text-decoration: none;
+                    color: #484c50;
+                    display: flex;
+                    align-items: center;
+                  "><i class="bx bx-mail-send" style="margin-right: 0.5em"></i><span>hello@toutclout.com</span></a>
+            <a href="tel:+919958835063" style="
+                    text-decoration: none;
+                    color: #484c50;
+                    display: flex;
+                    align-items: center;
+                  "><i class="bx bxs-phone" style="margin-right: 0.5em"></i><span>+919958835063</span></a>
           </div>
-        </div>
+          <p style="text-align: center; color: #484c50; padding-top: 1.5em">
+            <strong>&copy;</strong> TOUTCLOUT LLP. All Rights Reserved.
+          </p>
+        </footer>
       </div>
-      <img
-        src="assets/img/email/svg/email_footer_bottomicon-01.svg"
-        style="height: 7em; width: 100%; padding-left: 1em;"
-        alt=""
-      />
-    </section>
-    <footer
-      style="padding: 3.25em; text-align: center; background-color: #e5e5e550"
-    >
-    <p style="text-align: center; color: #484c50;">&copy; Toutclout LLP. All Rights Reserved.</p>
-      <a
-        href="https://www.toutclout.com"
-        style="text-decoration: none; color: #484c50;"
-        >www.toutclout.com</a
-      >
-      <div
-        style="
-          display: flex;
-          justify-content: center;
-          gap: 1em;
-          margin: 0.5em 0;
-          color: #484c50;
-        "
-        class="footer_contact"
-      >
-        <a
-          href="mailto:hello@toutclout.com"
-          target="_blank"
-          style="
-            text-decoration: none;
-            color: #484c50;
-            display: flex;
-            align-items: center;
-          "
-          ><i class="bx bx-mail-send" style="margin-right: 0.5em"></i
-          ><span>hello@toutclout.com</span></a
-        >
-        <a
-          href="tel:+919958835063"
-          style="
-            text-decoration: none;
-            color: #484c50;
-            display: flex;
-            align-items: center;
-          "
-          ><i class="bx bxs-phone" style="margin-right: 0.5em"></i
-          ><span>+919958835063</span></a
-        >
-      </div>
-    </footer>
+    </div>
   </body>
 </html>
