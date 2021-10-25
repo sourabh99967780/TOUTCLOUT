@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/black/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/black/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/black/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicon/black/site.webmanifest">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: "Lato", sans-serif;
+            font-size: 14px;
+            background-color: #e5e5e550;
+        }
+
+        .container {
+            margin: 0 auto;
+        }
+
+        li span {
+            position: relative;
+            left: -3px;
+        }
+
+        .triangle_list {
+            list-style-type: none;
+        }
+
+        .triangle_list li::before {
+            content: "▴";
+            font-size: 1.2em;
+            margin-right: 0.5em;
+            line-height: 1.05;
+        }
+
+        .section_icon {
+            width: 12%;
+        }
+
+        @media (max-width: 600px) {
+            .section_list_container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer_contact {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5em !important;
+                margin: 1em auto !important;
+            }
+
+            .footer_contact>span {
+                display: none;
+            }
+
+            .footer_contact>a:nth-child(1) {
+                margin-bottom: 0.5em;
+                text-align: center;
+            }
+
+            .section_list {
+                margin-bottom: 1.5em;
+            }
+
+            .section_list-title {
+                margin-left: 1em;
+            }
+
+            .triangle_list li {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .triangle_list li span {
+                flex: 1;
+            }
+
+            .section_icon {
+                width: 20%;
+            }
+        }
+
+        @media (min-width: 600px) {
+            .container {
+                max-width: 60%;
+            }
+
+            .section_meta {
+                max-width: 60%;
+            }
+
+            .footer_text {
+                max-width: 80%;
+            }
+
+            .section_icon_container {
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+            }
+
+            li+li {
+                margin-top: 0.3em;
+            }
+        }
+    </style>
+    <title>TOUTCLOUT | Branding & Digital Marketing Agency</title>
+</head>
+
+<body style="padding: 0">
+    <div class="maxWidth-container">
+        <div class="container">
+            <section style="padding: 3.75em; background-color: #484c50">
+                <img src="assets/img/email/svg/email_head_imae-01.svg" alt="Toutclout Graphic"
+                    style="width: 100%; height: 3.125em; margin-bottom: 2.25em" />
+                <img src="assets/img/email/svg/email_head_logo-01.svg" alt="Toutclout"
+                    style="width: 100%; height: 1.5625em" />
+            </section>
+            <section style="
+            background-color: #e5e5e5;
+            padding: 2.875em;
+            color: #484c50;
+            position: relative;
+          ">
+                <img src="assets/img/email/svg/email_section_sidegraphic-01.svg" alt="" style="
+              height: 14em;
+              position: absolute;
+              top: 22%;
+              left: 0;
+              bottom: 0;
+            " />
+                <div style="
+              display: flex;
+              justify-content: center;
+              padding-bottom: 3.8125em;
+            ">
+                    <div style="text-align: center; font-style: italic; font-weight: 700" class="setion_meta">
+                        In a world of information overload, <br />
+                        we aim to make meaningful connections through
+                    </div>
+                </div>
+                <div style="
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 4.5em;
+            " class="section_list_container">
+                    <div class="section_list">
+                        <div style="
+                  text-transform: uppercase;
+                  font-weight: 600;
+                  font-size: 1.1rem;
+                  padding-left: 2px;;
+                " class="section_list-title">
+                            Branding
+                        </div>
+                        <ul style="font-weight: 400; padding: 0" class="triangle_list">
+                            <li><span>Brand Strategy</span></li>
+                            <li><span>Brand Identity</span></li>
+                            <li><span>Brand Positioning</span></li>
+                            <li><span>Brand Activation</span></li>
+                        </ul>
+                    </div>
+                    <div class="section_list">
+                        <div style="
+                  text-transform: uppercase;
+                  font-weight: 600;
+                  font-size: 1.1rem;
+                " class="section_list-title">
+                            Website
+                        </div>
+                        <ul style="list-style-type: square; padding: 0; padding-left: 1em">
+                            <li><span>UX & UI</span></li>
+                            <li><span>Content & SEO</span></li>
+                            <li><span>Design & Development</span></li>
+                            <li><span>Analytics & Maintainance</span></li>
+                        </ul>
+                    </div>
+                    <div class="section_list">
+                        <div style="
+                  text-transform: uppercase;
+                  font-weight: 600;
+                  font-size: 1.1rem;
+                " class="section_list-title">
+                            Digital
+                        </div>
+                        <ul style="list-style-type: disc; padding: 0; padding-left: 1em">
+                            <li><span>Social Media Marketing</span></li>
+                            <li><span>Performance Marketing</span></li>
+                            <li><span>Content Marketing</span></li>
+                            <li><span>ORM</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="
+              display: flex;
+              justify-content: space-between;
+              gap: 1em;
+              margin-bottom: 1.5em;
+            " class="section_icon_container">
+                    <img src="assets/img/email/svg/email_section_icon1-01.svg" class="section_icon" alt="" />
+                    <img src="assets/img/email/svg/email_section_icon2-01.svg" class="section_icon" alt="" />
+                    <img src="assets/img/email/svg/email_section_icon3-01.svg" class="section_icon" alt="" />
+                    <img src="assets/img/email/svg/email_section_icon4-01.svg" class="section_icon" alt="" />
+                </div>
+            </section>
+            <section style="
+            padding: 3.25em;
+            background-color: #525f83;
+            color: #daae7d;
+            position: relative;
+          ">
+                <img src="assets/img/email/svg/email_footer_sidegraphic-01.svg" alt="" style="
+              position: absolute;
+              height: 9em;
+              right: 0;
+              bottom: 0;
+              top: 38%;
+              filter: brightness(0);
+              opacity: 0.2;
+            " class="footer_sidegraphic" />
+                <img src="assets/img/email/svg/email_footer_smallIcon-01.svg"
+                    style="height: 1.125em; width: 100%; margin-bottom: 2em" alt="" />
+                <div style="display: flex; justify-content: center">
+                    <div style="
+                text-align: center;
+                font-style: italic;
+                font-size: 1rem;
+                gap: 1em;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 2em;
+              " class="footer_text">
+                        <div>"We meet you where you are!</div>
+                        <div>
+                            For us, it’s all about what adds value to a business, which is
+                            why we <br />
+                            collaborate with you to build powerful brand ecosystem <br />
+                            while keeping your roots intact.
+                        </div>
+                        <div>
+                            We go above and beyond to deliver bespoke creative solutions
+                            <br />
+                            that make brands better known, better understood, and truly
+                            unique."
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/img/email/svg/email_footer_bottomicon-01.svg"
+                    style="height: 7em; width: 100%; padding-left: 1em" alt="" />
+            </section>
+            <footer style="padding: 3.25em; text-align: center">
+                <a href="https://www.toutclout.com" style="color: #484c50">www.toutclout.com</a>
+                <div style="
+              display: flex;
+              justify-content: center;
+              gap: 1em;
+              margin: 0.5em 0;
+              color: #484c50;
+            " class="footer_contact">
+                    <a href="mailto:hello@toutclout.com" target="_blank" style="
+                text-decoration: none;
+                color: #484c50;
+                display: flex;
+                align-items: center;
+              "><i class="bx bx-mail-send" style="margin-right: 0.5em"></i><span>hello@toutclout.com</span></a>
+                    <a href="tel:+919958835063" style="
+                text-decoration: none;
+                color: #484c50;
+                display: flex;
+                align-items: center;
+              "><i class="bx bxs-phone" style="margin-right: 0.5em"></i><span>+91 99588 35063</span></a>
+                </div>
+                <p style="text-align: center; color: #484c50; padding-top: 1.5em; margin: 0;">
+                    <strong>&copy;</strong> <span style="margin-right: 5px;">TOUTCLOUT LLP.</span> All Rights Reserved.
+                </p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
