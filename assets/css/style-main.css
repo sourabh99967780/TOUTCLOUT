@@ -1356,6 +1356,15 @@ body a {
 .top_header .menu.active .menu-link {
   color: #ddd;
 }
+.who_we_are .menu.active .menu-link {
+  color: #262728;
+}
+.who_we_are .top_header .menu.active {
+  background-color: #ffffff;
+}
+.who_we_are .top_header li.dropdown-toggle .dropdown-menu .dropdown-item {
+  color: #262728;
+}
 .top_header li.dropdown-toggle::after {
   border-top-color: #ddd;
   display: none;
