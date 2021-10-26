@@ -20,41 +20,49 @@
       <link href="assets/css/style.css" rel="stylesheet">
       <link href="assets/css/style-main.css" rel="stylesheet">
       <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+      <style>
+         .cursor--small {
+            background: #262728;
+         }
+      </style>
    </head>
-   <body>
+   <body class="website">
+      <div class="cursor cursor--small"></div>
+      <canvas class="cursor cursor--canvas" resize></canvas>
       <main>
-
          <div class="top_header">
             <div class="container">
                 <div class="menu-logo">
                     <a href="index.html">
                       <img src="assets/img/black_logo.svg" class="img-fluid logo1">
-                      <img src="assets/img/light_logo.svg" class="img-fluid logo2">
                      </a>
-                    <nav class="menu-opener">
-                        <div class="menu-opener-inner"></div>
-                        <div class="hamburger" id="hamburger-1">
-                          <span class="line"></span>
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                    </nav>
+                  <div class="hamburger__menu">
+                     <a id="btnHamburger" class="menu__toggle">
+                        <span class="upperBurger"></span>
+                        <span class="bun"></span>
+                        <span class="lowerBurger">
+                           <span class="lowerBurger__firstHalf"></span>
+                           <span class="lowerBurger__secondHalf"></span>
+                           <span class="lowerBurger__thirdHalf display-none"></span>
+                        </span>
+                     </a>
+                  </div>
                 </div>
                 <nav class="menu">
                     <ul class="menu-inner">
                         <li>
-                            <a href="who_we_are.html" class="menu-link">Who we are</a>
+                            <a href="who_we_are" class="menu-link">Who we are</a>
                         </li>
                         <li class="dropdown dropdown-toggle" id="dropdownMenuButton">
                             <a href="#" class="menu-link">What we do</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="branding.html">Branding</a>
-                                <a class="dropdown-item active-link" href="website_design.html">Website</a>
-                                <a class="dropdown-item" href="digital.html">Digital</a>
+                                <a class="dropdown-item" href="branding">Branding</a>
+                                <a class="dropdown-item active-link" href="website_design">Website</a>
+                                <a class="dropdown-item" href="digital">Digital</a>
                             </div>
                         </li>
                         <li>
-                            <a href="tack_to_us.html" class="menu-link">Talk to us</a>
+                            <a href="talk_to_us" class="menu-link">Talk to us</a>
                         </li>
                         
                     </ul>
@@ -243,24 +251,11 @@
       <script src="assets/vendor/aos/aos.js"></script>
       <!-------Slick slider js---------> 
       <script type="text/javascript" src="assets/js/slick.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.15/paper-full.min.js"
+         integrity="sha512-ovjLI1ZcZe6bw+ImQ21r+sv8q/Vwob2kq7tFidK6E1LWfi0T4uobbmpfEU1//a9h9o5Kkt+MnMWf6rWlg0EiMw=="
+         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
       <script src="assets/js/main.js"></script>
-      <script>
-        $(".menu-opener").click(function () {
-          $(".menu-opener, .menu-opener-inner, .menu").toggleClass("active");
-          if($("body,html").hasClass("overhide")) 
-          {
-            $("body,html").removeClass("overhide");
-            $(".logo2").removeClass("over_show");
-            $(".logo1").removeClass("over_hide");
-            
-          }
-          else
-          {
-            $("body,html").addClass("overhide");
-            $(".logo2").addClass("over_show");
-            $(".logo1").addClass("over_hide");
-          }     
-        });
-    </script>
+      <script src="assets/js/websiteDesign.js"></script>
    </body>
 </html>
