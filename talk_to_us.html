@@ -1,151 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Talk to us</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link rel="icon" href="assets/img/toutefavicon.png" type="image/svg+xml" />
 
-  <title>Talk to us</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link rel="icon" href="assets/img/toutefavicon.png" type="image/svg+xml">
+    <!-- Main CSS File -->
+    <link href="assets/css/style-main.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css"
+      media="all"
+    />
+    <style>
+      .cursor--small {
+        background: #dddddd;
+      }
+    </style>
+  </head>
 
-  <!-- Main CSS File -->
-  <link href="assets/css/style-main.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
-  <style>
-    .cursor--small {
-      background: #dddddd;
-    }
-  </style>
-</head>
-
-<body class="talk_to_us">
-  <div class="cursor cursor--small"></div>
-  <canvas class="cursor cursor--canvas" resize></canvas>
-  <section class="contact_us">
-    <div class="container">
-      <div class="menu-logo">
-        <a href="index.html"><img src="assets/img/white_logo.svg" class="img-fluid"></a>
-        <div class="hamburger__menu">
-          <a id="btnHamburger" class="menu__toggle">
-            <span class="upperBurger"></span>
-            <span class="bun"></span>
-            <span class="lowerBurger">
-              <span class="lowerBurger__firstHalf"></span>
-              <span class="lowerBurger__secondHalf"></span>
-              <span class="lowerBurger__thirdHalf display-none"></span>
-            </span>
-          </a>
+  <body class="talk_to_us">
+    <div class="cursor cursor--small"></div>
+    <canvas class="cursor cursor--canvas" resize></canvas>
+    <section class="contact_us">
+      <div class="container">
+        <div class="menu-logo">
+          <a href="index.html"
+            ><img src="assets/img/white_logo.svg" class="img-fluid"
+          /></a>
+          <div class="hamburger__menu">
+            <a id="btnHamburger" class="menu__toggle">
+              <span class="upperBurger"></span>
+              <span class="bun"></span>
+              <span class="lowerBurger">
+                <span class="lowerBurger__firstHalf"></span>
+                <span class="lowerBurger__secondHalf"></span>
+                <span class="lowerBurger__thirdHalf display-none"></span>
+              </span>
+            </a>
+          </div>
         </div>
-      </div>
-      <nav class="menu">
-        <ul class="menu-inner">
-          <li>
-            <a href="who_we_are" class="menu-link">Who we are</a>
-          </li>
-          <li class="dropdown dropdown-toggle" id="dropdownMenuButton">
-            <a href="#" class="menu-link">What we do</a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item " href="branding">Branding</a>
-              <a class="dropdown-item" href="website_design">Website</a>
-              <a class="dropdown-item" href="digital">Digital</a>
-            </div>
-          </li>
-          <li>
-            <a href="talk_to_us" class="menu-link active-link">Talk to us</a>
-          </li>
-
-          <!-- <a href="#" class="menu-link">
-            <li>Templates</li>
-          </a>
-          <a href="#" class="menu-link">
-            <li>Contact</li>
-          </a> -->
-        </ul>
-      </nav>
-      <div class="d-flex flex_item">
-        <div class="form_content">
-          <h4>Enough about us! <i>Let’s talk about you.</i></h4>
-          <form>
-            <div class="form-group">
-              <label for="form_nme">What’s your name?</label>
-              <input type="text" class="form-control" id="form_name">
-            </div>
-            <div class="form-group">
-              <label for="form_help">It’s great connecting with you <i>Deepeswari</i> What can we help you with?</label>
-              <input type="text" class="form-control" id="form_help">
-            </div>
-            <div class="form-group">
-              <label for="form_email">Wonderful! What’s your email address?</label>
-              <input type="email" class="form-control" id="form_email">
-            </div>
-            <div class="form-group">
-              <label for="form_number">We’ll be happy to reach out to you on call.</label>
-              <input type="number" class="form-control" id="form_number">
-            </div>
-            <button type="button" class="btn">send</button>
-          </form>
-          <div class="d-flex social_content">
+        <nav class="menu">
+          <ul class="menu-inner">
+            <li>
+              <a href="who_we_are" class="menu-link">Who we are</a>
+            </li>
+            <li class="dropdown dropdown-toggle" id="dropdownMenuButton">
+              <a href="#" class="menu-link">What we do</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="branding">Branding</a>
+                <a class="dropdown-item" href="website_design">Website</a>
+                <a class="dropdown-item" href="digital">Digital</a>
+              </div>
+            </li>
+            <li>
+              <a href="talk_to_us" class="menu-link active-link">Talk to us</a>
+            </li>
+            <!-- <a href="#" class="menu-link">
+              <li>Templates</li>
+            </a>
+            <a href="#" class="menu-link">
+              <li>Contact</li>
+            </a> -->
+          </ul>
+        </nav>
+        <div class="d-flex flex_item">
+          <div class="form_content" id="contact-form">
+            <h4>Enough about us! <i>Let’s talk about you.</i></h4>
+            <form v-on:submit.prevent="emailAndSaveInDatabase">
+              <div class="form-group">
+                <label for="form_nme">What’s your name?</label>
+                <input type="text" class="form-control" id="form_name" v-model="name" />
+              </div>
+              <div class="form-group">
+                <label for="form_help"
+                  >It’s great connecting with you <i>Deepeswari</i> What can we
+                  help you with?</label
+                >
+                <input type="text" class="form-control" id="form_help" v-model="message" />
+              </div>
+              <div class="form-group">
+                <label for="form_email"
+                  >Wonderful! What’s your email address?</label
+                >
+                <input type="email" class="form-control" id="form_email" v-model="email" />
+              </div>
+              <div class="form-group">
+                <label for="form_number"
+                  >We’ll be happy to reach out to you on call.</label
+                >
+                <input type="tel" class="form-control" id="form_number" v-model="phone" />
+              </div>
+              <button type="submit" class="btn">send</button>
+            </form>
+            <div class="d-flex social_content">
               <a href="#">hello@toutclout.com</a>
               <a href="#">+91 97727 50057</a>
               <ul>
-                <li><a href="#" class="facebook"><i class="bx bxl-facebook"></i></a></li>                
-                <li><a href="#" class="facebook"><i class="bx bxl-instagram"></i></a></li>
-                <li><a href="#" class="twitter"><i class="bx bxl-twitter"></i></a></li>
-                <li><a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a></li>
+                <li>
+                  <a href="#" class="facebook"
+                    ><i class="bx bxl-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="facebook"
+                    ><i class="bx bxl-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#" class="linkedin"
+                    ><i class="bx bxl-linkedin"></i
+                  ></a>
+                </li>
               </ul>
+            </div>
+          </div>
+          <div class="site_container">
+            <div class="left_img">
+              <img src="assets/img/contact/img_1.png" />
+              <img src="assets/img/contact/img_2.png" />
+              <img src="assets/img/contact/img_3.png" />
+              <img src="assets/img/contact/img_4.png" />
+              <img src="assets/img/contact/img_5.png" />
+            </div>
+            <div class="right_img">
+              <img src="assets/img/contact/img_6.png" />
+              <img src="assets/img/contact/img_7.png" />
+              <img src="assets/img/contact/img_2.png" />
+              <img src="assets/img/contact/img_3.png" />
+              <img src="assets/img/contact/img_1.png" />
+              <img src="assets/img/contact/img_8.png" />
+              <!-- <img src="assets/img/gry_border.png" />
+              <img src="assets/img/dark_gary.png" /> -->
+            </div>
           </div>
         </div>
-        <div class="site_container">
-          <div class="left_img">
-            <img src="assets/img/contact/img_1.png" />
-            <img src="assets/img/contact/img_2.png" />
-            <img src="assets/img/contact/img_3.png" />
-            <img src="assets/img/contact/img_4.png" />
-            <img src="assets/img/contact/img_5.png" />
-          </div>
-
-          <div class="right_img">
-            <img src="assets/img/contact/img_6.png" />
-           <img src="assets/img/contact/img_7.png" />
-             <img src="assets/img/contact/img_2.png" />
-             <img src="assets/img/contact/img_3.png" />
-            <img src="assets/img/contact/img_1.png" />
-            <img src="assets/img/contact/img_8.png" />
-           <!-- <img src="assets/img/gry_border.png" />
-            <img src="assets/img/dark_gary.png" /> -->
-          </div>
-        </div>
-
-
       </div>
-    </div>
-  </section>
-  <!-- End #main -->
+    </section>
+    <!-- End #main -->
 
+    <!-- <div id="preloader"></div> -->
 
-
-  <!-- <div id="preloader"></div> -->
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.15/paper-full.min.js"
-    integrity="sha512-ovjLI1ZcZe6bw+ImQ21r+sv8q/Vwob2kq7tFidK6E1LWfi0T4uobbmpfEU1//a9h9o5Kkt+MnMWf6rWlg0EiMw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/talkToUs.js"></script>
-</body>
-
+    <!-- Vendor JS Files -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.15/paper-full.min.js"
+      integrity="sha512-ovjLI1ZcZe6bw+ImQ21r+sv8q/Vwob2kq7tFidK6E1LWfi0T4uobbmpfEU1//a9h9o5Kkt+MnMWf6rWlg0EiMw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+    <script type="module" src="assets/js/database.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/talkToUs.js"></script>
+  </body>
 </html>
