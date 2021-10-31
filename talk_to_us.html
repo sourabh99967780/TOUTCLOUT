@@ -79,7 +79,7 @@
         <div class="d-flex flex_item">
           <div class="form_content" id="contact-form">
             <h4>Enough about us! <i>Let’s talk about you.</i></h4>
-            <form v-on:submit.prevent="emailAndSaveInDatabase">
+            <form v-on:submit.prevent="handleFormData">
               <div class="form-group">
                 <label for="form_nme">What’s your name?</label>
                 <input type="text" class="form-control" id="form_name" v-model="name" />
@@ -172,7 +172,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
-    <script type="module" src="assets/js/database.js"></script>
+    <script type="module" src="assets/js/formHandler.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/talkToUs.js"></script>
   </body>
