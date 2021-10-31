@@ -38,7 +38,9 @@ async function getEnquiries(db) {
 
 async function insertEnquiries(db, data) {
   const docRef = await addDoc(collection(db, "enquiries"), data);
-  console.log(`Document Successfully written with this id: ${docRef.id}`);
+  return new Promise((resolve, reject) => {
+    resolve(docRef.id);
+  });
 }
 
 // Vue app handling the form field
@@ -50,16 +52,20 @@ var vueApp = new Vue({
       message: "",
       email: "",
       phone: "",
+      emailSending: false,
     };
   },
   methods: {
     emailAndSaveInDatabase() {
+      this.emailSending = true;
       insertEnquiries(db, {
         name: this.name,
         email: this.email,
         message: this.message,
         phone: this.phone,
         timestamp: serverTimestamp(),
+      }).then(() => {
+        this.emailSending = false;
       });
     },
   },
