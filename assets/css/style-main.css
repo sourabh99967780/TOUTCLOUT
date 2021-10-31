@@ -987,7 +987,7 @@ body a {
   justify-content: center;
   text-align: left;
   align-items: center;
-  height: calc(100vh - 71px);
+  height: 100vh;
 }
 .contact_us .home_content {
   position: relative;
@@ -1728,9 +1728,6 @@ ul.brand-listing li {
     right: 5px;
     top: 60%;
   }
-  .contact_us .flex_item {
-    display: block !important;
-  }
   .contact_us .social_content {
     display: block !important;
     text-align: center;
@@ -1741,6 +1738,14 @@ ul.brand-listing li {
   .contact_us .social_content > a {
     display: inline-block;
     padding: 0 5px;
+  }
+  .contact_us .flex_item {
+    width: 85vw;
+    margin: 0 auto;
+  }
+  .contact_us .site_container .left_img,
+  .contact_us .site_container .right_img {
+    opacity: 0.3;
   }
   .contact_us .flex_item h4 {
     margin-top: 40px;
@@ -1764,7 +1769,6 @@ ul.brand-listing li {
   #our_process .pro_content {
     padding: 55px 0 10px;
   }
-
   .img_text_container .left_part img {
     max-height: 250px;
   }
@@ -1773,16 +1777,18 @@ ul.brand-listing li {
   }
   .img_text_container .right_part p {
     font-size: 15px;
+    text-align: center;
   }
   section.img_text_container {
-    padding: 40px 0 20px;
+    padding: 8em 40px;
   }
   .values_contant .title h2 {
     font-size: 30px;
     margin-bottom: 0;
   }
   .values_contant {
-    padding: 30px 0 30px 0;
+    padding: 14em 0 2em 0;
+    margin-top: 5em;
   }
   .values_contant .row .col-md-4:nth-child(3) {
     margin-top: 0;
@@ -1797,6 +1803,9 @@ ul.brand-listing li {
   .values_contant .row {
     margin-top: 35px;
   }
+  .values_contant .content {
+    margin: 20px 0;
+  }
   .values_contant .content .description h4 {
     font-size: 18px;
   }
@@ -1807,11 +1816,12 @@ ul.brand-listing li {
     font-size: 15px;
   }
   .approach_contant {
-    margin-top: 30px;
+    padding-top: 0em;
   }
   .story_contant {
     margin-top: 30px;
     padding: 30px 0;
+    padding-top: 7em;
   }
   .approach_contant .title h2 {
     font-size: 30px;
@@ -1843,7 +1853,7 @@ ul.brand-listing li {
 
   .about,
   #website_design {
-    padding-top: 40px;
+    padding-top: 8em;
     padding-bottom: 30px;
   }
   #about .top_content h2,
@@ -1874,6 +1884,17 @@ ul.brand-listing li {
   #website_design .content img {
     max-height: 250px;
     margin-top: 30px !important;
+  }
+  .aboutUs__graphic {
+    width: 20em !important;
+    margin-top: 14.5em !important;
+  }
+  .who_we_are .img_text_container .left_part {
+    display: flex;
+    justify-content: center;
+  }
+  .stagger__pattern {
+    display: none !important;
   }
   .services {
     padding: 30px 0;
