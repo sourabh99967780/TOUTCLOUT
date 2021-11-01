@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3300/api";
+const baseUrl = "http://3.145.21.71:81/api";
 
 var vueApp = new Vue({
   el: "#contact-form",
