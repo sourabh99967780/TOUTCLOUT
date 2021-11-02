@@ -1608,10 +1608,6 @@ ul.brand-listing li {
   #our_process .title p {
     max-width: 100%;
   }
-
-  .img_text_container {
-    bottom: 0;
-  }
   .values_contant {
     top: 0;
     padding-top: 10%;
@@ -1621,6 +1617,22 @@ ul.brand-listing li {
   }
   .img_text_container .heading h1 br {
     display: none;
+  }
+  .img_text_container .heading,
+  .img_text_container .row {
+    margin: 0px 0 4em;
+    text-align: center;
+  }
+  .aboutUs__graphic,
+  .stagger__pattern {
+    margin-top: 16em;
+  }
+  .values_contant {
+    padding-top: 38%;
+    margin-top: 18.5em;
+  }
+  .img_text_container .heading h1 {
+    font-size: 30px;
   }
   .img_text_container .heading h3 {
     max-width: 100%;
@@ -1676,6 +1688,10 @@ ul.brand-listing li {
   }
   .home_page li.dropdown-toggle .dropdown-menu .dropdown-item {
     color: #ddd;
+  }
+  .about,
+  #website_design {
+    padding-top: 150px;
   }
   .approach_contant {
     margin-top: 100px;
