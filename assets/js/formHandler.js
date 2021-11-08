@@ -11,22 +11,38 @@ var vueApp = new Vue({
       phone: "",
       emailSending: false,
       focusElements: {
-        0: "name",
-        1: "message",
-        2: "email",
-        3: "phone",
+        1: "name",
+        2: "message",
+        3: "email",
+        4: "phone",
       }
     };
   },
   methods: {
-    prev() {
-      this.$refs[this.focusElements[this.step - 1]].focus();
-      this.step--;
+    async prev() {
+      await this.step--;
+      if (this.step === 1) {
+        this.$refs.name.focus();
+      } else if (this.step === 2) {
+        this.$refs.message.focus();
+      } else if (this.step === 3) {
+        this.$refs.email.focus();
+      } else if (this.step === 4) {
+        this.$refs.phone.focus();
+      }
     },
 
-    next() {
-      this.$refs[this.focusElements[this.step - 1]].focus();
-      this.step++;
+    async next() {
+      await this.step++;
+      if (this.step === 1) {
+        this.$refs.name.focus();
+      } else if (this.step === 2) {
+        this.$refs.message.focus();
+      } else if (this.step === 3) {
+        this.$refs.email.focus();
+      } else if (this.step === 4) {
+        this.$refs.phone.focus();
+      }
     },
 
     async saveToDatabase() {
