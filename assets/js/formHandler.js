@@ -4,6 +4,7 @@ var vueApp = new Vue({
   el: "#contact-form",
   data() {
     return {
+      step: 1,
       name: "",
       message: "",
       email: "",
@@ -12,6 +13,14 @@ var vueApp = new Vue({
     };
   },
   methods: {
+    prev() {
+      this.step--;
+    },
+
+    next() {
+      this.step++;
+    },
+
     async saveToDatabase() {
       const data = {
         name: this.name,
@@ -57,7 +66,7 @@ var vueApp = new Vue({
       });
     },
 
-    async handleFormData() {
+    async submit() {
       this.emailSending = true;
 
       await this.saveToDatabase();
