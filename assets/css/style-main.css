@@ -1181,6 +1181,14 @@ body a {
   color: #fff;
   font-style: italic;
 }
+
+.contact_us form textarea {
+  margin-top: 1.5em;
+  background: none;
+  border-color: #262728;
+  height: 10em;
+}
+
 .contact_us form .form-control:focus {
   background-color: transparent;
   border-color: #333;
