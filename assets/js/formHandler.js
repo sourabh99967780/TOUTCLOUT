@@ -21,28 +21,12 @@ var vueApp = new Vue({
   methods: {
     async prev() {
       await this.step--;
-      if (this.step === 1) {
-        this.$refs.name.focus();
-      } else if (this.step === 2) {
-        this.$refs.message.focus();
-      } else if (this.step === 3) {
-        this.$refs.email.focus();
-      } else if (this.step === 4) {
-        this.$refs.phone.focus();
-      }
+      this.$refs[this.focusElements[this.step]].focus();
     },
 
     async next() {
       await this.step++;
-      if (this.step === 1) {
-        this.$refs.name.focus();
-      } else if (this.step === 2) {
-        this.$refs.message.focus();
-      } else if (this.step === 3) {
-        this.$refs.email.focus();
-      } else if (this.step === 4) {
-        this.$refs.phone.focus();
-      }
+      this.$refs[this.focusElements[this.step]].focus();
     },
 
     async saveToDatabase() {
