@@ -10,14 +10,22 @@ var vueApp = new Vue({
       email: "",
       phone: "",
       emailSending: false,
+      focusElements: {
+        0: "name",
+        1: "message",
+        2: "email",
+        3: "phone",
+      }
     };
   },
   methods: {
     prev() {
+      this.$refs[this.focusElements[this.step - 1]].focus();
       this.step--;
     },
 
     next() {
+      this.$refs[this.focusElements[this.step - 1]].focus();
       this.step++;
     },
 
@@ -77,4 +85,8 @@ var vueApp = new Vue({
       }, 10000);
     },
   },
+
+  mounted() {
+    this.$refs.name.focus();
+  }
 });

@@ -2056,3 +2056,16 @@ ul.brand-listing li {
   border: 1px solid #dbdbdb;
   background-color: #dbdbdb;
 }
+
+/* Talk to us page tab form btn */
+
+.tab-btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-btn {
+  border-radius: 5px;
+  margin-top: 2em !important;
+  box-shadow: #26272860 1px 4px 13px 0px;
+}
