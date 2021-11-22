@@ -853,6 +853,11 @@ body a {
   background-color: hsl(0, 0%, 98%);
   padding: 9em 0;
 }
+.outline-container {
+  border: 1px solid #26272810;
+  padding-left: unset !important;
+  padding-right: unset !important;
+}
 #digital_box .section-title {
   font-size: 18px;
   color: #525e82;
@@ -937,7 +942,7 @@ body a {
   transform: rotateY(180deg);
   backface-visibility: hidden;
   height: 314px;
-  width: 99%;
+  width: 100%;
 }
 #digital_box .back_content img {
   width: 100px;
