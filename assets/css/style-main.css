@@ -993,6 +993,13 @@ body a {
   position: relative;
   z-index: 1;
 }
+.contact_us .send-btn {
+  gap: 15px;
+}
+.contact_us .send-btn > span > img {
+  width: 1.3em;
+  height: auto;
+}
 .contact_us .home_content h2,
 .contact_us .home_content h4 {
   color: #dddddd;
@@ -1012,6 +1019,12 @@ body a {
   left: 50px;
   width: 10px;
   top: 25%;
+}
+.contact_us .flex_item .left_img img:nth-child(6) {
+  position: absolute;
+  bottom: 30px;
+  left: 16.5%;
+  width: 60px;
 }
 .contact_us .flex_item .left_img img:nth-child(5) {
   position: absolute;
@@ -1209,6 +1222,7 @@ body a {
   padding: 7px 30px;
   font-size: 15px;
   border: 0;
+  font-style: italic;
 }
 /*.contact_us .menu.active .menu-link{color: #231F20;}*/
 .contact_us li.dropdown-toggle::after {

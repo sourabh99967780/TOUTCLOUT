@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/black/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/black/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/black/favicon-16x16.png">
-    <link rel="manifest" href="assets/img/favicon/black/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/black/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/black/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/black/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/black/site.webmanifest">
 
     <title>TOUTCLOUT | Contact Us | India</title>
     <meta
@@ -122,7 +122,12 @@
                 <input type="tel" required class="form-control" placeholder="e.g. +91 99560 22342" ref="phone" v-model.trim="phone" />
                 <div class="tab-btn-container">
                   <button class="tab-btn" @click.prevent="prev()">Previous</button>
-                  <button class="tab-btn" @click.prevent="submit()">Save</button>
+                  <button class="tab-btn send-btn d-flex align-items-center" @click.prevent="submit()">
+                    <span>
+                      <img src="assets/images/contact/send.svg" alt="Send Message">
+                    </span>
+                    <span>Send</span>
+                  </button>
                 </div>
               </div>
             </form>
@@ -154,19 +159,20 @@
           </div>
           <div class="site_container">
             <div class="left_img">
-              <img src="assets/img/contact/img_1.png" />
-              <img src="assets/img/contact/img_2.png" />
-              <img src="assets/img/contact/img_3.png" />
-              <img src="assets/img/contact/img_4.png" />
-              <img src="assets/img/contact/img_5.png" />
+              <img src="assets/images/contact/contact-02.svg" />
+              <img src="assets/images/contact/contact-03.svg" />
+              <img src="assets/images/contact/contact-04.svg" />
+              <img src="assets/images/contact/contact-05.svg" />
+              <img src="assets/images/contact/contact-06.svg" />
+              <img src="assets/images/contact/contact-07.svg" />
             </div>
             <div class="right_img">
-              <img src="assets/img/contact/img_6.png" />
-              <img src="assets/img/contact/img_7.png" />
-              <img src="assets/img/contact/img_2.png" />
-              <img src="assets/img/contact/img_3.png" />
-              <img src="assets/img/contact/img_1.png" />
-              <img src="assets/img/contact/img_8.png" />
+              <img src="assets/images/contact/contact-08.svg" />
+              <img src="assets/images/contact/contact-13.svg" />
+              <img src="assets/images/contact/contact-09.svg" />
+              <img src="assets/images/contact/contact-10.svg" />
+              <img src="assets/images/contact/contact-11.svg" />
+              <img src="assets/images/contact/contact-12.svg" />
               <!-- <img src="assets/img/gry_border.png" />
               <img src="assets/img/dark_gary.png" /> -->
             </div>
