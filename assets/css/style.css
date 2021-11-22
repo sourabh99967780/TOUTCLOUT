@@ -418,6 +418,12 @@ section {
 }
 #footer .footer-top .social-links {
   display: flex;
+  align-items: center;
+}
+
+#footer .footer-links a {
+  text-decoration: none;
+  color: #fff;
 }
 
 #footer .footer-top .social-links a:hover {
