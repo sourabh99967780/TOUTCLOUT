@@ -452,7 +452,7 @@ section {
   width: 100%;
   max-width: 80%;
   transform: translateX(-50%);
-  left: 49%;
+  left: 50%;
   top: 10px;
 }
 #footer .foote_img img:nth-child(2) {
