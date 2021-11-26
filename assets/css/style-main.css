@@ -471,7 +471,7 @@ body a {
 .menu-inner {
   justify-content: center;
   height: 100vh;
-  padding-top: 40vh;
+  padding-top: 35vh;
 }
 
 .discover_video {
@@ -565,7 +565,7 @@ body a {
 }
 .img_text_container {
   position: relative;
-  bottom: -7em;
+  bottom: -9em;
   z-index: 2;
 }
 
@@ -726,7 +726,7 @@ body a {
   margin-bottom: 10px;
 }
 #website_design .top_content p {
-  color: #798dab;
+  color: #62748f;
   font-size: 16px;
   max-width: 65%;
   margin: 0 auto;
@@ -830,7 +830,7 @@ body a {
   margin-bottom: 20px;
 }
 #our_process .title p {
-  color: #798dab;
+  color: #62748f;
   font-size: 16px;
   max-width: 70%;
   margin: 0 auto 100px;
@@ -854,7 +854,7 @@ body a {
   padding: 9em 0;
 }
 .outline-container {
-  border: 1px solid #26272810;
+  border: 1px solid #26272815;
   padding-left: unset !important;
   padding-right: unset !important;
 }
@@ -865,7 +865,7 @@ body a {
   text-align: center;
 }
 #digital_box .section-title p {
-  color: #798dab;
+  color: #62748f;
 }
 #digital_box .icon-box {
   padding: 30px 0;
@@ -893,7 +893,6 @@ body a {
   font-weight: 400;
   text-align: center;
   margin: 0;
-  width: 70%;
 }
 #digital_box .icon-box {
   background-color: hsl(0, 0%, 98%);
@@ -989,10 +988,11 @@ body a {
   height: 100%;
 }
 .contact_us .flex_item {
-  justify-content: center;
+  justify-content: flex-start;
   text-align: left;
   align-items: center;
   height: 100vh;
+  padding: 0 12%;
 }
 .contact_us .home_content {
   position: relative;
@@ -1021,79 +1021,79 @@ body a {
 }
 .contact_us .flex_item .left_img img:first-child {
   position: absolute;
-  left: 50px;
-  width: 10px;
-  top: 25%;
+  left: 4%;
+  width: 0.6vw;
+  top: 52%;
 }
 .contact_us .flex_item .left_img img:nth-child(6) {
   position: absolute;
-  bottom: 30px;
-  left: 16.5%;
-  width: 60px;
+  bottom: 3%;
+  left: 13.5%;
+  width: 3.6vw;
 }
 .contact_us .flex_item .left_img img:nth-child(5) {
   position: absolute;
-  bottom: -120px;
-  left: 12%;
-  width: 100px;
+  bottom: -16%;
+  left: 8%;
+  width: 6.5vw;
 }
 .contact_us .flex_item .left_img img:nth-child(4) {
   position: absolute;
-  left: -30px;
-  bottom: 40px;
-  width: 200px;
+  left: -2.5%;
+  bottom: 8%;
+  width: 14vw;
 }
 .contact_us .flex_item .left_img img:nth-child(2) {
-  width: 40px;
+  width: 2.5vw;
   position: absolute;
-  left: 20px;
-  bottom: 55%;
+  left: 2%;
+  bottom: 38%;
   z-index: 1;
 }
 .contact_us .flex_item .left_img img:nth-child(3) {
-  width: 40px;
+  width: 2.5vw;
   position: absolute;
-  left: 40px;
-  bottom: 50%;
+  left: 3.5%;
+  bottom: 36.5%;
   z-index: 1;
   transform: rotate(0deg);
 }
 
 .contact_us .flex_item .right_img img:nth-child(1) {
   position: absolute;
-  right: 30px;
+  right: 2.5%;
   bottom: 0;
-  width: 100px;
+  width: 8vw;
 }
 .contact_us .flex_item .right_img img:nth-child(2) {
   position: absolute;
-  right: 60px;
-  bottom: -30px;
-  width: 25px;
+  right: 4.5%;
+  bottom: -4%;
+  width: 2vw;
 }
 .contact_us .flex_item .right_img img:nth-child(3) {
   position: absolute;
-  right: 7%;
-  bottom: 35%;
-  width: 40px;
+  right: 6.5%;
+  bottom: 22%;
+  width: 2.5vw;
 }
 .contact_us .flex_item .right_img img:nth-child(4) {
   position: absolute;
-  right: 6%;
-  bottom: 32%;
+  right: 5.3%;
+  bottom: 20.5%;
   width: 30px;
 }
 .contact_us .flex_item .right_img img:nth-child(5) {
   position: absolute;
   right: 6%;
-  bottom: 40%;
-  width: 10px;
+  bottom: 27%;
+  width: 0.6vw;
 }
 .contact_us .flex_item .right_img img:nth-child(6) {
-  width: 140px;
+  width: 10vw;
   position: absolute;
-  right: -70px;
-  bottom: 250px;
+  right: -4%;
+  bottom: 40%;
   z-index: 1;
   transform: rotate(-6deg);
 }
@@ -1203,8 +1203,12 @@ body a {
 .contact_us form textarea {
   margin-top: 1.5em;
   background: none;
-  border-color: #262728;
+  border-color: #fff;
   height: 10em;
+}
+
+.contact_us .form-control {
+  color: #fff;
 }
 
 .contact_us form .form-control:focus {
@@ -1249,26 +1253,33 @@ body a {
   color: #fff;
 }
 .contact_us .social_content {
-  justify-content: flex-end;
+  justify-content: center;
   margin-top: 25px;
-  position: relative;
+  position: absolute;
   z-index: 1;
+  bottom: 10%;
+  width: 100vw;
+  left: 0;
+  right: 0;
 }
 .contact_us .social_content > a {
   padding-right: 50px;
-  color: #fff;
+  color: #484c50;
   text-decoration: none;
+  display: flex;
+  align-items: flex-end;
 }
 .contact_us .social_content ul {
   padding: 0;
   margin: 0;
   list-style: none;
   display: flex;
+  margin-bottom: -0.5em;
 }
 .contact_us .social_content ul li a {
   padding: 0 10px;
-  color: #fff;
-  font-size: 20px;
+  color: #484c50;
+  font-size: 30px;
 }
 .contact_us form label {
   margin-bottom: 0;
@@ -2116,4 +2127,55 @@ ul.brand-listing li {
 
 #backToTop:hover {
   background-color: #aaaaaa;
+}
+
+@media screen and (max-width: 1366px) {
+  .values_contant .content .description h4,
+  .approach_contant .description h4,
+  .story_contant .description h4 {
+    font-size: 18px;
+  }
+
+  .innovation__anim {
+    width: 5em;
+  }
+
+  .simplicity__anim {
+    width: 7em;
+  }
+
+  .integration__anim {
+    width: 8.5em;
+  }
+
+  .agility__anim {
+    width: 5em;
+  }
+
+  .integrity__anim {
+    width: 11em;
+  }
+
+  .curiosity__anim,
+  .discovery__anim,
+  .creation__anim,
+  .ignition__anim {
+    width: 10em;
+  }
+
+  .ignition__anim {
+    margin-top: 0.5em;
+    margin-bottom: 3em;
+  }
+
+  .digital__graphic,
+  .branding__graphic,
+  .web__graphic,
+  .aboutUs__graphic {
+    width: 25.25em;
+  }
+}
+
+.branding__services-heading {
+  font-weight: 500;
 }

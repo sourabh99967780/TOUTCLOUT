@@ -89,40 +89,35 @@
           <div class="form_content" id="contact-form">
             <h4>Enough about us! <i>Let’s talk about you.</i></h4>
             <form>
-              <div class="form-group" v-if="step === 1">
+              <div class="form-group" v-if="step >= 1">
                 <label for="form_nme">What’s your name?</label>
                 <input type="text" required class="form-control" placeholder="e.g. John Doe" ref="name" v-model.trim="name" />
                 <div class="tab-btn-container">
-                  <button class="tab-btn" @click.prevent="next()">Next</button>
                 </div>
               </div>
-              <div class="form-group" v-if="step === 2">
+              <div class="form-group" v-if="step >= 2">
                   <label for="form_help">It’s great connecting with you <i>Deepeswari</i> What can we
                     help you with?</label>
                   <textarea type="text" required class="form-control" placeholder="e.g. I have a website requirement." ref="message" v-model.trim="message"></textarea>
                   <div class="tab-btn-container">
-                    <button class="tab-btn" @click.prevent="prev()">Previous</button>
-                    <button class="tab-btn" @click.prevent="next()">Next</button>
                   </div>
                 </div>
-              <div class="form-group" v-if="step === 3">
+              <div class="form-group" v-if="step >= 3">
                 <label for="form_email"
                   >Wonderful! What’s your email address?</label
                 >
                 <input type="email" required class="form-control" placeholder="e.g. johndoe@example.com" ref="email" v-model.lazy.trim="email" />
                 <div class="tab-btn-container">
-                  <button class="tab-btn" @click.prevent="prev()">Previous</button>
-                  <button class="tab-btn" @click.prevent="next()">Next</button>
                 </div>
               </div>
-              <div class="form-group" v-if="step === 4">
-                <label for="form_number"
+              <div class="form-group">
+                <label for="form_number" v-if="step >= 4"
                   >We’ll be happy to reach out to you on call.</label
                 >
-                <input type="tel" required class="form-control" placeholder="e.g. +91 99560 22342" ref="phone" v-model.trim="phone" />
+                <input v-if="step >= 4" type="tel" required class="form-control" placeholder="e.g. +91 99560 22342" ref="phone" v-model.trim="phone" />
                 <div class="tab-btn-container">
-                  <button class="tab-btn" @click.prevent="prev()">Previous</button>
-                  <button class="tab-btn send-btn d-flex align-items-center" @click.prevent="submit()">
+                  <button class="tab-btn" v-if="step < 4" @click.prevent="next()">Next</button>
+                  <button class="tab-btn send-btn d-flex align-items-center" v-else @click.prevent="submit()">
                     <span>
                       <img src="assets/images/contact/send.svg" alt="Send Message">
                     </span>
