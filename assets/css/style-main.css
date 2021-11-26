@@ -17,17 +17,8 @@ html {
   color: #262728;
 }
 
-@font-face {
-  font-family: "Playfair Display";
-  src: url(assets/Fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf);
-}
-@font-face {
-  font-family: "Playfair Display";
-  src: url(assets/Fonts/PlayfairDisplay-VariableFont_wght.ttf);
-}
-
 body {
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", serif;
 }
 
 a {
