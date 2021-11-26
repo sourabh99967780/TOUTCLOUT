@@ -565,7 +565,7 @@ body a {
 }
 .img_text_container {
   position: relative;
-  bottom: -11em;
+  bottom: -7em;
   z-index: 2;
 }
 
