@@ -114,14 +114,14 @@
                   class="form-control"
                   placeholder="e.g. John Doe"
                   ref="name"
-                  v-model.trim="name"
+                  v-model.trim="$v.name.$model"
                 />
                 <div class="tab-btn-container"></div>
               </div>
               <transition name="fade">
                 <div class="form-group" v-if="step >= 2">
                   <label for="form_help"
-                    >It’s great connecting with you <i>Deepeswari</i> What can we
+                    >It’s great connecting with you <i>{{ firstName }}</i> What can we
                     help you with?</label
                   >
                   <textarea
@@ -130,7 +130,7 @@
                     class="form-control"
                     placeholder="e.g. I have a website requirement."
                     ref="message"
-                    v-model.trim="message"
+                    v-model.trim="$v.message.$model"
                   ></textarea>
                   <div class="tab-btn-container"></div>
                 </div>
@@ -146,7 +146,7 @@
                     class="form-control"
                     placeholder="e.g. johndoe@example.com"
                     ref="email"
-                    v-model.lazy.trim="email"
+                    v-model.lazy.trim="$v.email.$model"
                   />
                   <div class="tab-btn-container"></div>
                 </div>
@@ -165,7 +165,7 @@
                     class="form-control"
                     placeholder="e.g. +91 99560 22342"
                     ref="phone"
-                    v-model.trim="phone"
+                    v-model.trim="$v.phone.$model"
                   />
                 </transition>
                 <div class="tab-btn-container">
@@ -191,6 +191,9 @@
                   </button>
                 </div>
               </div>
+              <p class="typo__p" v-if="submitStatus === 'OK'">Thanks for your submission!</p>
+              <p class="typo__p" v-if="submitStatus === 'ERROR'">Please fill the form correctly.</p>
+              <p class="typo__p" v-if="submitStatus === 'PENDING'">Sending...</p>
             </form>
             <div class="data-success-message" v-if="emailSending">
               Thank you for reaching out to us.
@@ -249,6 +252,8 @@
 
     <!-- Vendor JS Files -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuelidate@0.7.6/dist/vuelidate.min.js"></script>
+    <script src="https://unpkg.com/vuelidate@0.7.6/dist/validators.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

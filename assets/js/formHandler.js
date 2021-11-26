@@ -1,5 +1,8 @@
 const baseUrl = "http://3.145.21.71:81/api";
 
+Vue.use(window.vuelidate.default)
+const { required, minLength, maxLength, alpha, email } = window.validators
+
 var vueApp = new Vue({
   el: "#contact-form",
   data() {
@@ -15,8 +18,31 @@ var vueApp = new Vue({
         2: "message",
         3: "email",
         4: "phone",
-      }
+      },
+      submitStatus: ''
     };
+  },
+  validations: {
+    name: {
+      required,
+      alpha
+    },
+    message: {
+      required,
+      maxLength: maxLength(200)
+    },
+    email: {
+      required,
+      email
+    },
+    phone: {
+      required
+    }
+  },
+  computed: {
+    firstName() {
+      return this.name.split(" ")[0];
+    }
   },
   methods: {
     async prev() {
@@ -75,14 +101,20 @@ var vueApp = new Vue({
     },
 
     async submit() {
-      this.emailSending = true;
+      this.$v.$touch();
+      if (this.$v.$invalid) {
+        this.submitStatus = 'ERROR'
+      } else {
+        // do your submit logic here
+        this.emailSending = true;
+        this.submitStatus = 'PENDING';
+        await this.saveToDatabase();
+        await this.sendEmail();
 
-      await this.saveToDatabase();
-      await this.sendEmail();
-
-      setTimeout(() => {
-        this.emailSending = false;
-      }, 10000);
+        setTimeout(() => {
+          this.emailSending = false;
+        }, 10000);
+      }
     },
   },
 
