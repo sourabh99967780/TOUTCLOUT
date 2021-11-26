@@ -116,6 +116,8 @@
                   ref="name"
                   v-model.trim="$v.name.$model"
                 />
+                <div class="error" v-if="!$v.name.required">Field is required</div>
+                <div class="error" v-if="!$v.name.minLength">Name must have at least {{$v.name.$params.minLength.min}} letters.</div>
                 <div class="tab-btn-container"></div>
               </div>
               <transition name="fade">

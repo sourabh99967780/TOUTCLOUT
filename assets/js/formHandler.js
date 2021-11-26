@@ -25,6 +25,7 @@ var vueApp = new Vue({
   validations: {
     name: {
       required,
+      minLength: minLength(3),
       alpha
     },
     message: {
@@ -33,6 +34,7 @@ var vueApp = new Vue({
     },
     email: {
       required,
+      maxLength: maxLength(40),
       email
     },
     phone: {
@@ -51,8 +53,25 @@ var vueApp = new Vue({
     },
 
     async next() {
-      await this.step++;
-      this.$refs[this.focusElements[this.step]].focus();
+      if (this.step === 1) {
+        this.$v.name.$touch();
+        if (!this.$v.name.$invalid) {
+          await this.step++;
+          this.$refs[this.focusElements[this.step]].focus();
+        }
+      } else if (this.step === 2) {
+        this.$v.message.$touch();
+        if (!this.$v.message.$invalid) {
+          await this.step++;
+          this.$refs[this.focusElements[this.step]].focus();
+        }
+      } else if (this.step === 3) {
+        this.$v.email.$touch();
+        if (!this.$v.email.$invalid) {
+          await this.step++;
+          this.$refs[this.focusElements[this.step]].focus();
+        }
+      }
     },
 
     async saveToDatabase() {
