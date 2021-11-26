@@ -4,16 +4,34 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/black/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/black/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/black/favicon-16x16.png">
-    <link rel="manifest" href="assets/images/favicon/black/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/favicon/black/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon/black/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon/black/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/images/favicon/black/site.webmanifest" />
 
     <title>TOUTCLOUT | Contact Us | India</title>
     <meta
       content="Contact us | If you’re looking for a strategic partner to level-up, please get in touch. hello@toutclout.com"
-      name="description" />
-    <meta content="Brand Ecosystem, Digital Strategy, Website & Technology" name="keywords" />
+      name="description"
+    />
+    <meta
+      content="Brand Ecosystem, Digital Strategy, Website & Technology"
+      name="keywords"
+    />
     <meta content="Talk to us | TOUTCLOUT" />
 
     <!-- Vendor CSS Files -->
@@ -24,7 +42,6 @@
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
     <link href="assets/vendor/venobox/venobox.css" rel="stylesheet" />
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link rel="icon" href="assets/img/toutefavicon.png" type="image/svg+xml" />
 
     <!-- Main CSS File -->
     <link href="assets/css/style-main.css" rel="stylesheet" />
@@ -91,42 +108,93 @@
             <form>
               <div class="form-group" v-if="step >= 1">
                 <label for="form_nme">What’s your name?</label>
-                <input type="text" required class="form-control" placeholder="e.g. John Doe" ref="name" v-model.trim="name" />
-                <div class="tab-btn-container">
-                </div>
+                <input
+                  type="text"
+                  required
+                  class="form-control"
+                  placeholder="e.g. John Doe"
+                  ref="name"
+                  v-model.trim="name"
+                />
+                <div class="tab-btn-container"></div>
               </div>
-              <div class="form-group" v-if="step >= 2">
-                  <label for="form_help">It’s great connecting with you <i>Deepeswari</i> What can we
-                    help you with?</label>
-                  <textarea type="text" required class="form-control" placeholder="e.g. I have a website requirement." ref="message" v-model.trim="message"></textarea>
-                  <div class="tab-btn-container">
-                  </div>
+              <transition name="fade">
+                <div class="form-group" v-if="step >= 2">
+                  <label for="form_help"
+                    >It’s great connecting with you <i>Deepeswari</i> What can we
+                    help you with?</label
+                  >
+                  <textarea
+                    type="text"
+                    required
+                    class="form-control"
+                    placeholder="e.g. I have a website requirement."
+                    ref="message"
+                    v-model.trim="message"
+                  ></textarea>
+                  <div class="tab-btn-container"></div>
                 </div>
-              <div class="form-group" v-if="step >= 3">
-                <label for="form_email"
-                  >Wonderful! What’s your email address?</label
-                >
-                <input type="email" required class="form-control" placeholder="e.g. johndoe@example.com" ref="email" v-model.lazy.trim="email" />
-                <div class="tab-btn-container">
+              </transition>
+              <transition name="fade">
+                <div class="form-group" v-if="step >= 3">
+                  <label for="form_email"
+                    >Wonderful! What’s your email address?</label
+                  >
+                  <input
+                    type="email"
+                    required
+                    class="form-control"
+                    placeholder="e.g. johndoe@example.com"
+                    ref="email"
+                    v-model.lazy.trim="email"
+                  />
+                  <div class="tab-btn-container"></div>
                 </div>
-              </div>
+              </transition>
               <div class="form-group">
-                <label for="form_number" v-if="step >= 4"
-                  >We’ll be happy to reach out to you on call.</label
-                >
-                <input v-if="step >= 4" type="tel" required class="form-control" placeholder="e.g. +91 99560 22342" ref="phone" v-model.trim="phone" />
+                <transition name="fade">
+                  <label for="form_number" v-if="step >= 4"
+                    >We’ll be happy to reach out to you on call.</label
+                  >
+                  </transition>
+                <transition name="fade">
+                  <input
+                    v-if="step >= 4"
+                    type="tel"
+                    required
+                    class="form-control"
+                    placeholder="e.g. +91 99560 22342"
+                    ref="phone"
+                    v-model.trim="phone"
+                  />
+                </transition>
                 <div class="tab-btn-container">
-                  <button class="tab-btn" v-if="step < 4" @click.prevent="next()">Next</button>
-                  <button class="tab-btn send-btn d-flex align-items-center" v-else @click.prevent="submit()">
+                  <button
+                    class="tab-btn"
+                    v-if="step < 4"
+                    @click.prevent="next()"
+                  >
+                    Next
+                  </button>
+                  <button
+                    class="tab-btn send-btn d-flex align-items-center"
+                    v-else
+                    @click.prevent="submit()"
+                  >
                     <span>
-                      <img src="assets/images/contact/send.svg" alt="Send Message">
+                      <img
+                        src="assets/images/contact/send.svg"
+                        alt="Send Message"
+                      />
                     </span>
                     <span>Send</span>
                   </button>
                 </div>
               </div>
             </form>
-            <div class="data-success-message" v-if="emailSending">Thank you for reaching out to us.</div>
+            <div class="data-success-message" v-if="emailSending">
+              Thank you for reaching out to us.
+            </div>
             <div class="d-flex social_content">
               <a href="#">hello@toutclout.com</a>
               <a href="#">+91 97727 50057</a>
