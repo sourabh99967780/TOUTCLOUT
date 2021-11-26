@@ -777,7 +777,7 @@ body a {
 #our_process .pro_content .icon:after {
   content: "";
   position: absolute;
-  background-image: url(../img/website/process_border.png);
+  background-image: url(../images/website_design/process_border.svg);
   width: 120px;
   height: 120px;
   background-size: contain;
@@ -827,7 +827,7 @@ body a {
   margin: 0 auto 100px;
 }
 #our_process .col-md-4:nth-child(3) .pro_content .icon:before {
-  background-image: url(../img/website/process_border_right.png);
+  background-image: url(../images/website_design/process_border-right.svg);
   height: 260px;
   right: -42%;
   top: 50%;
