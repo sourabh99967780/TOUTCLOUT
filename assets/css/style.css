@@ -326,6 +326,10 @@ section {
   z-index: 1;
 }
 
+#footer .footer-top .footer-contact > a {
+  padding: 5px;
+}
+
 #footer .footer-top .footer-contact .footer-logo {
   max-width: 70%;
 }
