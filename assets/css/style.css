@@ -346,7 +346,6 @@ section {
   font-weight: 700;
 }
 .what-we-do {
-  color: #dc9f32 !important;
   text-align: center;
 }
 
@@ -378,6 +377,18 @@ section {
   margin-bottom: 30px;
   position: relative;
   z-index: 1;
+}
+
+#footer .footer-top .footer-links a.active {
+  color: #dc9f32;
+}
+
+#footer .footer-top .footer-links a {
+  transition: color ease-in-out 200ms;
+}
+
+#footer .footer-top .footer-links a:hover {
+  color: #dc9f32;
 }
 
 #footer .footer-top .footer-links ul {
@@ -415,11 +426,6 @@ section {
   display: inline-block;
   line-height: 1;
   font-size: 14px;
-}
-
-#footer .footer-top .footer-links ul a:hover {
-  text-decoration: none;
-  color: #fff;
 }
 
 #footer .footer-top .social-links a {

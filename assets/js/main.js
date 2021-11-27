@@ -8,6 +8,22 @@ $(window).on("load", function () {
   aos_init();
 });
 
+$(function () {
+  setNavigation();
+})
+
+// set footer menu color based on web url
+function setNavigation() {
+  var path = window.location.pathname;
+  const menuName = path.split("/").pop();
+  $('#footer .footer-top .footer-links a').each(function () {
+    var href = $(this).attr('href');
+    if (href === menuName) {
+      $(this).addClass('active');
+    }
+  })
+}
+
 // check if it is a mobile screen
 function checkIfItIsMobile() {
   if (
