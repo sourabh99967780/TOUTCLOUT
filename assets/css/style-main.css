@@ -1454,6 +1454,7 @@ body a {
 }
 ul.brand-listing {
   padding-left: 0;
+  margin-bottom: 0;
 }
 ul.brand-listing li {
   color: #c8c8c9;
