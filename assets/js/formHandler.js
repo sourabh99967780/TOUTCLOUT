@@ -1,7 +1,7 @@
 const baseUrl = "http://3.145.21.71:81/api";
 
 Vue.use(window.vuelidate.default)
-const { required, minLength, maxLength, alpha, email } = window.validators
+const { required, minLength, maxLength, email } = window.validators
 
 var vueApp = new Vue({
   el: "#contact-form",
@@ -26,7 +26,6 @@ var vueApp = new Vue({
     name: {
       required,
       minLength: minLength(3),
-      alpha
     },
     message: {
       required,
