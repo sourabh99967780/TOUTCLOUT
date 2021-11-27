@@ -29,15 +29,16 @@ var vueApp = new Vue({
     },
     message: {
       required,
-      maxLength: maxLength(200)
+      minLength: minLength(2),
+      maxLength: maxLength(10000),
     },
     email: {
       required,
-      maxLength: maxLength(40),
+      maxLength: maxLength(320),
       email
     },
     phone: {
-      required
+      minLength: minLength(10),
     }
   },
   computed: {

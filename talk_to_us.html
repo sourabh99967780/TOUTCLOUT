@@ -110,15 +110,13 @@
                 <label for="form_nme">What’s your name?</label>
                 <input
                   type="text"
-                  required
                   class="form-control"
                   placeholder="e.g. John Doe"
                   ref="name"
                   v-model.trim="$v.name.$model"
                 />
-                <div class="error" v-if="!$v.name.required">Field is required</div>
-                <div class="error" v-if="!$v.name.minLength">Name must have at least {{$v.name.$params.minLength.min}} letters.</div>
-                <div class="tab-btn-container"></div>
+                <div class="error" v-if="!$v.name.required">You must enter your name to proceed.</div>
+                <div class="error" v-if="!$v.name.minLength">Your name must have at least {{$v.name.$params.minLength.min}} letters.</div>
               </div>
               <transition name="fade">
                 <div class="form-group" v-if="step >= 2">
@@ -126,15 +124,15 @@
                     >It’s great connecting with you <i>{{ firstName }}</i> What can we
                     help you with?</label
                   >
-                  <textarea
+                  <input
                     type="text"
-                    required
                     class="form-control"
                     placeholder="e.g. I have a website requirement."
                     ref="message"
                     v-model.trim="$v.message.$model"
-                  ></textarea>
-                  <div class="tab-btn-container"></div>
+                  ></input>
+                  <div class="error" v-if="!$v.message.required">A message is required to help you.</div>
+                  <div class="error" v-if="!$v.message.minLength">The message must have at least {{$v.message.$params.minLength.min}} letters.</div>
                 </div>
               </transition>
               <transition name="fade">
@@ -144,13 +142,14 @@
                   >
                   <input
                     type="email"
-                    required
                     class="form-control"
                     placeholder="e.g. johndoe@example.com"
                     ref="email"
-                    v-model.lazy.trim="$v.email.$model"
+                    v-model.trim="$v.email.$model"
                   />
-                  <div class="tab-btn-container"></div>
+                  <div class="error" v-if="!$v.email.required">You have to provide your email to help you with the query.</div>
+                  <div class="error" v-if="!$v.email.maxLength">Your email is of {{$v.email.$params.maxLength.max}} letters. Too long to proceed.</div>
+                  <div class="error" v-if="!$v.email.email">This email address is not a valid one. Please correct it.</div>
                 </div>
               </transition>
               <div class="form-group">
@@ -160,15 +159,12 @@
                   >
                   </transition>
                 <transition name="fade">
-                  <input
-                    v-if="step >= 4"
-                    type="tel"
-                    required
-                    class="form-control"
-                    placeholder="e.g. +91 99560 22342"
-                    ref="phone"
-                    v-model.trim="$v.phone.$model"
-                  />
+                  <div>
+                    <input v-if="step >= 4" type="tel" class="form-control" placeholder="e.g. +91 99560 22342" ref="phone"
+                      v-model.trim="$v.phone.$model" />
+                    <div class="error" v-if="!$v.phone.minLength">Your phone must be at least {{$v.phone.$params.minLength.min}} letters.
+                    </div>
+                  </div>
                 </transition>
                 <div class="tab-btn-container">
                   <button

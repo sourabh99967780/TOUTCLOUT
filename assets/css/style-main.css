@@ -2180,3 +2180,20 @@ ul.brand-listing li {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+
+/* contact form error message stylings */
+#contact-form .error {
+  font-style: italic;
+  font-size: 0.8rem;
+  margin-top: 12px;
+}
+
+#contact-form .error::before {
+  content: "\A";
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: #262728;
+  display: inline-block;
+  margin-right: 0.5em;
+}
