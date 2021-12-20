@@ -122,6 +122,8 @@ var vueApp = new Vue({
     async submit() {
       this.$v.$touch();
       if (this.$v.$invalid) {
+        const invalidFields = Object.keys(this.$v.$params).filter(fieldName => this.$v[fieldName].$invalid);
+        console.log("Invalid Fields", invalidFields);
         this.submitStatus = 'ERROR'
       } else {
         // do your submit logic here
@@ -129,6 +131,7 @@ var vueApp = new Vue({
         this.submitStatus = 'PENDING';
         await this.saveToDatabase();
         await this.sendEmail();
+        this.submitStatus = 'OK';
 
         setTimeout(() => {
           this.emailSending = false;

@@ -115,8 +115,8 @@
                   ref="name"
                   v-model.trim="$v.name.$model"
                 />
-                <div class="error" v-if="!$v.name.required">You must enter your name to proceed.</div>
-                <div class="error" v-if="!$v.name.minLength">Your name must have at least {{$v.name.$params.minLength.min}} letters.</div>
+                <div class="error" :class="{'shake' : this.$v.name.$invalid}" v-if="!$v.name.required">You must enter your name to proceed.</div>
+                <div class="error" :class="{'shake' : this.$v.name.$invalid}" v-if="!$v.name.minLength">Your name must have at least {{$v.name.$params.minLength.min}} letters.</div>
               </div>
               <transition name="fade">
                 <div class="form-group" v-if="step >= 2">
@@ -131,8 +131,8 @@
                     ref="message"
                     v-model.trim="$v.message.$model"
                   ></input>
-                  <div class="error" v-if="!$v.message.required">A message is required to help you.</div>
-                  <div class="error" v-if="!$v.message.minLength">The message must have at least {{$v.message.$params.minLength.min}} letters.</div>
+                  <div class="error" :class="{'shake' : this.$v.message.$invalid}" v-if="!$v.message.required">A message is required to help you.</div>
+                  <div class="error" :class="{'shake' : this.$v.message.$invalid}" v-if="!$v.message.minLength">The message must have at least {{$v.message.$params.minLength.min}} letters.</div>
                 </div>
               </transition>
               <transition name="fade">
@@ -147,9 +147,9 @@
                     ref="email"
                     v-model.trim="$v.email.$model"
                   />
-                  <div class="error" v-if="!$v.email.required">You have to provide your email to help you with the query.</div>
-                  <div class="error" v-if="!$v.email.maxLength">Your email is of {{$v.email.$params.maxLength.max}} letters. Too long to proceed.</div>
-                  <div class="error" v-if="!$v.email.email">This email address is not a valid one. Please correct it.</div>
+                  <div class="error" :class="{'shake' : this.$v.email.$invalid}" v-if="!$v.email.required">You have to provide your email to help you with the query.</div>
+                  <div class="error" :class="{'shake' : this.$v.email.$invalid}" v-if="!$v.email.maxLength">Your email is of {{$v.email.$params.maxLength.max}} letters. Too long to proceed.</div>
+                  <div class="error" :class="{'shake' : this.$v.email.$invalid}" v-if="!$v.email.email">This email address is not a valid one. Please correct it.</div>
                 </div>
               </transition>
               <div class="form-group">
@@ -162,7 +162,7 @@
                   <div>
                     <input v-if="step >= 4" type="tel" class="form-control" placeholder="e.g. +91 99560 22342" ref="phone"
                       v-model.trim="$v.phone.$model" />
-                    <div class="error" v-if="!$v.phone.minLength">Your phone must be at least {{$v.phone.$params.minLength.min}} digits.
+                    <div class="error" :class="{'shake' : this.$v.phone.$invalid}" v-if="!$v.phone.minLength">Your phone must be at least {{$v.phone.$params.minLength.min}} digits.
                     </div>
                   </div>
                 </transition>
@@ -190,7 +190,6 @@
                 </div>
               </div>
               <p class="typo__p" v-if="submitStatus === 'OK'">Thanks for your submission!</p>
-              <p class="typo__p" v-if="submitStatus === 'ERROR'">Please fill the form correctly.</p>
               <p class="typo__p" v-if="submitStatus === 'PENDING'">Sending...</p>
             </form>
             <div class="data-success-message" v-if="emailSending">
@@ -265,6 +264,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="assets/vendor/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
     <script type="module" src="assets/js/formHandler.js"></script>
     <script src="assets/js/main.js"></script>
