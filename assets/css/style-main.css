@@ -528,13 +528,13 @@ body a {
 .img_text_container .heading h1 {
   color: #525e82;
   margin-bottom: 30px;
-  font-size: 45px;
+  font-size: 35px;
   font-weight: normal;
 }
 .img_text_container .heading h3 {
   font-size: 22px;
   color: #797b7e;
-  max-width: 55%;
+  max-width: 60%;
   margin: 0 auto;
 }
 .img_text_container .left_part img {
@@ -681,6 +681,11 @@ body a {
 .story_contant .content {
   text-align: center;
 }
+.story_contant .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .story_contant .description h4 {
   font-size: 20px;
   font-weight: 600;
@@ -689,6 +694,7 @@ body a {
 .story_contant .content .description p {
   color: #797b7e;
   margin-bottom: 0;
+  width: 70%;
 }
 .story_contant:after {
   content: "";
@@ -841,7 +847,7 @@ body a {
 
 /* servies section start */
 #digital_box {
-  background-color: hsl(0, 0%, 98%);
+  background-color: hsl(0, 0%, 97%);
   padding: 9em 0;
 }
 .outline-container {
@@ -886,7 +892,7 @@ body a {
   margin: 0;
 }
 #digital_box .icon-box {
-  background-color: hsl(0, 0%, 98%);
+  background-color: hsl(0, 0%, 97%);
 }
 
 #digital_box .flipper {
@@ -952,6 +958,7 @@ body a {
   text-align: center;
   margin: 0;
   width: 100%;
+  opacity: 0.9;
 }
 #digital_box .flipper:hover .main_box {
   transform: rotateY(180deg);
@@ -963,6 +970,10 @@ body a {
 }
 #digital_box .back_content h6 {
   color: #ffffff;
+}
+
+#digital_box .digital__orm {
+  width: 120px !important;
 }
 
 /* servies section end*/
@@ -1459,6 +1470,7 @@ ul.brand-listing {
 ul.brand-listing li {
   color: #c8c8c9;
   font-size: 18px;
+  opacity: 0.9;
 }
 .listlnk {
   display: inline-block;
@@ -2009,6 +2021,24 @@ ul.brand-listing li {
   align-items: center;
 }
 
+.innovation,
+.simplicity,
+.integration,
+.agility,
+.integrity {
+  position: relative;
+}
+
+.hoverblock {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 3;
+}
+
 .innovation__anim {
   width: 7em;
   margin: 1.75em 0;
@@ -2196,4 +2226,8 @@ ul.brand-listing li {
   background-color: #262728;
   display: inline-block;
   margin-right: 0.5em;
+}
+
+.website__graphic {
+  height: 520px !important;
 }

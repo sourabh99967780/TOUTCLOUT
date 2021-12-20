@@ -150,8 +150,8 @@ h6 {
 }
 #about .top_content p {
   color: #62748f;
-  font-size: 16px;
-  max-width: 65%;
+  font-size: 15px;
+  max-width: 60%;
   margin: 0 auto;
 }
 #about .top_content p:last-child {
@@ -227,7 +227,7 @@ h6 {
   transform: rotateY(180deg);
   backface-visibility: hidden;
   height: 314px;
-  width: 99%;
+  width: 100%;
 }
 #services .main_box .icon-box {
   background-color: #f4f4f4;

@@ -184,7 +184,7 @@ const initCanvas = () => {
 initCanvas();
 
 // innovation element
-var innovationElem = document.querySelector(".innovation");
+var innovationElem = document.querySelector(".innovation__hoverblock");
 innovationElem.addEventListener("mouseover", (event) => {
   var innovationPlayer = document.querySelector(".innovation__anim");
   innovationPlayer.play();
@@ -195,19 +195,18 @@ innovationElem.addEventListener("mouseout", (event) => {
 });
 
 // simplicity element
-var simplicityElem = document.querySelector(".simplicity");
+var simplicityElem = document.querySelector(".simplicity__hoverblock");
 simplicityElem.addEventListener("mouseover", (event) => {
   var simplicityPlayer = document.querySelector(".simplicity__anim");
   simplicityPlayer.play();
 });
-var simplicityElem = document.querySelector(".simplicity");
 simplicityElem.addEventListener("mouseout", (event) => {
   var simplicityPlayer = document.querySelector(".simplicity__anim");
   simplicityPlayer.stop();
 });
 
 // integration element
-var integrationElem = document.querySelector(".integration");
+var integrationElem = document.querySelector(".integration__hoverblock");
 integrationElem.addEventListener("mouseover", (event) => {
   var integrationPlayer = document.querySelector(".integration__anim");
   integrationPlayer.play();
@@ -218,7 +217,7 @@ integrationElem.addEventListener("mouseout", (event) => {
 });
 
 // agility element
-var agilityElem = document.querySelector(".agility");
+var agilityElem = document.querySelector(".agility__hoverblock");
 agilityElem.addEventListener("mouseover", (event) => {
   var agilityPlayer = document.querySelector(".agility__anim");
   agilityPlayer.play();
@@ -229,7 +228,7 @@ agilityElem.addEventListener("mouseout", (event) => {
 });
 
 // integrity element
-var integrityElem = document.querySelector(".integrity");
+var integrityElem = document.querySelector(".integrity__hoverblock");
 integrityElem.addEventListener("mouseover", (event) => {
   var integrityPlayer = document.querySelector(".integrity__anim");
   integrityPlayer.play();
