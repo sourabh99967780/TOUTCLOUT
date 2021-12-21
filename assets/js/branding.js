@@ -48,7 +48,8 @@ const initHovers = () => {
 };
 
 const initCanvas = (strokeColor, cursorBackground) => {
-  const canvas = document.querySelector(".cursor--canvas");
+  paper.clear();
+  const canvas = document.querySelector('.cursor--canvas');
   const cursorSmall = document.querySelector('.cursor--small');
 
   // set cursor background
@@ -179,3 +180,13 @@ let isStuck = false;
 let showCursor = false;
 let group, stuckX, stuckY, fillOuterCursor;
 initCanvas("rgba(38,39,40,0.5)", '#262728');
+
+// change cursor color on flip
+document.querySelectorAll('.flipper').forEach(item => {
+  item.addEventListener('mouseover', (event) => {
+    initCanvas("rgba(221,221,221,0.5)", '#dddddd');
+  })
+  item.addEventListener('mouseout', (event) => {
+    initCanvas("rgba(38,39,40,0.5)", '#262728');
+  })
+})
