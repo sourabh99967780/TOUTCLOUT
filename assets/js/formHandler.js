@@ -38,6 +38,7 @@ var vueApp = new Vue({
       email
     },
     phone: {
+      required,
       minLength: minLength(10),
     }
   },
@@ -122,8 +123,6 @@ var vueApp = new Vue({
     async submit() {
       this.$v.$touch();
       if (this.$v.$invalid) {
-        const invalidFields = Object.keys(this.$v.$params).filter(fieldName => this.$v[fieldName].$invalid);
-        console.log("Invalid Fields", invalidFields);
         this.submitStatus = 'ERROR'
       } else {
         // do your submit logic here

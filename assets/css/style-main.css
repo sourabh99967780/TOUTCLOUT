@@ -532,9 +532,9 @@ body a {
   font-weight: normal;
 }
 .img_text_container .heading h3 {
-  font-size: 22px;
+  font-size: 18px;
   color: #797b7e;
-  max-width: 60%;
+  max-width: 50%;
   margin: 0 auto;
 }
 .img_text_container .left_part img {
@@ -886,7 +886,7 @@ body a {
 }
 #digital_box .icon-box p {
   color: #797b7e;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
   text-align: center;
   margin: 0;
@@ -954,7 +954,7 @@ body a {
 }
 #digital_box .back_content p {
   color: #c8c8c9;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   text-align: center;
   margin: 0;
@@ -1360,7 +1360,7 @@ body a {
   color: #fff;
 }
 .top_header li.dropdown-toggle .dropdown-menu .dropdown-item:hover {
-  color: #484c50;
+  color: #eaad67 !important;
 }
 .top_header li.dropdown-toggle:hover .dropdown-menu {
   display: block;
@@ -1471,7 +1471,7 @@ ul.brand-listing {
 }
 ul.brand-listing li {
   color: #c8c8c9;
-  font-size: 18px;
+  font-size: 15px;
   opacity: 0.9;
 }
 .listlnk {

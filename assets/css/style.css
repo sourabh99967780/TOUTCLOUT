@@ -124,7 +124,7 @@ h6 {
   color: #797b7e;
   font-weight: 400;
   font-style: normal;
-  font-size: 24px;
+  font-size: 20px;
   margin: 0;
 }
 .about img {
@@ -191,6 +191,7 @@ h6 {
   font-weight: 700;
   font-size: 18px;
   color: #ffffff;
+  margin-bottom: 0.8em;
 }
 .services .back_content p {
   color: #c8c8c9;
@@ -251,11 +252,12 @@ h6 {
 }
 #services .main_box .icon-box p {
   color: #797b7e;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
   text-align: center;
   margin: 0;
   width: 90%;
+  padding-top: 0.8em;
 }
 #services .flipper {
   height: 315px;
