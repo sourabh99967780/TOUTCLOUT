@@ -11,13 +11,6 @@ $(".menu-opener").click(function () {
   }
 });
 
-// Customised Cursor
-// cursor effects
-// set the starting position of the cursor outside of the screen
-let clientX = -100;
-let clientY = -100;
-const innerCursor = document.querySelector(".cursor--small");
-
 const initCursor = () => {
   // add listener to track the current mouse position
   document.addEventListener("mousemove", (e) => {
@@ -33,8 +26,6 @@ const initCursor = () => {
   };
   requestAnimationFrame(render);
 };
-
-initCursor();
 
 const initHovers = () => {
   // find the center of the link element and set stuckX and stuckY
@@ -60,23 +51,18 @@ const initHovers = () => {
   });
 };
 
-initHovers();
-
-// making the canvas
-let lastX = 0;
-let lastY = 0;
-let isStuck = false;
-let showCursor = false;
-let group, stuckX, stuckY, fillOuterCursor;
-
-const initCanvas = () => {
+const initCanvas = (strokeColor, cursorBackground) => {
   const canvas = document.querySelector(".cursor--canvas");
+  const cursorSmall = document.querySelector('.cursor--small');
+
+  // set cursor background
+  cursorSmall.style.background = cursorBackground;
+
   const shapeBounds = {
     width: 75,
     height: 75,
   };
   paper.setup(canvas);
-  const strokeColor = "rgba(38,39,40,0.5)";
   const strokeWidth = 1;
   const segments = 8;
   const radius = 15;
@@ -181,7 +167,22 @@ const initCanvas = () => {
   };
 };
 
-initCanvas();
+// Customised Cursor
+// cursor effects
+// set the starting position of the cursor outside of the screen
+let clientX = -100;
+let clientY = -100;
+const innerCursor = document.querySelector(".cursor--small");
+initCursor();
+initHovers();
+
+// making the canvas
+let lastX = 0;
+let lastY = 0;
+let isStuck = false;
+let showCursor = false;
+let group, stuckX, stuckY, fillOuterCursor;
+initCanvas("rgba(38,39,40,0.5)", '#262728');
 
 // innovation element
 var innovationElem = document.querySelector(".innovation__hoverblock");
