@@ -427,7 +427,7 @@ body a {
   transition: none;
   opacity: 0;
   flex: unset;
-  padding: 0 30px;
+  padding: 0 45px;
 }
 .menu.active li:first-child {
   transform: translateY(0);
