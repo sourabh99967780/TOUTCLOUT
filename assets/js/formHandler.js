@@ -29,7 +29,7 @@ var vueApp = new Vue({
     },
     message: {
       required,
-      minLength: minLength(2),
+      minLength: minLength(6),
       maxLength: maxLength(10000),
     },
     email: {

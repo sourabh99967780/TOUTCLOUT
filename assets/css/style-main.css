@@ -121,7 +121,7 @@ body a {
 .talk_to_us .lowerBurger__firstHalf,
 .talk_to_us .lowerBurger__secondHalf,
 .talk_to_us .lowerBurger__thirdHalf {
-  background-color: #dddddd;
+  background-color: hsl(0, 0%, 97%);
 }
 
 .who_we_are .bun,
@@ -654,7 +654,7 @@ body a {
 }
 
 .story_contant {
-  background-color: #484c50;
+  background-color: rgb(51, 52, 53);
   position: relative;
   z-index: 1;
   padding-top: 7.5625em;
@@ -759,7 +759,7 @@ body a {
 
 #our_process {
   overflow: hidden;
-  background-color: #f4f4f4;
+  background-color: hsl(0, 0%, 97%);
 }
 #our_process .pro_content {
   text-align: center;
@@ -925,7 +925,7 @@ body a {
   width: 99%;
 }
 #digital_box .back_content {
-  background: #484c50;
+  background: rgb(51, 52, 53);
   padding: 30px 20px;
   text-align: center;
   display: flex;
@@ -937,7 +937,8 @@ body a {
   left: 0;
   transform: rotateY(180deg);
   backface-visibility: hidden;
-  height: 314px;
+  height: inherit;
+  background-size: cover;
   width: 100%;
 }
 #digital_box .back_content img {
@@ -967,6 +968,7 @@ body a {
   transition: 0.6s;
   transform-style: preserve-3d;
   position: relative;
+  height: 316px;
 }
 #digital_box .back_content h6 {
   color: #ffffff;
@@ -1182,7 +1184,7 @@ body a {
   background-color: transparent;
 }
 .contact_us .menu.active {
-  background-color: rgb(216, 151, 77, 0.9);
+  background-color: rgb(216, 151, 77);
   z-index: 3;
 }
 .contact_us .flex_item h4 {

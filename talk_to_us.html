@@ -127,7 +127,7 @@
                     v-model.trim="$v.message.$model"
                   ></input>
                   <div class="error" :class="{'shake' : this.$v.message.$invalid}" v-if="!$v.message.required">A message is required to help you.</div>
-                  <div class="error" :class="{'shake' : this.$v.message.$invalid}" v-if="!$v.message.minLength">The message must have at least {{$v.message.$params.minLength.min}} letters.</div>
+                  <div class="error" :class="{'shake' : this.$v.message.$invalid}" v-if="!$v.message.minLength">Your message must have at least {{$v.message.$params.minLength.min}} letters.</div>
                 </div>
               </transition>
               <transition name="fade">
@@ -142,9 +142,9 @@
                     ref="email"
                     v-model.trim="$v.email.$model"
                   />
-                  <div class="error" :class="{'shake' : this.$v.email.$invalid}" v-if="!$v.email.required">You have to provide your email to help you with the query.</div>
+                  <div class="error" :class="{'shake' : this.$v.email.$invalid}" v-if="!$v.email.required">Please provide your email address to help you with the query.</div>
                   <div class="error" :class="{'shake' : this.$v.email.$invalid}" v-if="!$v.email.maxLength">Your email is of {{$v.email.$params.maxLength.max}} letters. Too long to proceed.</div>
-                  <div class="error" :class="{'shake' : this.$v.email.$invalid}" v-if="!$v.email.email">This email address is not a valid one. Please correct it.</div>
+                  <div class="error" :class="{'shake' : this.$v.email.$invalid}" v-if="!$v.email.email">This email address is not valid.</div>
                 </div>
               </transition>
               <div class="form-group">

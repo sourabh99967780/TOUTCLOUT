@@ -169,7 +169,7 @@ h6 {
   text-align: center;
 }
 .services .back_content {
-  background: #484c50;
+  background: rgb(51, 52, 53);
   padding: 30px 0;
   display: flex;
   justify-content: center;
@@ -178,7 +178,7 @@ h6 {
 }
 
 .services {
-  background-color: #f4f4f4;
+  background-color: hsl(0, 0%, 97%);
   padding: 10em 0;
 }
 .services .back_content img {
@@ -205,6 +205,7 @@ h6 {
   transition: 0.6s;
   transform-style: preserve-3d;
   position: relative;
+  height: 316px;
 }
 #services .main_box .icon-box {
   position: absolute;
@@ -226,11 +227,11 @@ h6 {
   height: 100%;
   transform: rotateY(180deg);
   backface-visibility: hidden;
-  height: 314px;
+  height: inherit;
   width: 100%;
 }
 #services .main_box .icon-box {
-  background-color: #f4f4f4;
+  background-color: hsl(0, 0%, 97%);
   padding: 30px 0;
   display: flex;
   justify-content: center;
