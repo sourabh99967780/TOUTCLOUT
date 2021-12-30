@@ -52,6 +52,7 @@ const initHovers = () => {
 };
 
 const initCanvas = (strokeColor, cursorBackground) => {
+  paper.clear();
   const canvas = document.querySelector(".cursor--canvas");
   const cursorSmall = document.querySelector('.cursor--small');
 
@@ -183,6 +184,16 @@ let isStuck = false;
 let showCursor = false;
 let group, stuckX, stuckY, fillOuterCursor;
 initCanvas("rgba(38,39,40,0.5)", '#262728');
+
+// change cursor color on flip
+const storyTop = document.querySelector('.story_top');
+storyTop.addEventListener('mouseover', (event) => {
+  console.log("Story content block")
+    initCanvas("rgba(221,221,221,0.5)", '#dddddd');
+  })
+storyTop.addEventListener('mouseout', (event) => {
+  initCanvas("rgba(38,39,40,0.5)", '#262728');
+})
 
 // innovation element
 var innovationElem = document.querySelector(".innovation__hoverblock");

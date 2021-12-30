@@ -48,6 +48,7 @@ const initHovers = () => {
 };
 
 const initCanvas = (strokeColor, cursorBackground) => {
+  paper.clear();
   const canvas = document.querySelector(".cursor--canvas");
   const cursorSmall = document.querySelector('.cursor--small');
 
