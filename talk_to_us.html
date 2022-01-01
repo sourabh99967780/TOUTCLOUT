@@ -149,18 +149,16 @@
               </transition>
               <div class="form-group">
                 <transition name="fade">
-                  <label for="form_number" v-if="step >= 4"
-                    >We’ll be happy to reach out to you on call.</label
-                  >
-                  </transition>
-                <transition name="fade">
-                  <div>
+                  <div class="form-group" v-if="step >= 4">
+                    <label for="form_phone">We’ll be happy to reach out to you on call.</label>
                     <input v-if="step >= 4" type="tel" class="form-control" placeholder="e.g. +91 99560 22342" ref="phone"
                       v-model.trim="$v.phone.$model" />
-                    <div class="error" :class="{'shake' : this.$v.phone.$invalid}" v-if="!$v.phone.minLength">Your phone must be at least {{$v.phone.$params.minLength.min}} digits.
-                    </div>
+                    <div class="error" :class="{'shake' : this.$v.phone.$invalid && !this.isAPhoneNumber}" v-if="!$v.phone.required">A phone number is required to
+                      serve you faster.</div>
+                    <div class="error" :class="{'shake' : this.$v.phone.$invalid && !this.isAPhoneNumber}" v-if="!this.isAPhoneNumber">Please provide a valid phone
+                      number to help you.</div>
                   </div>
-                </transition>
+                  </transition>
                 <div class="tab-btn-container">
                   <button
                     class="tab-btn"
@@ -174,22 +172,18 @@
                     v-else
                     @click.prevent="submit()"
                   >
-                    <span>
-                      <img
-                        src="assets/images/contact/send.svg"
-                        alt="Send Message"
-                      />
-                    </span>
-                    <span>Send</span>
+                  <div v-if="submitStatus === 'PENDING'" class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                    <div v-else class="d-flex align-items-center">
+                      <img src="assets/images/contact/send.svg" class="img-fluid" alt="Send Message" />
+                      <span>Send</span>
+                    </div>
                   </button>
                 </div>
               </div>
               <p class="typo__p" v-if="submitStatus === 'OK'">Thanks for your submission!</p>
-              <p class="typo__p" v-if="submitStatus === 'PENDING'">Sending...</p>
             </form>
-            <div class="data-success-message" v-if="emailSending">
-              Thank you for reaching out to us.
-            </div>
             <div class="d-flex social_content">
               <a href="#">hello@toutclout.com</a>
               <a href="#">+91 99588 35063</a>

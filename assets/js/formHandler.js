@@ -38,14 +38,18 @@ var vueApp = new Vue({
       email
     },
     phone: {
-      required,
-      minLength: minLength(10),
+      required
     }
   },
   computed: {
     firstName() {
       return this.name.split(" ")[0];
-    }
+    },
+
+    isAPhoneNumber() {
+      const match = /^\+?\d{0,3}[\(\- ]?\d{3}\)?[\- ]?\d{3,4}[\- ]?\d{4}/.test(this.phone);
+      return match;
+    },
   },
   methods: {
     async prev() {
@@ -69,6 +73,12 @@ var vueApp = new Vue({
       } else if (this.step === 3) {
         this.$v.email.$touch();
         if (!this.$v.email.$invalid) {
+          await this.step++;
+          this.$refs[this.focusElements[this.step]].focus();
+        }
+      } else if (this.step === 4) {
+        this.$v.phone.$touch();
+        if (!this.$v.phone.$invalid && this.isAPhoneNumber) {
           await this.step++;
           this.$refs[this.focusElements[this.step]].focus();
         }
@@ -122,7 +132,7 @@ var vueApp = new Vue({
 
     async submit() {
       this.$v.$touch();
-      if (this.$v.$invalid) {
+      if (this.$v.$invalid || !this.isAPhoneNumber) {
         this.submitStatus = 'ERROR'
       } else {
         // do your submit logic here
@@ -131,10 +141,7 @@ var vueApp = new Vue({
         await this.saveToDatabase();
         await this.sendEmail();
         this.submitStatus = 'OK';
-
-        setTimeout(() => {
-          this.emailSending = false;
-        }, 10000);
+        this.emailSending = false;
       }
     },
   },

@@ -1029,10 +1029,10 @@ body a {
   position: relative;
   z-index: 1;
 }
-.contact_us .send-btn {
+.contact_us .send-btn > div {
   gap: 15px;
 }
-.contact_us .send-btn > span > img {
+.contact_us .send-btn img {
   width: 1.3em;
   height: auto;
 }
@@ -1260,11 +1260,18 @@ body a {
   background: #484c50;
   color: #fff;
   text-transform: capitalize;
-  padding: 7px 30px;
+  padding: 7px 25px;
   font-size: 15px;
   border: 0;
   font-style: italic;
 }
+
+.contact_us .spinner-border {
+  width: 1em;
+  height: 1em;
+  margin: 0.5em 1em;
+}
+
 /*.contact_us .menu.active .menu-link{color: #231F20;}*/
 .contact_us li.dropdown-toggle::after {
   border-top-color: #ddd;
