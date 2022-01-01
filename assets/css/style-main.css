@@ -719,6 +719,16 @@ body a {
   z-index: -1;
 }
 
+.story_top_transparent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 50%;
+  background-color: transparent;
+  z-index: 1;
+}
+
 /* website design */
 #website_design {
   padding-top: 16em;
