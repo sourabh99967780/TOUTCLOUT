@@ -545,7 +545,7 @@ section {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   #footer .footer-top h4 {
     text-align: center !important;
   }
@@ -569,6 +569,9 @@ section {
     margin-top: 0 !important;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .what-we-do {
     margin-top: 0 !important;
@@ -576,8 +579,15 @@ section {
   #footer .footer-top .footer-links ul li:last-child {
     margin-bottom: 20px !important;
   }
-  #footer .footer-top .footer-links {
-    margin-bottom: 12px;
+  #footer .footer-top .footer-links > div:first-child {
+    margin-bottom: 28px;
+    margin-top: 1em;
+  }
+  #footer .footer-top .footer-links > div > div:first-child > a {
+    margin-bottom: 28px;
+  }
+  #footer .footer-top h4 {
+    font-size: 16px;
   }
 }
 /* media query end */
