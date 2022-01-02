@@ -1838,6 +1838,16 @@ ul.brand-listing li {
     width: 85vw;
     margin: 0 auto;
   }
+
+  .story_top,
+  .story_top_transparent {
+    height: 36%;
+  }
+
+  .story_bottom {
+    height: 64%;
+  }
+
   .contact_us .site_container .left_img,
   .contact_us .site_container .right_img {
     opacity: 0.3;
@@ -1845,6 +1855,7 @@ ul.brand-listing li {
   .contact_us .flex_item h4 {
     margin-top: 40px;
   }
+
   .img_text_container .heading h1 {
     font-size: 25px;
   }
