@@ -1,4 +1,4 @@
-const baseUrl = "http://3.145.21.71:81/api";
+const baseUrl = "http://localhost:3300/api";
 
 Vue.use(window.vuelidate.default)
 const { required, minLength, maxLength, email } = window.validators

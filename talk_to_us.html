@@ -151,7 +151,7 @@
                 <transition name="fade">
                   <div class="form-group" v-if="step >= 4">
                     <label for="form_phone">We’ll be happy to reach out to you on call.</label>
-                    <input v-if="step >= 4" type="tel" class="form-control" placeholder="e.g. +91 99560 22342" ref="phone"
+                    <input v-if="step >= 4" type="tel" class="form-control" placeholder="e.g. +91 9956022342" ref="phone"
                       v-model.trim="$v.phone.$model" />
                     <div class="error" :class="{'shake' : this.$v.phone.$invalid && !this.isAPhoneNumber}" v-if="!$v.phone.required">A phone number is required to
                       serve you faster.</div>
@@ -182,7 +182,7 @@
                   </button>
                 </div>
               </div>
-              <p class="typo__p" v-if="submitStatus === 'OK'">Thanks for your submission!</p>
+              <p class="typo__p" v-if="submitStatus === 'OK' && !emailSending">Thanks for your submission!</p>
             </form>
             <div class="d-flex social_content">
               <a href="#">hello@toutclout.com</a>
