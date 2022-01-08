@@ -52,35 +52,50 @@ var vueApp = new Vue({
     },
   },
   methods: {
-    async prev() {
-      await this.step--;
-      this.$refs[this.focusElements[this.step]].focus();
-    },
-
     async next() {
       if (this.step === 1) {
         this.$v.name.$touch();
         if (!this.$v.name.$invalid) {
           await this.step++;
           this.$refs[this.focusElements[this.step]].focus();
+        } else {
+          document.querySelector(`.${this.focusElements[this.step]}-error`).classList.remove('shake');
+          setTimeout(() => {
+            document.querySelector(`.${this.focusElements[this.step]}-error`).classList.add('shake');
+          }, 100);
         }
       } else if (this.step === 2) {
         this.$v.message.$touch();
         if (!this.$v.message.$invalid) {
           await this.step++;
           this.$refs[this.focusElements[this.step]].focus();
+        } else {
+          document.querySelector(`.${this.focusElements[this.step]}-error`).classList.remove('shake');
+          setTimeout(() => {
+            document.querySelector(`.${this.focusElements[this.step]}-error`).classList.add('shake');
+          }, 100);
         }
       } else if (this.step === 3) {
         this.$v.email.$touch();
         if (!this.$v.email.$invalid) {
           await this.step++;
           this.$refs[this.focusElements[this.step]].focus();
+        } else {
+          document.querySelector(`.${this.focusElements[this.step]}-error`).classList.remove('shake');
+          setTimeout(() => {
+            document.querySelector(`.${this.focusElements[this.step]}-error`).classList.add('shake');
+          }, 100);
         }
       } else if (this.step === 4) {
         this.$v.phone.$touch();
         if (!this.$v.phone.$invalid && this.isAPhoneNumber) {
           await this.step++;
           this.$refs[this.focusElements[this.step]].focus();
+        } else {
+          document.querySelector(`.${this.focusElements[this.step]}-error`).classList.remove('shake');
+          setTimeout(() => {
+            document.querySelector(`.${this.focusElements[this.step]}-error`).classList.add('shake');
+          }, 100);
         }
       }
     },
@@ -133,6 +148,10 @@ var vueApp = new Vue({
     async submit() {
       this.$v.$touch();
       if (this.$v.$invalid || !this.isAPhoneNumber) {
+        document.querySelector(`.phone-error`).classList.remove('shake');
+          setTimeout(() => {
+            document.querySelector(`.phone-error`).classList.add('shake');
+          }, 100);
         this.submitStatus = 'ERROR'
       } else {
         // do your submit logic here
