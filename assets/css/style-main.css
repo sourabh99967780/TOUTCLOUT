@@ -2076,6 +2076,13 @@ ul.brand-listing li {
   position: relative;
 }
 
+.content__boundary {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .hoverblock {
   position: absolute;
   top: 0;
