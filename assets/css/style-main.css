@@ -746,8 +746,8 @@ body a {
 }
 #website_design .top_content p {
   color: #797b7e;
-  font-size: 16px;
-  max-width: 65%;
+  font-size: 15px;
+  max-width: 60%;
   margin: 0 auto;
 }
 #website_design .content h6 {
@@ -775,7 +775,6 @@ body a {
 #website_design_content p {
   font-size: 19px;
   color: #797b7e;
-  text-align: center;
 }
 #website_design_content p i {
   font-weight: 600;

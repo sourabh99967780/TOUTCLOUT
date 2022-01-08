@@ -591,3 +591,7 @@ section {
   }
 }
 /* media query end */
+
+.no-scroll {
+  overflow: hidden;
+}

@@ -1,12 +1,3 @@
-$(".menu-opener").click(function () {
-  $(".menu-opener, .menu-opener-inner, .menu").toggleClass("active");
-  if ($("body,html").hasClass("overhide")) {
-    $("body,html").removeClass("overhide");
-  } else {
-    $("body,html").addClass("overhide");
-  }
-});
-
 const initCursor = () => {
   // add listener to track the current mouse position
   document.addEventListener("mousemove", (e) => {

@@ -56,6 +56,7 @@ hamburgerMenu.addEventListener("click", function () {
   hamburgerMenuButton.classList.toggle("menu__active");
   upperBurger.style.width = "26px";
   $(".menu").toggleClass("active");
+  $("body").toggleClass("no-scroll");
 });
 
 if (!isAMobileDevice) {

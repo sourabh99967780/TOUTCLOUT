@@ -1,16 +1,3 @@
-$(".menu-opener").click(function () {
-  $(".menu-opener, .menu-opener-inner, .menu").toggleClass("active");
-  if ($("body,html").hasClass("overhide")) {
-    $("body,html").removeClass("overhide");
-    $(".logo2").removeClass("over_show");
-    $(".logo1").removeClass("over_hide");
-  } else {
-    $("body,html").addClass("overhide");
-    $(".logo2").addClass("over_show");
-    $(".logo1").addClass("over_hide");
-  }
-});
-
 const initCursor = () => {
   // add listener to track the current mouse position
   document.addEventListener("mousemove", (e) => {
