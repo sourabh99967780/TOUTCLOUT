@@ -2286,6 +2286,13 @@ ul.brand-listing li {
   height: 520px !important;
 }
 
+.website__process {
+  width: 50em;
+  margin: 0em auto;
+  margin-top: 7em;
+  margin-bottom: 7em;
+}
+
 /* shake animation for contact us page */
 .shake {
   animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
