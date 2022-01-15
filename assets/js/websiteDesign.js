@@ -171,3 +171,18 @@ let isStuck = false;
 let showCursor = false;
 let group, stuckX, stuckY, fillOuterCursor;
 initCanvas("rgba(38,39,40,0.5)", '#262728');
+
+// process animation customisation
+document.addEventListener("DOMContentLoaded", () => {
+  LottieInteractivity.create({
+    player: '#website__process',
+    mode: 'scroll',
+    actions: [
+      {
+        visibility: [0, 1.0],
+        type: 'seek',
+        frames: [0, 360],
+      },
+    ],
+  });
+})
