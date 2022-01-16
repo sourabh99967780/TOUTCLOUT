@@ -783,9 +783,18 @@ body a {
   max-height: 500px;
 }
 
+#sticky__process {
+  height: 950vh;
+}
+
 #our_process {
   overflow: hidden;
   background-color: hsl(0, 0%, 97%);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
 }
 #our_process .pro_content {
   text-align: center;

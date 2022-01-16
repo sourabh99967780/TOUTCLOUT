@@ -8,7 +8,7 @@ const initCursor = () => {
   // transform the innerCursor to the current mouse position
   // use requestAnimationFrame() for smooth performance
   const render = () => {
-    innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;;
+    innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
     requestAnimationFrame(render);
   };
   requestAnimationFrame(render);
@@ -41,7 +41,7 @@ const initHovers = () => {
 const initCanvas = (strokeColor, cursorBackground) => {
   paper.clear();
   const canvas = document.querySelector(".cursor--canvas");
-  const cursorSmall = document.querySelector('.cursor--small');
+  const cursorSmall = document.querySelector(".cursor--small");
 
   // set cursor background
   cursorSmall.style.background = cursorBackground;
@@ -170,19 +170,25 @@ let lastY = 0;
 let isStuck = false;
 let showCursor = false;
 let group, stuckX, stuckY, fillOuterCursor;
-initCanvas("rgba(38,39,40,0.5)", '#262728');
+initCanvas("rgba(38,39,40,0.5)", "#262728");
 
 // process animation customisation
 document.addEventListener("DOMContentLoaded", () => {
   LottieInteractivity.create({
-    player: '#website__process',
-    mode: 'scroll',
+    player: "#website__process",
+    mode: "scroll",
+    container: "#sticky__process",
     actions: [
       {
-        visibility: [0, 1.0],
-        type: 'seek',
-        frames: [0, 360],
+        visibility: [0, 0.1],
+        type: 'stop',
+        frames: [0],
+      },
+      {
+        visibility: [0.1, 1.0],
+        type: "seek",
+        frames: [0, 1830],
       },
     ],
   });
-})
+});
