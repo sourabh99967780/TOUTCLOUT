@@ -784,7 +784,7 @@ body a {
 }
 
 #sticky__process {
-  height: 950vh;
+  height: 4000vh;
 }
 
 #our_process {
@@ -794,7 +794,7 @@ body a {
   top: 0;
   left: 0;
   right: 0;
-  height: 115vh;
+  height: 120vh;
   padding: 4em 0;
 }
 #our_process .pro_content {
@@ -2297,10 +2297,10 @@ ul.brand-listing li {
 }
 
 .website__process {
-  width: 50em;
+  width: 45em;
   margin: 0em auto;
   margin-top: 5em;
-  margin-bottom: 7em;
+  margin-bottom: 5em;
 }
 
 /* shake animation for contact us page */
