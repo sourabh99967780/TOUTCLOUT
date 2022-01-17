@@ -794,7 +794,7 @@ body a {
   left: 0;
   right: 0;
   height: 110vh;
-  padding: 9vh 0;
+  padding: 6vh 0;
 }
 #our_process .pro_content {
   text-align: center;
@@ -864,7 +864,7 @@ body a {
 #our_process .title p {
   color: #62748f;
   font-size: 16px;
-  max-width: 70%;
+  max-width: 78%;
   margin: 0 auto 100px;
 }
 #our_process .col-md-4:nth-child(3) .pro_content .icon:before {
@@ -2296,9 +2296,8 @@ ul.brand-listing li {
 }
 
 .website__process {
-  width: 48em;
+  width: 94vh;
   margin: 0em auto;
-  margin-top: 6em;
 }
 
 /* shake animation for contact us page */
