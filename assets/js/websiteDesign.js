@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         visibility: [0.05, 1.0],
         type: "seek",
-        frames: [0, 1860],
+        frames: [0, 2160],
       },
     ],
   });
