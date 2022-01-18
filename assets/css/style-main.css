@@ -891,10 +891,18 @@ body a {
   border-right: 1px solid #26272815;
 }
 
+.outline-container:nth-child(4),
+.outline-container:nth-child(5),
+.outline-container:nth-child(6) {
+  border-top: none;
+}
+
 .outline-container {
   border-top: 1px solid #26272815;
   border-bottom: 1px solid #26272815;
   border-left: 1px solid #26272815;
+  padding-left: unset !important;
+  padding-right: unset !important;
 }
 #digital_box .section-title {
   font-size: 18px;
@@ -981,6 +989,7 @@ body a {
   height: inherit;
   background-size: cover;
   width: 100%;
+  z-index: 100;
 }
 #digital_box .back_content img {
   width: 100px;
