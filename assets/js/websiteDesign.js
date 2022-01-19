@@ -180,12 +180,12 @@ document.addEventListener("DOMContentLoaded", () => {
     container: "#sticky__process",
     actions: [
       {
-        visibility: [0, 0.05],
+        visibility: [0, 0.1],
         type: 'stop',
         frames: [0],
       },
       {
-        visibility: [0.05, 1.0],
+        visibility: [0.1, 1.0],
         type: "seek",
         frames: [0, 2160],
       },
