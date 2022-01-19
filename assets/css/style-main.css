@@ -961,7 +961,7 @@ body a {
   z-index: 2;
   transform: rotateY(0deg);
   backface-visibility: hidden;
-  height: 315px;
+  height: inherit;
   width: 100%;
 }
 #digital_box #services .main_box .back_content {
@@ -1018,7 +1018,7 @@ body a {
   transition: 0.6s;
   transform-style: preserve-3d;
   position: relative;
-  height: 316px;
+  height: inherit;
 }
 #digital_box .back_content h6 {
   color: #ffffff;
