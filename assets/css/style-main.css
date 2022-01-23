@@ -862,7 +862,7 @@ body a {
   margin-bottom: 20px;
 }
 #our_process .title p {
-  color: rgb(51, 52, 53);
+  color: #525e82;
   font-size: 16px;
   max-width: 78%;
   margin: 0 auto 92px;
@@ -912,7 +912,7 @@ body a {
   text-align: center;
 }
 #digital_box .section-title p {
-  color: #62748f;
+  color: #525e82;
 }
 #digital_box .icon-box {
   padding: 30px 0;
@@ -2278,7 +2278,7 @@ ul.brand-listing li {
 }
 
 .branding__services-heading {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* contact us form animation */
