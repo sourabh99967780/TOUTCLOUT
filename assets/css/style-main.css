@@ -790,11 +790,10 @@ body a {
   overflow: hidden;
   background-color: hsl(0, 0%, 97%);
   position: sticky;
-  top: 0;
+  top: -6%;
   left: 0;
   right: 0;
-  height: 110vh;
-  padding: 6vh 0;
+  padding-top: 6vh;
 }
 #our_process .pro_content {
   text-align: center;
@@ -2313,7 +2312,8 @@ ul.brand-listing li {
 
 .website__process {
   width: 94vh;
-  margin: 0em auto;
+  margin: 0 auto;
+  margin-bottom: 3em;
 }
 
 /* shake animation for contact us page */
