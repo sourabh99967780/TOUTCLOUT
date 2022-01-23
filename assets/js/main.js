@@ -87,19 +87,27 @@ if (!isAMobileDevice) {
   });
 }
 
-// highlight menu top when menu dropdown items are hovered
-$('.menu-inner .dropdown .dropdown-item').mouseover(() => {
-  document.querySelector('#what_we_do').style.color = '#eaad67';
-})
-
 // check if it is the home page
 const isItTheHomePage = !!document.querySelector(".home_page");
+const isItContactUsPage = !!document.querySelector('.contact_us');
 
-$('.menu-inner .dropdown .dropdown-item').mouseout(() => {
-  if (!homePage) {
+console.log("Is it contact us page", isItContactUsPage);
+console.log("Is it home page", isItTheHomePage);
+
+// highlight menu top when menu dropdown items are hovered
+$('.menu-inner .dropdown .dropdown-item').mouseover(() => {
+  if (isItContactUsPage) {
     document.querySelector('#what_we_do').style.color = '#262728';
   } else {
+    document.querySelector('#what_we_do').style.color = '#eaad67';
+  }
+})
+
+$('.menu-inner .dropdown .dropdown-item').mouseout(() => {
+  if (isItTheHomePage || isItContactUsPage) {
     document.querySelector('#what_we_do').style.color = '#f7f7f7';
+  } else {
+    document.querySelector('#what_we_do').style.color = '#262728';
   }
 })
 

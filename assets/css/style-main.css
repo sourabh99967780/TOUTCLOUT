@@ -1356,7 +1356,7 @@ body a {
 .contact_us .active-link {
   text-decoration-color: #ffffff;
 }
-.contact_us .menu.active li .menu-link:hover {
+.contact_us .menu.active li:not(:nth-child(2)) .menu-link:hover {
   color: #000;
 }
 /* contact us */
