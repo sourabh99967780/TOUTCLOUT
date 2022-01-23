@@ -87,6 +87,22 @@ if (!isAMobileDevice) {
   });
 }
 
+// highlight menu top when menu dropdown items are hovered
+$('.menu-inner .dropdown .dropdown-item').mouseover(() => {
+  document.querySelector('#what_we_do').style.color = '#eaad67';
+})
+
+// check if it is the home page
+const isItTheHomePage = !!document.querySelector(".home_page");
+
+$('.menu-inner .dropdown .dropdown-item').mouseout(() => {
+  if (!homePage) {
+    document.querySelector('#what_we_do').style.color = '#262728';
+  } else {
+    document.querySelector('#what_we_do').style.color = '#f7f7f7';
+  }
+})
+
 // sroll to top button
 //Get the button
 var mybutton = document.getElementById("backToTop");
