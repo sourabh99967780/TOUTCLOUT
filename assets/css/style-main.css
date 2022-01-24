@@ -884,7 +884,7 @@ body a {
 /* servies section start */
 #digital_box {
   background-color: hsl(0, 0%, 97%);
-  padding: 9em 0;
+  padding: 10em 0;
 }
 
 .outline-container:nth-child(3),
@@ -906,7 +906,7 @@ body a {
   padding-right: unset !important;
 }
 #digital_box .section-title {
-  font-size: 18px;
+  font-size: 16px;
   color: #525e82;
   font-weight: 400;
   text-align: center;
