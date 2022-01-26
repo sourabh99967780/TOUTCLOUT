@@ -387,6 +387,10 @@ section {
   font-size: 18px;
 }
 
+#footer .footer-top .footer-links > div div > a.active {
+  color: #dc9f32;
+}
+
 #footer .footer-top .footer-links > div div:nth-child(2) > ul a.active {
   color: #dc9f32;
 }
@@ -399,7 +403,7 @@ section {
   color: #dc9f32;
 }
 
-#footer .footer-top .footer-links > div div:not(:nth-child(2)) > a:active {
+#footer .footer-top .footer-links > div div:not(:nth-child(2)) > a.active {
   color: #dc9f32;
 }
 
@@ -408,6 +412,7 @@ section {
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 1em;
+  text-align: center;
 }
 
 #footer .footer-top .footer-links a {
@@ -462,7 +467,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-top: -0.15em;
+  margin-top: -0.05em;
 }
 
 #footer .footer-links a {

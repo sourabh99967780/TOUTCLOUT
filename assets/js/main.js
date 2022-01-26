@@ -111,6 +111,18 @@ $('.menu-inner .dropdown .dropdown-item').mouseout(() => {
   }
 })
 
+// Also highlight what we do menu item based on route
+function hightLightMenuItem() {
+  var path = window.location.pathname;
+  const menuName = path.split('/').pop();
+  if (menuName === 'branding' || menuName === 'website_design' || menuName === 'digital') {
+    document.querySelector('#what_we_do').style.color = '#eaad67';
+    document.querySelector('.footer-what-we-do').style.color = '#eaad67';
+  }
+}
+
+hightLightMenuItem();
+
 // sroll to top button
 //Get the button
 var mybutton = document.getElementById("backToTop");
