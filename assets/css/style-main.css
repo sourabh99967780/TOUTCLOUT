@@ -2316,9 +2316,10 @@ ul.brand-listing li {
 }
 
 .website__process {
-  width: 94vh;
+  width: 97vh;
   margin: 0 auto;
   margin-bottom: 3em;
+  padding-left: 2.2em;
 }
 
 /* shake animation for contact us page */
