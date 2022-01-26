@@ -794,6 +794,7 @@ body a {
   left: 0;
   right: 0;
   padding-top: 6vh;
+  padding-bottom: 6vh;
   height: 110vh;
 }
 #our_process .pro_content {
@@ -2218,7 +2219,7 @@ ul.brand-listing li {
   bottom: 20px;
   right: 30px;
   z-index: 99;
-  font-size: 18px;
+  font-size: 14px;
   border: none;
   outline: none;
   background-color: #c1c1c1;
