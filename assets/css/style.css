@@ -361,11 +361,11 @@ section {
   margin-bottom: 0;
   font-weight: 400;
   color: #fff;
-  margin-top: 1.3em;
-  margin-left: 3.5em;
+  margin-top: 1em;
+  margin-left: 3.53em;
 }
 #footer .footer-top .footer-contact p a {
-  color: #f7f7f7;
+  color: #c1c1c1;
 }
 
 #footer .footer-top h4 {
@@ -373,7 +373,7 @@ section {
   font-weight: bold;
   color: #ffffff;
   position: relative;
-  padding-bottom: 12px;
+  margin-bottom: 1.25em;
 }
 
 #footer .footer-top .footer-links {
@@ -382,16 +382,36 @@ section {
   z-index: 1;
 }
 
-#footer .footer-top .footer-links a.active {
+#footer .footer-top .footer-links > div div > a {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#footer .footer-top .footer-links > div div:nth-child(2) > ul a.active {
   color: #dc9f32;
+}
+
+#footer .footer-top .footer-links > div div:nth-child(2) > ul a:hover {
+  color: #dc9f32;
+}
+
+#footer .footer-top .footer-links > div div:not(:nth-child(2)) > a:hover {
+  color: #dc9f32;
+}
+
+#footer .footer-top .footer-links > div div:not(:nth-child(2)) > a:active {
+  color: #dc9f32;
+}
+
+#footer .footer-top .footer-links > div div:nth-child(2) > div {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1em;
 }
 
 #footer .footer-top .footer-links a {
   transition: color ease-in-out 200ms;
-}
-
-#footer .footer-top .footer-links a:hover {
-  color: #dc9f32;
 }
 
 #footer .footer-top .footer-links ul {
@@ -435,13 +455,14 @@ section {
   color: #dc9f32;
 }
 #footer .footer-top .social-links a i {
-  font-size: 30px;
+  font-size: 22px;
   padding-right: 15px;
 }
 #footer .footer-top .social-links {
   display: flex;
   align-items: center;
-  margin-top: -0.5em;
+  justify-content: flex-end;
+  margin-top: -0.15em;
 }
 
 #footer .footer-links a {
@@ -502,7 +523,7 @@ section {
   justify-content: center;
   list-style: none;
   margin-bottom: 10px;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
 }
 #footer .footer_copyright ul a {
   color: #c1c1c1;
@@ -512,7 +533,7 @@ section {
 #footer .footer_copyright p {
   color: #c1c1c1;
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
 }
 /* footer css end */
 
