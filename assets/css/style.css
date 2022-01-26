@@ -575,10 +575,8 @@ section {
   #footer .footer-top h4 {
     text-align: center !important;
   }
-  .social-links {
-    display: flex;
+  #footer .footer-top .social-links {
     justify-content: center;
-    align-items: center;
   }
   #footer .footer-top .footer-contact p {
     text-align: center;
