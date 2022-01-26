@@ -2346,3 +2346,14 @@ ul.brand-listing li {
     transform: translate3d(4px, 0, 0);
   }
 }
+
+/* Enquiry form CSS */
+.enquireForm {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 350px;
+  background: hsl(0, 0%, 97%);
+  color: #262728;
+  z-index: 9999;
+}
