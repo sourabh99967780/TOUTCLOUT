@@ -143,3 +143,8 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// enquiry form open close trigger
+$('.enquireForm__tab').click(() => {
+  $('.enquireForm').toggleClass('enquireForm-open');
+})
