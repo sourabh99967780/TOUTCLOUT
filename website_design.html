@@ -36,6 +36,108 @@
          <i class="fas fa-chevron-up"></i>
       </a>
       <canvas class="cursor cursor--canvas" resize></canvas>
+
+      <!-- Enquiry Form -->
+      <div class="enquireForm">
+         <div class="enquireForm__tab">
+            <div class="enquireForm__tab-heading">
+               Talk to Us
+            </div>
+            <a class="enquireForm__tab-icon">
+               <i class="fas fa-chevron-up"></i>
+            </a>
+         </div>
+         <form class="enquireForm__form" id="enquireForm__form">
+            <div class="enquireForm__body">
+               <p>Please fill in the details below.</p>
+      
+               <!-- Name -->
+               <div class="floating-label-group">
+                  <input type="text" class="form-control" id="enquiryForm__name" placeholder="Name" ref="name"
+                     v-focus="isElementFocused['name']" @focus="isElementFocused['name'] = true"
+                     @blur="isElementFocused['name'] = false" v-model.trim="name" required>
+                  <label class="floating-label">Name</label>
+                  <div class="floating-input-error" v-if="isElementFocused['name']">
+                     <div class="error name-error" :class="{'shake' : this.$v.name.$invalid}" v-if="!$v.name.required">
+                        You must enter your
+                        name to proceed.</div>
+                     <div class="error name-error" :class="{'shake' : this.$v.name.$invalid}" v-if="!$v.name.minLength">
+                        Your name must have
+                        at least {{$v.name.$params.minLength.min}} letters.</div>
+                  </div>
+               </div>
+      
+               <!-- Email -->
+               <div class="floating-label-group">
+                  <input type="text" class="form-control" id="enquiryForm__email" placeholder="Email" ref="email"
+                     v-focus="isElementFocused['email']" @focus="isElementFocused['email'] = true"
+                     @blur="isElementFocused['email'] = false" v-model.trim="email" required>
+                  <label class="floating-label">Email</label>
+                  <div class="floating-input-error" v-if="isElementFocused['email']">
+                     <div class="error email-error" :class="{'shake' : this.$v.email.$invalid}" v-if="!$v.email.required">
+                        Please provide your
+                        email address to help you with the query.</div>
+                     <div class="error email-error" :class="{'shake' : this.$v.email.$invalid}" v-if="!$v.email.maxLength">
+                        Your email is of
+                        {{$v.email.$params.maxLength.max}} letters. Too long to proceed.</div>
+                     <div class="error email-error" :class="{'shake' : this.$v.email.$invalid}" v-if="!$v.email.email">
+                        This email address is
+                        not valid.</div>
+                  </div>
+               </div>
+      
+               <!-- Phone -->
+               <div class="floating-label-group">
+                  <input type="text" class="form-control" id="enquiryForm__phone" placeholder="Phone" ref="phone"
+                     v-focus="isElementFocused['phone']" @focus="isElementFocused['phone'] = true"
+                     @blur="isElementFocused['phone'] = false" v-model.trim="phone" required>
+                  <label class="floating-label">Phone</label>
+                  <div class="floating-input-error" v-if="isElementFocused['phone']">
+                     <div class="error phone-error" :class="{'shake' : this.$v.phone.$invalid }" v-if="!$v.phone.required">A
+                        phone number is
+                        required to
+                        serve you better.</div>
+                     <div class="error phone-error" :class="{'shake' : this.$v.phone.$invalid && this.phone !== ''}"
+                        v-if="!this.$v.phone.isAPhoneNumber && this.phone !== ''">Please provide a valid phone
+                        number (minimum 10 digits).</div>
+                  </div>
+               </div>
+      
+               <!-- Message -->
+               <div class="floating-label-group">
+                  <input type="text" class="form-control" id="enquiryForm__service" placeholder="Message" ref="message"
+                     v-focus="isElementFocused['message']" @focus="isElementFocused['message'] = true"
+                     @blur="isElementFocused['message'] = false" v-model.trim="message" required>
+                  <label class="floating-label">Message</label>
+                  <div class="floating-input-error" v-if="isElementFocused['message']">
+                     <div class="error message-error" :class="{'shake' : this.$v.message.$invalid}"
+                        v-if="!$v.message.required">A message is
+                        required to help you.</div>
+                     <div class="error message-error" :class="{'shake' : this.$v.message.$invalid}"
+                        v-if="!$v.message.minLength">Your message
+                        must have at least {{$v.message.$params.minLength.min}} letters.</div>
+                  </div>
+               </div>
+      
+               <!-- Submit -->
+               <button class="send-btn d-flex align-items-center enquireForm__submit" @click.prevent="submit()">
+                  <div v-if="submitStatus === 'PENDING'" class="spinner-border" role="status">
+                     <span class="sr-only">Loading...</span>
+                  </div>
+                  <div v-else class="d-flex align-items-center">
+                     <img src="assets/images/contact/send.svg" class="img-fluid" alt="Send Message" />
+                     <span>Send</span>
+                  </div>
+               </button>
+      
+               <!-- Success -->
+               <p class="typo__p" v-if="submitStatus === 'OK' && !emailSending">Thank you for contacting us! We will get in
+                  touch with
+                  you soon.</p>
+            </div>
+         </form>
+      </div>
+
       <main>
          <div class="top_header">
             <div class="container">
@@ -177,6 +279,10 @@
       </main>
   </footer><!-- End Footer -->
       <!-- <div id="preloader"></div> -->
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+      <script src="https://unpkg.com/vuelidate@0.7.6/dist/vuelidate.min.js"></script>
+      <script src="https://unpkg.com/vuelidate@0.7.6/dist/validators.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-focus/2.1.0/vue-focus.js"></script>
       <script src="assets/vendor/jquery/jquery.min.js"></script>
       <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
       <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>

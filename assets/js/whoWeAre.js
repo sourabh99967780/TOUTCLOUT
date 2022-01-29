@@ -172,7 +172,7 @@ let showCursor = false;
 let group, stuckX, stuckY, fillOuterCursor;
 initCanvas("rgba(38,39,40,0.5)", '#262728');
 
-// change cursor color on flip
+// change cursor color on our story
 const storyTop = document.querySelector('.story_top_transparent');
 storyTop.addEventListener('mouseover', (event) => {
     initCanvas("rgba(221,221,221,0.5)", '#dddddd');

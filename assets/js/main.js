@@ -91,9 +91,6 @@ if (!isAMobileDevice) {
 const isItTheHomePage = !!document.querySelector(".home_page");
 const isItContactUsPage = !!document.querySelector('.contact_us');
 
-console.log("Is it contact us page", isItContactUsPage);
-console.log("Is it home page", isItTheHomePage);
-
 // highlight menu top when menu dropdown items are hovered
 $('.menu-inner .dropdown .dropdown-item').mouseover(() => {
   if (isItContactUsPage) {
@@ -147,4 +144,133 @@ function topFunction() {
 // enquiry form open close trigger
 $('.enquireForm__tab').click(() => {
   $('.enquireForm').toggleClass('enquireForm-open');
+  $('.enquireForm__tab-icon').toggleClass('enquireForm__tab-icon-rotate');
 })
+
+// handle the function of enquire Form
+if (!isItContactUsPage) {
+  const baseUrl = "http://3.145.21.71/api";
+  Vue.use(window.vuelidate.default);
+  const { required, minLength, maxLength, email } = window.validators;
+
+  function isAPhoneNumber(phone) {
+    const match =
+      /^\+?\d{0,3}[\(\- ]?\d{3}\)?[\- ]?\d{3,4}[\- ]?\d{4}/.test(phone);
+    return match;
+  }
+
+  var vueApp = new Vue({
+    el: '#enquireForm__form',
+    directives: { focus: focus },
+    data() {
+      return {
+        name: "",
+        message: "",
+        email: "",
+        phone: "",
+        emailSending: false,
+        submitStatus: "",
+        isElementFocused: {
+          name: false,
+          message: false,
+          phone: false,
+          email: false
+        }
+      }
+    },
+
+    validations: {
+      name: {
+        required,
+        minLength: minLength(3),
+      },
+      message: {
+        required,
+        minLength: minLength(6),
+        maxLength: maxLength(10000),
+      },
+      email: {
+        required,
+        maxLength: maxLength(320),
+        email,
+      },
+      phone: {
+        required,
+        isAPhoneNumber
+      },
+    },
+
+    methods: {
+      async saveToDatabase() {
+        const data = {
+          name: this.name,
+          email: this.email,
+          phone: this.phone,
+          message: this.message,
+        };
+
+        const response = await fetch(`${baseUrl}/db/insert-enquiry`, {
+          method: "POST", // *GET, POST, PUT, DELETE, etc.
+          mode: "cors", // no-cors, *cors, same-origin
+          cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+          credentials: "same-origin", // include, *same-origin, omit
+          headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          redirect: "follow", // manual, *follow, error
+          referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+          body: JSON.stringify(data), // body data type must match "Content-Type" header
+        });
+      },
+
+       async sendEmail() {
+        const data = {
+          name: this.name,
+          email: this.email,
+          message: this.message,
+          phone: this.phone,
+        };
+        const response = await fetch(`${baseUrl}/email`, {
+          method: "POST", // *GET, POST, PUT, DELETE, etc.
+          mode: "cors", // no-cors, *cors, same-origin
+          cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+          credentials: "same-origin", // include, *same-origin, omit
+          headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          redirect: "follow", // manual, *follow, error
+          referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+          body: JSON.stringify(data), // body data type must match "Content-Type" header
+        });
+      },
+       
+      async submit() {
+        this.$v.$touch();
+        if (this.$v.$invalid || !this.$v.phone.isAPhoneNumber) {
+          const invalidFields = Object.keys(this.$v.$params).filter(fieldName => this.$v[fieldName].$invalid);
+          invalidFields.forEach(field => {
+            this.isElementFocused['name'] = true;
+            this.isElementFocused['message'] = true;
+            this.isElementFocused['phone'] = true;
+            this.isElementFocused['email'] = true;
+            document.querySelector(`.${field}-error`).classList.remove('shake');
+            setTimeout(() => {
+              document.querySelector(`.${field}-error`).classList.add('shake');
+            }, 100)
+          })
+          this.submitStatus = "ERROR";
+        } else {
+          // do your submit logic here
+          this.emailSending = true;
+          this.submitStatus = "PENDING";
+          await this.saveToDatabase();
+          await this.sendEmail();
+          this.submitStatus = "OK";
+          this.emailSending = false;
+        }
+      },
+    }
+  })
+}
