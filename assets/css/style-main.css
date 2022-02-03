@@ -2302,6 +2302,10 @@ ul.brand-listing li {
   color: #d8974d;
 }
 
+.contact_us .error {
+  color: #262728;
+}
+
 .error::before {
   content: "\A";
   width: 0.4rem;
