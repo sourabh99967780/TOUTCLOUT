@@ -2295,18 +2295,14 @@ ul.brand-listing li {
 }
 
 /* contact form error message stylings */
-.error {
+.contact_us .error {
   font-style: italic;
   font-size: 0.8rem;
   margin-top: 12px;
-  color: #d8974d;
-}
-
-.contact_us .error {
   color: #262728;
 }
 
-.error::before {
+.contact_us .error::before {
   content: "\A";
   width: 0.4rem;
   height: 0.4rem;
@@ -2320,16 +2316,7 @@ ul.brand-listing li {
   font-style: italic;
   font-size: 0.8rem;
   margin-top: 12px;
-}
-
-.enquireForm .error::before {
-  content: "\A";
-  width: 0.4rem;
-  height: 0.4rem;
-  border-radius: 50%;
-  background-color: #d8974d;
-  display: inline-block;
-  margin-right: 0.5em;
+  color: #d8974d;
 }
 
 .website__graphic {
@@ -2383,7 +2370,6 @@ ul.brand-listing li {
 
 .enquireForm__form {
   border: 3px solid #262728;
-  border-radius: 0 0 5px 5px;
 }
 
 .enquireForm-open {
@@ -2404,7 +2390,6 @@ ul.brand-listing li {
   transition: background-color ease-in-out 200ms;
   display: flex;
   align-items: center;
-  border-radius: 5px 5px 0 0;
 }
 
 .enquireForm__tab-heading {
@@ -2449,13 +2434,13 @@ ul.brand-listing li {
 .enquireForm__body .floating-label-group input[type="text"] {
   border: none;
   background: transparent;
-  border-bottom: 1px solid black;
   border-radius: unset;
   color: #262728;
   padding: 0.375rem 0;
   font-family: "Playfair Display", serif;
   color: #262728;
   font-style: italic;
+  border-bottom: 0.3px solid #26272830;
 }
 
 .enquireForm__body input:focus,
@@ -2475,9 +2460,6 @@ ul.brand-listing li {
   font-size: 15px;
   justify-content: center;
   height: 3em;
-  font-style: italic;
-  border-radius: 5px;
-  box-shadow: #26272860 1px 4px 13px 0px;
   transition: background-color ease-in-out 200ms;
 }
 
@@ -2507,7 +2489,7 @@ ul.brand-listing li {
 .floating-label-group {
   position: relative;
   margin-top: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .floating-label-group:nth-child(5) {

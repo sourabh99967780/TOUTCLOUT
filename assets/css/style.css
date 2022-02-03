@@ -388,23 +388,23 @@ section {
 }
 
 #footer .footer-top .footer-links > div div > a.active {
-  color: #dc9f32;
+  color: #eaad67;
 }
 
 #footer .footer-top .footer-links > div div:nth-child(2) > ul a.active {
-  color: #dc9f32;
+  color: #eaad67;
 }
 
 #footer .footer-top .footer-links > div div:nth-child(2) > ul a:hover {
-  color: #dc9f32;
+  color: #eaad67;
 }
 
 #footer .footer-top .footer-links > div div:not(:nth-child(2)) > a:hover {
-  color: #dc9f32;
+  color: #eaad67;
 }
 
 #footer .footer-top .footer-links > div div:not(:nth-child(2)) > a.active {
-  color: #dc9f32;
+  color: #eaad67;
 }
 
 #footer .footer-top .footer-links > div div:nth-child(2) > div {
@@ -457,7 +457,7 @@ section {
 }
 
 #footer .footer-top .social-links a {
-  color: #dc9f32;
+  color: #eaad67;
 }
 #footer .footer-top .social-links a i {
   font-size: 22px;
