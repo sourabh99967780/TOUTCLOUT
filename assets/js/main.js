@@ -150,10 +150,7 @@ $('.enquireForm__tab').click(() => {
 // select the input elements from the contact form to change cursor in hover
 const inputElements = document.querySelectorAll('.enquireForm-input');
 
-console.log(inputElements);
-
 inputElements.forEach((elem) => {
-  console.log("elem", elem);
   elem.addEventListener('mouseover', () => {
     console.log("This is the input element", elem);
     $('.cursor').addClass('display-none');
