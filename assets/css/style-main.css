@@ -2225,7 +2225,7 @@ ul.brand-listing li {
   background-color: #c1c1c1;
   color: #262728;
   cursor: pointer;
-  padding: 10px 16px;
+  padding: 8px 14px;
   border-radius: 4px;
   transition: background-color 200ms ease-in-out;
 }
@@ -2362,13 +2362,13 @@ ul.brand-listing li {
   right: 0;
   width: 350px;
   background: hsl(0, 0%, 97%);
-  color: #262728;
+  color: #2e2f30;
   z-index: 9999;
 }
 
 .enquireForm__form {
-  border-left: 3px solid #262728;
-  border-right: 3px solid #262728;
+  border-left: 3px solid #2e2f30;
+  border-right: 3px solid #2e2f30;
   border-bottom: 0;
   max-height: 0;
   transition: max-height ease-in-out 1.5s, border-bottom ease-in-out 200ms;
@@ -2376,7 +2376,7 @@ ul.brand-listing li {
 
 .form-open .enquireForm__form {
   max-height: 100vh;
-  border-bottom: 3px solid #262728;
+  border-bottom: 3px solid #2e2f30;
 }
 
 .enquireForm input:focus::placeholder {
@@ -2388,12 +2388,12 @@ ul.brand-listing li {
 .enquireForm input:-webkit-autofill:focus,
 .enquireForm input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
-  -webkit-text-fill-color: inherit !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 .enquireForm__tab {
   color: #fff;
-  background-color: #262728;
+  background-color: #2e2f30;
   padding: 0.5em 1.5em;
   font-weight: 600;
   font-size: 18px;
@@ -2446,12 +2446,22 @@ ul.brand-listing li {
   border: none;
   background: transparent;
   border-radius: unset;
-  color: #262728;
+  color: #2e2f30;
   padding: 0.375rem 0;
   font-family: "Playfair Display", serif;
-  color: #262728;
+  color: #2e2f30;
   font-style: italic;
-  border-bottom: 0.3px solid #26272830;
+}
+
+.enquireForm__body .floating-label-group textarea {
+  border: none;
+  border-radius: unset;
+  padding: 0.375rem 0;
+  font-family: "Playfair Display", serif;
+  color: #2e2f30;
+  font-style: italic;
+  resize: none;
+  background-color: transparent;
 }
 
 .enquireForm__body input:focus,
@@ -2460,10 +2470,16 @@ ul.brand-listing li {
   box-shadow: none;
 }
 
+.enquireForm__body textarea:focus,
+.enquireForm__body textarea:active {
+  outline: 0;
+  box-shadow: none;
+}
+
 .enquireForm__body button {
   width: 100%;
   border: none;
-  background: #262728;
+  background: #2e2f30;
   color: #fff;
   font-weight: bold;
   padding: 7px 25px;
@@ -2497,6 +2513,10 @@ ul.brand-listing li {
   padding-bottom: 1em;
 }
 
+.enquireForm .typo__p {
+  color: #d8974d;
+}
+
 .floating-label-group {
   position: relative;
   margin-top: 15px;
@@ -2520,6 +2540,16 @@ ul.brand-listing li {
 
 .floating-label-group input:focus ~ .floating-label,
 .floating-label-group input:not(:focus):valid ~ .floating-label {
+  top: -15px;
+  bottom: 0px;
+  left: 0px;
+  font-size: 11px;
+  opacity: 1;
+  color: #404040;
+}
+
+.floating-label-group textarea:focus ~ .floating-label,
+.floating-label-group textarea:not(:focus):valid ~ .floating-label {
   top: -15px;
   bottom: 0px;
   left: 0px;
