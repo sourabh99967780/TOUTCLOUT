@@ -53,7 +53,7 @@
       
                <!-- Name -->
                <div class="floating-label-group">
-                  <input type="text" class="form-control" id="enquiryForm__name" placeholder="Name" ref="name"
+                  <input type="text" class="form-control enquireForm-input" id="enquiryForm__name" placeholder="Name" ref="name"
                      v-focus="isElementFocused['name']" @focus="isElementFocused['name'] = true"
             v-model.trim="name" required>
                   <label class="floating-label">Name</label>
@@ -67,7 +67,7 @@
       
                <!-- Email -->
                <div class="floating-label-group">
-                  <input type="text" class="form-control" id="enquiryForm__email" placeholder="Email" ref="email"
+                  <input type="text" class="form-control enquireForm-input" id="enquiryForm__email" placeholder="Email" ref="email"
                      v-focus="isElementFocused['email']" @focus="isElementFocused['email'] = true"
                v-model.trim="email" required>
                   <label class="floating-label">Email</label>
@@ -85,7 +85,7 @@
       
                <!-- Phone -->
                <div class="floating-label-group">
-                  <input type="text" class="form-control" id="enquiryForm__phone" placeholder="Phone" ref="phone"
+                  <input type="text" class="form-control enquireForm-input" id="enquiryForm__phone" placeholder="Phone" ref="phone"
                      v-focus="isElementFocused['phone']" @focus="isElementFocused['phone'] = true"
                v-model.trim="phone" required>
                   <label class="floating-label">Phone</label>
@@ -98,7 +98,7 @@
       
                <!-- Message -->
                <div class="floating-label-group">
-                  <input type="text" class="form-control" id="enquiryForm__service" placeholder="Message" ref="message"
+                  <input type="text" class="form-control enquireForm-input" id="enquiryForm__service" placeholder="Message" ref="message"
                      v-focus="isElementFocused['message']" @focus="isElementFocused['message'] = true"
                      v-model.trim="message" required>
                   <label class="floating-label">Message</label>
@@ -118,7 +118,6 @@
                      <span class="sr-only">Loading...</span>
                   </div>
                   <div v-else class="d-flex align-items-center">
-                     <img src="assets/images/contact/send.svg" class="img-fluid" alt="Send Message" />
                      <span>Send</span>
                   </div>
                </button>
@@ -264,7 +263,7 @@
                         <li><a href="#" class="">Terms & Conditions</a></li>
                         <li><a href="#" class="">Privacy Policy</a></li>
                     </ul>
-                    <p>©2021 TOUTCLOUT LLP. All rights reserved</p>
+                    <p>©2021 TOUTCLOUT LLP. All Rights Reserved</p>
                 </div>
             </div>
 

@@ -2364,20 +2364,31 @@ ul.brand-listing li {
   background: hsl(0, 0%, 97%);
   color: #262728;
   z-index: 9999;
-  transition: transform ease-in-out 1.5s;
-  transform: translateY(90.5%);
 }
 
 .enquireForm__form {
-  border: 3px solid #262728;
+  border-left: 3px solid #262728;
+  border-right: 3px solid #262728;
+  border-bottom: 0;
+  max-height: 0;
+  transition: max-height ease-in-out 1.5s, border-bottom ease-in-out 200ms;
 }
 
-.enquireForm-open {
-  transform: translateY(0) !important;
+.form-open .enquireForm__form {
+  max-height: 100vh;
+  border-bottom: 3px solid #262728;
 }
 
 .enquireForm input:focus::placeholder {
   color: transparent;
+}
+
+.enquireForm input:-webkit-autofill,
+.enquireForm input:-webkit-autofill:hover,
+.enquireForm input:-webkit-autofill:focus,
+.enquireForm input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: inherit !important;
 }
 
 .enquireForm__tab {

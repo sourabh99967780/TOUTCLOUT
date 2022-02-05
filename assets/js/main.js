@@ -143,9 +143,25 @@ function topFunction() {
 
 // enquiry form open close trigger
 $('.enquireForm__tab').click(() => {
-  $('.enquireForm').toggleClass('enquireForm-open');
+  $('.enquireForm').toggleClass('form-open');
   $('.enquireForm__tab-icon').toggleClass('enquireForm__tab-icon-rotate');
 })
+
+// select the input elements from the contact form to change cursor in hover
+const inputElements = document.querySelectorAll('.enquireForm-input');
+
+inputElements.forEach((elem) => {
+  elem.addEventListener('mouseover', () => {
+    console.log("This is the input element", elem);
+    $('.cursor').addClass('display-none');
+  })
+})
+
+// inputElements.forEach((elem) => {
+//   elem.addEventListener('mouseout', () => {
+//     $('.cursor').removeClass('display-none');
+//   })
+// })
 
 // handle the function of enquire Form
 if (!isItContactUsPage) {
