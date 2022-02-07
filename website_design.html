@@ -55,7 +55,7 @@
                <div class="floating-label-group">
                   <input type="text" class="form-control enquireForm-input" id="enquiryForm__name" placeholder="Name" ref="name"
                      v-focus="isElementFocused['name']" @focus="isElementFocused['name'] = true"
-            v-model.trim="name" required>
+            v-model.trim="name" @mouseover="areAnyElementsHovered = true" @mouseout="areAnyElementsHovered = false" required>
                   <label class="floating-label">Name</label>
                   <div class="floating-input-error" v-if="isElementFocused['name']">
                      <div class="error name-error" v-if="!$v.name.required">Please enter your name.</div>
@@ -69,7 +69,7 @@
                <div class="floating-label-group">
                   <input type="text" class="form-control enquireForm-input" id="enquiryForm__email" placeholder="Email" ref="email"
                      v-focus="isElementFocused['email']" @focus="isElementFocused['email'] = true"
-               v-model.trim="email" required>
+               v-model.trim="email" @mouseover="areAnyElementsHovered = true" @mouseout="areAnyElementsHovered = false" required>
                   <label class="floating-label">Email</label>
                   <div class="floating-input-error" v-if="isElementFocused['email']">
                      <div class="error email-error" v-if="!$v.email.required">
@@ -87,7 +87,7 @@
                <div class="floating-label-group">
                   <input type="text" class="form-control enquireForm-input" id="enquiryForm__phone" placeholder="Phone" ref="phone"
                      v-focus="isElementFocused['phone']" @focus="isElementFocused['phone'] = true"
-               v-model.trim="phone" required>
+               v-model.trim="phone" @mouseover="areAnyElementsHovered = true" @mouseout="areAnyElementsHovered = false" required>
                   <label class="floating-label">Phone</label>
                   <div class="floating-input-error" v-if="isElementFocused['phone']">
                      <div class="error phone-error" v-if="!$v.phone.required">Please provide your phone number.</div>
@@ -100,7 +100,7 @@
                <div class="floating-label-group">
                   <textarea rows="2" type="text" class="form-control enquireForm-input" id="enquiryForm__service" placeholder="Message" ref="message"
                      v-focus="isElementFocused['message']" @focus="isElementFocused['message'] = true"
-                     v-model.trim="message" required>
+                     v-model.trim="message" @mouseover="areAnyElementsHovered = true" @mouseout="areAnyElementsHovered = false" required>
                      </textarea>
                   <label class="floating-label">Message</label>
                   <div class="floating-input-error" v-if="isElementFocused['message']">

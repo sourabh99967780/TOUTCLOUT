@@ -147,22 +147,6 @@ $('.enquireForm__tab').click(() => {
   $('.enquireForm__tab-icon').toggleClass('enquireForm__tab-icon-rotate');
 })
 
-// select the input elements from the contact form to change cursor in hover
-const inputElements = document.querySelectorAll('.enquireForm-input');
-
-inputElements.forEach((elem) => {
-  elem.addEventListener('mouseover', () => {
-    console.log("This is the input element", elem);
-    $('.cursor').addClass('display-none');
-  })
-})
-
-// inputElements.forEach((elem) => {
-//   elem.addEventListener('mouseout', () => {
-//     $('.cursor').removeClass('display-none');
-//   })
-// })
-
 // handle the function of enquire Form
 if (!isItContactUsPage) {
   const baseUrl = "http://3.145.21.71/api";
@@ -188,10 +172,11 @@ if (!isItContactUsPage) {
         submitStatus: "",
         isElementFocused: {
           name: false,
-          message: false,
+          email: false,
           phone: false,
-          email: false
-        }
+          message: false
+        },
+        areAnyElementsHovered: false,
       }
     },
 
@@ -287,6 +272,14 @@ if (!isItContactUsPage) {
           this.emailSending = false;
         }
       },
-    }
+    },
+
+    watch: {
+      areAnyElementsHovered(newValue, oldValue) {
+        document.querySelectorAll('.cursor').forEach(elem => {
+          elem.classList.toggle('display-none', newValue);
+        })
+      }
+    },
   })
 }

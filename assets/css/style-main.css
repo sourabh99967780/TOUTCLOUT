@@ -2360,7 +2360,7 @@ ul.brand-listing li {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 350px;
+  width: 25vmax;
   background: hsl(0, 0%, 97%);
   color: #2e2f30;
   z-index: 9999;
@@ -2451,6 +2451,7 @@ ul.brand-listing li {
   font-family: "Playfair Display", serif;
   color: #2e2f30;
   font-style: italic;
+  border-bottom: 0.3px solid #2e2f3030;
 }
 
 .enquireForm__body .floating-label-group textarea {
