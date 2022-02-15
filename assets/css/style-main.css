@@ -2360,7 +2360,7 @@ ul.brand-listing li {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 25vmax;
+  width: 350px;
   background: hsl(0, 0%, 97%);
   color: #2e2f30;
   z-index: 9999;
