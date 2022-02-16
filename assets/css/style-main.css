@@ -2500,7 +2500,6 @@ ul.brand-listing li {
   color: #262728;
   font-weight: bold;
   padding: 7px 25px;
-  text-transform: capitalize;
   font-size: 15px;
   justify-content: center;
   height: 2.5em;
@@ -2532,7 +2531,8 @@ ul.brand-listing li {
 }
 
 .enquireForm .typo__p {
-  color: #d8974d;
+  color: #262728;
+  text-align: center;
 }
 
 .floating-label-group {
