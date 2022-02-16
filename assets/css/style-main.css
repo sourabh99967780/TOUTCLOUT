@@ -2315,7 +2315,7 @@ ul.brand-listing li {
 .enquireForm .error {
   font-style: italic;
   font-size: 0.8rem;
-  margin-top: 12px;
+  margin-top: 2px;
   color: #d8974d;
 }
 
@@ -2455,14 +2455,25 @@ ul.brand-listing li {
 }
 
 .enquireForm__body .floating-label-group textarea {
-  padding: 0.375rem 0;
+  padding: 0.375rem;
   border: 0.3px solid #2e2f3030;
   font-family: "Playfair Display", serif;
   color: #2e2f30;
   height: 50px;
   font-style: italic;
   resize: none;
+  border-radius: none;
   background-color: transparent;
+}
+
+.enquireForm__body .floating-label-group textarea::-webkit-scrollbar {
+  width: 0.3em;
+  padding: 0.5em;
+}
+
+.enquireForm__body .floating-label-group textarea::-webkit-scrollbar-thumb {
+  background-color: rgb(201, 201, 201);
+  border-radius: 50px;
 }
 
 .enquireForm__body input:focus,
@@ -2521,8 +2532,8 @@ ul.brand-listing li {
 
 .floating-label-group {
   position: relative;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .floating-label-group:nth-child(5) {
