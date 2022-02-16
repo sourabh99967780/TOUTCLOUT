@@ -2385,11 +2385,12 @@ ul.brand-listing li {
 }
 
 .enquireForm input:-webkit-autofill,
+.enquireForm input:autofill,
 .enquireForm input:-webkit-autofill:hover,
 .enquireForm input:-webkit-autofill:focus,
 .enquireForm input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px hsl(0, 0%, 97%) inset !important;
-  -webkit-text-fill-color: #2e2f30 !important;
+  color: #262728;
+  background-color: hsl(0, 0%, 97%);
 }
 
 .enquireForm__tab {
