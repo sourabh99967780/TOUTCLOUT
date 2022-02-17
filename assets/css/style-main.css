@@ -1284,7 +1284,8 @@ body a {
 .contact_us .menu-opener {
   z-index: 4;
 }
-.contact_us form button {
+.contact_us form button,
+#contact-form .query-btn {
   background: #484c50;
   color: #fff;
   text-transform: capitalize;
@@ -1292,6 +1293,16 @@ body a {
   font-size: 15px;
   border: 0;
   font-style: italic;
+}
+
+#contact-form .query-btn {
+  margin-top: 1em !important;
+}
+
+#contact-form .typo__p {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .contact_us .spinner-border {

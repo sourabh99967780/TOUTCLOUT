@@ -62,6 +62,16 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
     methods: {
+      resetForm() {
+        this.step = 1;
+        this.name = "";
+        this.message = "";
+        this.email = "";
+        this.phone = "";
+        this.emailSending = false;
+        this.submitStatus = "";
+      },
+
       async next() {
         if (this.step === 1) {
           this.$v.name.$touch();
