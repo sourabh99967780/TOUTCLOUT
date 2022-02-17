@@ -144,7 +144,14 @@ function topFunction() {
 // enquiry form open close trigger
 $('.enquireForm__tab').click(() => {
   $('.enquireForm').toggleClass('form-open');
-  $('.enquireForm__tab-icon').toggleClass('enquireForm__tab-icon-rotate');
+  const isFormOpen = $('.enquireForm').hasClass('form-open');
+  if (isFormOpen) {
+    $('.enquireForm__tab-icon').addClass('enquireForm__tab-icon-rotate');
+  } else {
+    setTimeout(() => {
+      $('.enquireForm__tab-icon').removeClass('enquireForm__tab-icon-rotate');
+    }, 1700);
+  }
 })
 
 // handle the function of enquire Form
