@@ -149,7 +149,7 @@ $('.enquireForm__tab').click(() => {
 
 // handle the function of enquire Form
 if (!isItContactUsPage) {
-  const baseUrl = "http://3.145.21.71/api";
+  const baseUrl = "http://3.145.21.71:81/api";
   Vue.use(window.vuelidate.default);
   const { required, minLength, maxLength, email } = window.validators;
 
@@ -202,6 +202,20 @@ if (!isItContactUsPage) {
     },
 
     methods: {
+      resetForm() {
+        this.name = "",
+        this.message = "";
+        this.email = "";
+        this.phone = "";
+        this.emailSending = false;
+        this.submitStatus = "";
+        this.isElementFocused.name = false;
+        this.isElementFocused.email = false;
+        this.isElementFocused.phone = false;
+        this.isElementFocused.message = false;
+        this.areAnyElementsHovered = false;
+      },
+
       async saveToDatabase() {
         const data = {
           name: this.name,
