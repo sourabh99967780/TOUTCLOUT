@@ -150,7 +150,7 @@ $('.enquireForm__tab').click(() => {
   } else {
     setTimeout(() => {
       $('.enquireForm__tab-icon').removeClass('enquireForm__tab-icon-rotate');
-    }, 1700);
+    }, 1500);
   }
 })
 
