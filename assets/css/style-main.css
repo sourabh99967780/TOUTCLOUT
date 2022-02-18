@@ -2296,6 +2296,10 @@ ul.brand-listing li {
   font-weight: 400;
 }
 
+.branding .brand-listing {
+  list-style-image: url("../images/branding/triangle-list-style-01.svg");
+}
+
 /* contact us form animation */
 .fade-enter-active,
 .fade-leave-active {
