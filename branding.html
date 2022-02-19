@@ -44,7 +44,7 @@
     <div class="enquireForm">
         <div class="enquireForm__tab">
             <div class="enquireForm__tab-heading">
-                Talk to Us
+                Talk to us
             </div>
             <a class="enquireForm__tab-icon">
                 <i class="fas fa-chevron-up"></i>
@@ -57,7 +57,7 @@
                     <p class="typo__p">Thank you reaching out to us! <br> We will get in
                         touch with
                         you shortly.</p>
-                    <button class="qurey__btn" @click="resetForm">Have a new Query ?</button>
+                    <button class="qurey__btn" @click="resetForm">Have a new query ?</button>
                 </div>
                 <div v-else>
                     <p>Please fill in the details below.</p>
@@ -102,7 +102,7 @@
                         <label class="floating-label">Phone</label>
                         <div class="floating-input-error" v-if="isElementFocused['phone']">
                             <div class="error phone-error" v-if="!$v.phone.required">Please provide your phone number.</div>
-                            <div class="error phone-error" :class="{'shake' : this.$v.phone.$invalid && this.phone !== ''}"
+                            <div class="error phone-error"
                                 v-if="!this.$v.phone.isAPhoneNumber && this.phone !== ''">Please provide a valid 10 digit phone
                                 number</div>
                         </div>
