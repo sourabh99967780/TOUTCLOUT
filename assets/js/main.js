@@ -146,11 +146,13 @@ $('.enquireForm__tab').click(() => {
   $('.enquireForm').toggleClass('form-open');
   const isFormOpen = $('.enquireForm').hasClass('form-open');
   if (isFormOpen) {
-    $('.enquireForm__tab-icon').addClass('enquireForm__tab-icon-rotate');
+    setTimeout(() => {
+      $('.enquireForm__tab-icon').addClass('enquireForm__tab-icon-rotate');
+    }, 1100);
   } else {
     setTimeout(() => {
       $('.enquireForm__tab-icon').removeClass('enquireForm__tab-icon-rotate');
-    }, 1500);
+    }, 1300);
   }
 })
 
