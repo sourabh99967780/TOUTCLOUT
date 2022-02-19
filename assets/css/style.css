@@ -465,14 +465,15 @@ section {
 }
 #footer .footer-top .social-links a i {
   font-size: 26px;
-  padding-right: 15px;
+  padding-right: 7.5px;
+  padding-left: 7.5px;
 }
 #footer .footer-top .social-links {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   margin-top: -0.3em;
-  margin-right: 0.8em;
+  margin-right: 1em;
 }
 
 #footer .footer-links a {

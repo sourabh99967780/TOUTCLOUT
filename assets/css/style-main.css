@@ -1343,7 +1343,7 @@ body a {
   right: 0;
 }
 .contact_us .social_content > a {
-  padding-right: 50px;
+  margin-right: 50px;
   color: #484c50;
   text-decoration: none;
   display: flex;
