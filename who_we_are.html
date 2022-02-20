@@ -49,13 +49,14 @@
         <form class="enquireForm__form" id="enquireForm__form">
             <div class="enquireForm__body">
                 <!-- Success -->
-                <div class="success_block" v-if="submitStatus === 'OK' && !emailSending">
+                <div class="success_block" v-show="submitStatus === 'OK' && !emailSending">
                     <p class="typo__p">Thank you reaching out to us! <br> We will get in
                         touch with
                         you shortly.</p>
-                    <button class="qurey__btn" @click="resetForm">Have a new query ?</button>
+                    <button class="query__btn" :disabled="submitStatus === 'PENDING' ? true : false" id="query-btn"
+                        @click="resetForm">Have a new query ?</button>
                 </div>
-                <div v-else>
+                <div v-show="!(submitStatus === 'OK' && !emailSending)">
                     <p>Please fill in the details below.</p>
                     <!-- Name -->
                     <div class="floating-label-group">
@@ -73,10 +74,10 @@
                     </div>
                     <!-- Email -->
                     <div class="floating-label-group">
-                        <input type="text" class="form-control enquireForm-input" id="enquiryForm__email" placeholder="Email"
-                            ref="email" v-focus="isElementFocused['email']" @focus="isElementFocused['email'] = true"
-                            v-model.trim="email" @mouseover="areAnyElementsHovered = true"
-                            @mouseout="areAnyElementsHovered = false" required>
+                        <input type="text" class="form-control enquireForm-input" id="enquiryForm__email"
+                            placeholder="Email" ref="email" v-focus="isElementFocused['email']"
+                            @focus="isElementFocused['email'] = true" v-model.trim="email"
+                            @mouseover="areAnyElementsHovered = true" @mouseout="areAnyElementsHovered = false" required>
                         <label class="floating-label">Email</label>
                         <div class="floating-input-error" v-if="isElementFocused['email']">
                             <div class="error email-error" v-if="!$v.email.required">
@@ -91,16 +92,15 @@
                     </div>
                     <!-- Phone -->
                     <div class="floating-label-group">
-                        <input type="text" class="form-control enquireForm-input" id="enquiryForm__phone" placeholder="Phone"
-                            ref="phone" v-focus="isElementFocused['phone']" @focus="isElementFocused['phone'] = true"
-                            v-model.trim="phone" @mouseover="areAnyElementsHovered = true"
-                            @mouseout="areAnyElementsHovered = false" required>
+                        <input type="text" class="form-control enquireForm-input" id="enquiryForm__phone"
+                            placeholder="Phone" ref="phone" v-focus="isElementFocused['phone']"
+                            @focus="isElementFocused['phone'] = true" v-model.trim="phone"
+                            @mouseover="areAnyElementsHovered = true" @mouseout="areAnyElementsHovered = false" required>
                         <label class="floating-label">Phone</label>
                         <div class="floating-input-error" v-if="isElementFocused['phone']">
                             <div class="error phone-error" v-if="!$v.phone.required">Please provide your phone number.</div>
-                            <div class="error phone-error"
-                                v-if="!this.$v.phone.isAPhoneNumber && this.phone !== ''">Please provide a valid 10 digit phone
-                                number</div>
+                            <div class="error phone-error" v-if="!this.$v.phone.isAPhoneNumber && this.phone !== ''">Please
+                                provide a valid 10 digit phone number</div>
                         </div>
                     </div>
                     <!-- Message -->
@@ -109,7 +109,7 @@
                             placeholder="Message" ref="message" v-focus="isElementFocused['message']"
                             @focus="isElementFocused['message'] = true" v-model.trim="message"
                             @mouseover="areAnyElementsHovered = true" @mouseout="areAnyElementsHovered = false" required>
-                                </textarea>
+                            </textarea>
                         <label class="floating-label">Message</label>
                         <div class="floating-input-error" v-if="isElementFocused['message']">
                             <div class="error message-error" v-if="!$v.message.required">A message is
@@ -118,9 +118,10 @@
                                 must have at least {{$v.message.$params.minLength.min}} letters.</div>
                         </div>
                     </div>
-        
+    
                     <!-- Submit -->
-                    <button class="send-btn d-flex align-items-center enquireForm__submit" @click.prevent="submit()">
+                    <button class="send-btn d-flex align-items-center enquireForm__submit"
+                        :disabled="submitStatus === 'PENDING' ? true : false" @click.prevent="submit()">
                         <div v-if="submitStatus === 'PENDING'" class="spinner-border" role="status">
                             <span class="sr-only">Loading...</span>
                         </div>

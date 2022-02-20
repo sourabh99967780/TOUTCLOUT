@@ -36,6 +36,14 @@ const initHovers = () => {
     item.addEventListener("mouseenter", handleMouseEnter);
     item.addEventListener("mouseleave", handleMouseLeave);
   });
+
+  // add event listener to button
+  const buttonElements = document.querySelectorAll('button');
+  buttonElements.forEach((item) => {
+    item.addEventListener('mouseenter', handleMouseEnter);
+    item.addEventListener('mouseleave', handleMouseLeave);
+    item.addEventListener('click', handleMouseLeave);
+  })
 };
 
 const initCanvas = (strokeColor, cursorBackground) => {

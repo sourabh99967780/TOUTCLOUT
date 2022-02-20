@@ -50,13 +50,13 @@
          <form class="enquireForm__form" id="enquireForm__form">
             <div class="enquireForm__body">
                <!-- Success -->
-               <div class="success_block" v-if="submitStatus === 'OK' && !emailSending">
+               <div class="success_block" v-show="submitStatus === 'OK' && !emailSending">
                   <p class="typo__p">Thank you reaching out to us! <br> We will get in
                   touch with
                   you shortly.</p>
-                  <button class="qurey__btn" @click="resetForm">Have a new query ?</button>
+                  <button class="query__btn" :disabled="submitStatus === 'PENDING' ? true : false" id="query-btn" @click="resetForm">Have a new query ?</button>
                </div>
-               <div v-else>
+               <div v-show="!(submitStatus === 'OK' && !emailSending)">
                   <p>Please fill in the details below.</p>
                   <!-- Name -->
                   <div class="floating-label-group">
@@ -118,7 +118,7 @@
                   </div>
       
                   <!-- Submit -->
-                  <button class="send-btn d-flex align-items-center enquireForm__submit" @click.prevent="submit()">
+                  <button class="send-btn d-flex align-items-center enquireForm__submit" :disabled="submitStatus === 'PENDING' ? true : false" @click.prevent="submit()">
                      <div v-if="submitStatus === 'PENDING'" class="spinner-border" role="status">
                         <span class="sr-only">Loading...</span>
                      </div>
