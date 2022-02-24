@@ -1294,6 +1294,10 @@ body a {
   border: 0;
 }
 
+#contact-form .send-btn {
+  display: flex;
+}
+
 #contact-form .query-btn {
   margin-top: 1em !important;
 }

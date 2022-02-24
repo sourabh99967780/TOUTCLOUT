@@ -93,13 +93,13 @@
         </nav>
         <div class="d-flex flex_item">
           <div class="form_content" id="contact-form">
-            <div class="success_block" v-if="submitStatus === 'OK' && !emailSending">
+            <div class="success_block" v-show="submitStatus === 'OK' && !emailSending">
               <p class="typo__p">Thank you reaching out to us! <br> We will get in
                 touch with
                 you shortly.</p>
               <button class="tab-btn query-btn" @click="resetForm">Have a new query ?</button>
             </div>
-            <div v-else class="contact-filling">
+            <div v-show="!(submitStatus === 'OK' && !emailSending)" class="contact-filling">
               <h4>Enough about us! <i>Let’s talk about you.</i></h4>
               <form>
                 <div class="form-group" v-if="step >= 1">
@@ -163,14 +163,14 @@
                   <div class="tab-btn-container">
                     <button
                       class="tab-btn"
-                      v-if="step < 4"
+                      v-show="step < 4"
                       @click.prevent="next()"
                     >
                       Next
                     </button>
                     <button
-                      class="tab-btn send-btn d-flex align-items-center"
-                      v-else
+                      class="tab-btn send-btn align-items-center"
+                      v-show="step >= 4"
                       @click.prevent="submit()"
                     >
                     <div v-if="submitStatus === 'PENDING'" class="spinner-border" role="status">

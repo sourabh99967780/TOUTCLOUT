@@ -27,6 +27,7 @@ const initHovers = () => {
 
   // reset isStuck on mouseLeave
   const handleMouseLeave = () => {
+    console.log("Handle Mouse Leave triggered");
     isStuck = false;
   };
 
