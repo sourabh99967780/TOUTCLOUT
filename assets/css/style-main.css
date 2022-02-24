@@ -1348,6 +1348,7 @@ body a {
   text-decoration: none;
   display: flex;
   align-items: flex-end;
+  padding: 0 10px;
 }
 .contact_us .social_content ul {
   padding: 0;
