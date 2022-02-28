@@ -148,7 +148,7 @@ $('.enquireForm__tab').click(() => {
   if (isFormOpen) {
     setTimeout(() => {
       $('.enquireForm__tab-icon').addClass('enquireForm__tab-icon-rotate');
-    }, 1100);
+    }, 900);
   } else {
     setTimeout(() => {
       $('.enquireForm__tab-icon').removeClass('enquireForm__tab-icon-rotate');
@@ -275,13 +275,12 @@ if (!isItContactUsPage) {
         if (this.$v.$invalid || !this.$v.phone.isAPhoneNumber) {
           const invalidFields = Object.keys(this.$v.$params).filter(fieldName => this.$v[fieldName].$invalid);
           invalidFields.forEach(field => {
-            this.isElementFocused['name'] = true;
-            this.isElementFocused['message'] = true;
-            this.isElementFocused['phone'] = true;
-            this.isElementFocused['email'] = true;
-            document.querySelector(`.${field}-error`).classList.remove('shake');
+            this.isElementFocused[field] = true;
             setTimeout(() => {
-              document.querySelector(`.${field}-error`).classList.add('shake');
+              document.querySelector(`.${field}-error`).classList.remove('shake');
+                setTimeout(() => {
+                  document.querySelector(`.${field}-error`).classList.add('shake');
+                }, 100)
             }, 100)
           })
           this.submitStatus = "ERROR";

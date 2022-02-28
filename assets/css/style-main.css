@@ -1288,7 +1288,6 @@ body a {
 #contact-form .query-btn {
   background: #484c50;
   color: #fff;
-  text-transform: capitalize;
   padding: 7px 25px;
   font-size: 15px;
   border: 0;
@@ -2456,7 +2455,7 @@ ul.brand-listing li {
 }
 
 .enquireForm__tab-icon:hover {
-  background-color: #d0d0d0;
+  background-color: hsl(0, 0%, 90%);
 }
 
 .enquireForm__tab:hover {
@@ -2586,12 +2585,18 @@ ul.brand-listing li {
   color: #404040;
 }
 
-.floating-label-group textarea:focus ~ .floating-label,
-.floating-label-group textarea:not(:focus):valid ~ .floating-label {
-  top: -15px;
-  bottom: 0px;
-  left: 0px;
-  font-size: 11px;
-  opacity: 1;
-  color: #404040;
+.form-label-top {
+  display: none;
+}
+.form-line-error {
+  background: none transparent;
+}
+.form-error-message,
+.form-required {
+  display: none !important;
+}
+.form-validation-error {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
