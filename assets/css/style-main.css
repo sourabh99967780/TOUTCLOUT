@@ -2380,6 +2380,10 @@ ul.brand-listing li {
   padding: 0 3em;
 }
 
+#footer .footer-contact > a {
+  display: inline;
+}
+
 /* Enquiry form CSS */
 .enquireForm {
   position: fixed;
