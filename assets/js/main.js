@@ -57,6 +57,7 @@ hamburgerMenu.addEventListener("click", function () {
   upperBurger.style.width = "26px";
   $(".menu").toggleClass("active");
   $("body").toggleClass("no-scroll");
+  $('.enquireForm').toggleClass('display-none');
 });
 
 if (!isAMobileDevice) {

@@ -40,7 +40,6 @@ const initHovers = () => {
   // add event listener to button
   const buttonElements = document.querySelectorAll('button');
   buttonElements.forEach((item) => {
-    console.log(item);
     item.addEventListener('mouseenter', handleMouseEnter);
     item.addEventListener('mouseleave', handleMouseLeave);
     item.addEventListener('click', handleMouseLeave);
