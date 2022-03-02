@@ -89,6 +89,7 @@ body a {
   top: 0;
   right: 0;
   left: 0;
+  width: 99.9999994vw;
 }
 .menu-logo .menu-logo__imgAnchor {
   padding: 3px;
