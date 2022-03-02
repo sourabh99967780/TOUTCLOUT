@@ -2396,16 +2396,13 @@ ul.brand-listing li {
   border-top: 3px solid #262728;
   border-right: 3px solid #262728;
   border-left: 3px solid #262728;
+  transition: transform ease-in-out 1.5s;
 }
 
 .enquireForm__form {
-  border-bottom: 0;
   max-height: 0;
   transition: max-height ease-in-out 1.5s;
-}
-
-.form-open .enquireForm__form {
-  max-height: 100vh;
+  border-bottom: 0;
 }
 
 .enquireForm input:focus::placeholder,

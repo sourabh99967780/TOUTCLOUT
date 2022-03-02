@@ -142,19 +142,46 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+function openEnquireForm() {
+  const enquireFormElement = document.querySelector('.enquireForm');
+  enquireFormElement.style.transform = `translateY(0px)`;
+}
+
+function closeEnquireForm() {
+  const enquireFormElement = document.querySelector('.enquireForm');
+  const enquireFormTabElement = document.querySelector('.enquireForm__tab');
+
+  const enquireFormTabHeight = enquireFormTabElement.offsetHeight;
+  const enquireFormOffsetHeight = enquireFormElement.offsetHeight;
+  enquireFormElement.style.transform = `translateY(${enquireFormOffsetHeight - enquireFormTabHeight}px)`;
+}
+
 // enquiry form open close trigger
+let counter = 0;
 $('.enquireForm__tab').click(() => {
   $('.enquireForm').toggleClass('form-open');
-  const isFormOpen = $('.enquireForm').hasClass('form-open');
-  if (isFormOpen) {
-    setTimeout(() => {
+  if (counter === 0) {
+    document.querySelector('.enquireForm__form').style.maxHeight = '530px';
+    const isFormOpen = $('.enquireForm').hasClass('form-open');
+    if (isFormOpen) {
+      openEnquireForm();
       $('.enquireForm__tab-icon').addClass('enquireForm__tab-icon-rotate');
-    }, 900);
-  } else {
-    setTimeout(() => {
+    } else {
+      closeEnquireForm();
       $('.enquireForm__tab-icon').removeClass('enquireForm__tab-icon-rotate');
-    }, 1300);
+    }
+  } else {
+    document.querySelector('.enquireForm__form').style.maxHeight = 'unset';
+    const isFormOpen = $('.enquireForm').hasClass('form-open');
+    if (isFormOpen) {
+      openEnquireForm();
+      $('.enquireForm__tab-icon').addClass('enquireForm__tab-icon-rotate');
+    } else {
+      closeEnquireForm();
+      $('.enquireForm__tab-icon').removeClass('enquireForm__tab-icon-rotate');
+    }
   }
+  counter += 1;
 })
 
 // handle the function of enquire Form
