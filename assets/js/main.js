@@ -162,24 +162,16 @@ $('.enquireForm__tab').click(() => {
   $('.enquireForm').toggleClass('form-open');
   if (counter === 0) {
     document.querySelector('.enquireForm__form').style.maxHeight = '530px';
-    const isFormOpen = $('.enquireForm').hasClass('form-open');
-    if (isFormOpen) {
-      openEnquireForm();
-      $('.enquireForm__tab-icon').addClass('enquireForm__tab-icon-rotate');
-    } else {
-      closeEnquireForm();
-      $('.enquireForm__tab-icon').removeClass('enquireForm__tab-icon-rotate');
-    }
   } else {
     document.querySelector('.enquireForm__form').style.maxHeight = 'unset';
-    const isFormOpen = $('.enquireForm').hasClass('form-open');
-    if (isFormOpen) {
-      openEnquireForm();
-      $('.enquireForm__tab-icon').addClass('enquireForm__tab-icon-rotate');
-    } else {
-      closeEnquireForm();
-      $('.enquireForm__tab-icon').removeClass('enquireForm__tab-icon-rotate');
-    }
+  }
+  const isFormOpen = $('.enquireForm').hasClass('form-open');
+  if (isFormOpen) {
+    openEnquireForm();
+    $('.enquireForm__tab-icon').addClass('enquireForm__tab-icon-rotate');
+  } else {
+    closeEnquireForm();
+    $('.enquireForm__tab-icon').removeClass('enquireForm__tab-icon-rotate');
   }
   counter += 1;
 })
