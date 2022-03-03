@@ -2515,7 +2515,8 @@ ul.brand-listing li {
   box-shadow: none;
 }
 
-.enquireForm__body button {
+.enquireForm__body button,
+.enquireForm__form .query__btn {
   width: 100%;
   border: none;
   background: #d0d0d0;
@@ -2528,12 +2529,17 @@ ul.brand-listing li {
   transition: background-color ease-in-out 200ms;
 }
 
+.enquireForm__form .query__btn {
+  text-align: center;
+}
+
 .enquireForm .spinner-border {
   width: 1.4rem;
   height: 1.4rem;
 }
 
-.enquireForm__body button:hover {
+.enquireForm__body button:hover,
+.enquireForm__form .query__btn:hover {
   cursor: none;
   background-color: #c8c8c8;
 }

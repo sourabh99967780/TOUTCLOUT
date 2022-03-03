@@ -50,15 +50,15 @@
                 <i class="fas fa-chevron-up"></i>
             </a>
         </div>
-        <form class="enquireForm__form" id="enquireForm__form">
+        <form class="enquireForm__form" id="enquireForm__form" @submit.prevent="submit">
             <div class="enquireForm__body">
                 <!-- Success -->
                 <div class="success_block" v-show="submitStatus === 'OK' && !emailSending">
                     <p class="typo__p">Thank you for reaching out to us! <br> We will get in
                         touch with
                         you shortly.</p>
-                    <button class="query__btn" :disabled="submitStatus === 'PENDING' ? true : false" id="query-btn"
-                        @click="resetForm">Have a new query ?</button>
+                    <div class="query__btn" :disabled="submitStatus === 'PENDING' ? true : false" id="query-btn"
+                        @click="resetForm">Have a new query ?</div>
                 </div>
                 <div v-show="!(submitStatus === 'OK' && !emailSending)">
                     <p>Please fill in the details below.</p>
@@ -125,7 +125,7 @@
     
                     <!-- Submit -->
                     <button class="send-btn d-flex align-items-center enquireForm__submit"
-                        :disabled="submitStatus === 'PENDING' ? true : false" @click.prevent="submit()">
+                        :disabled="submitStatus === 'PENDING' ? true : false" @click.prevent="submit">
                         <div v-if="submitStatus === 'PENDING'" class="spinner-border" role="status">
                             <span class="sr-only">Loading...</span>
                         </div>
