@@ -325,7 +325,7 @@ section {
 
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
-  margin-top: -20px;
+  margin-top: -14px;
   z-index: 1;
 }
 
@@ -338,7 +338,7 @@ section {
 }
 
 #footer .footer-top .footer-contact .footer-logo {
-  max-width: 70%;
+  max-width: 68%;
 }
 
 #footer .footer-top .footer-contact h3 {
@@ -361,7 +361,7 @@ section {
   margin-bottom: 0;
   font-weight: 400;
   color: #fff;
-  margin-top: 0.6em;
+  margin-top: 0.8em;
   margin-left: 3.7em;
 }
 #footer .footer-top .footer-contact p a {
