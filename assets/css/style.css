@@ -462,6 +462,11 @@ section {
 
 #footer .footer-top .social-links a {
   color: #eaad67;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
 }
 #footer .footer-top .social-links a i {
   font-size: 26px;
@@ -500,9 +505,9 @@ section {
   position: absolute;
   bottom: 0;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   transform: translateX(-50%);
-  left: 49.5%;
+  left: 50%;
   top: 10px;
 }
 #footer .foote_img img:nth-child(2) {
