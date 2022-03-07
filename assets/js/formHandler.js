@@ -114,8 +114,7 @@ Vue.component('contact-form', {
       } else if (this.step === 4) {
         this.$v.phone.$touch();
         if (!this.$v.phone.$invalid && this.isAPhoneNumber) {
-          await this.step++;
-          this.$refs[this.focusElements[this.step]].focus();
+          this.submit();
         } else {
           document
             .querySelector(`.${this.focusElements[this.step]}-error`)
