@@ -510,7 +510,9 @@ body a {
 .home_page li.dropdown-toggle .dropdown-menu .dropdown-item {
   color: #fff;
 }
-.home_page li.dropdown-toggle .dropdown-menu .dropdown-item:hover {
+.home_page li.dropdown-toggle .dropdown-menu .dropdown-item:hover,
+.home_page li.dropdown-toggle .dropdown-menu .dropdown-item:focus,
+.home_page li.dropdown-toggle .dropdown-menu .dropdown-item:active {
   color: #eaad67;
   background-color: transparent;
 }
@@ -2347,7 +2349,7 @@ ul.brand-listing li {
 }
 
 .website__process {
-  width: 97vh;
+  width: 97vmin;
   margin: 0 auto;
   margin-bottom: 3em;
   padding-left: 2.2em;
