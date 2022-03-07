@@ -4,8 +4,7 @@ const contactForm = document.querySelector("#contact-form");
 Vue.use(window.vuelidate.default);
 const { required, minLength, maxLength, email } = window.validators;
 
-var vueApp = new Vue({
-  el: "#contact-form",
+Vue.component('contact-form', {
   data() {
     return {
       step: 1,
@@ -23,6 +22,7 @@ var vueApp = new Vue({
       submitStatus: "",
     };
   },
+  template: `#contact-form-template`,
   validations: {
     name: {
       required,
@@ -197,4 +197,8 @@ var vueApp = new Vue({
   mounted() {
     this.$refs.name.focus();
   },
+})
+
+var vueApp = new Vue({
+  el: "#contact-form",
 });

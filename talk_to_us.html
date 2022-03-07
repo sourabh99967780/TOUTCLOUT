@@ -94,98 +94,7 @@
       </div>
         <div class="d-flex flex_item">
           <div class="form_content" id="contact-form">
-            <div class="success_block" v-show="submitStatus === 'OK' && !emailSending">
-              <p class="typo__p">Thank you for reaching out to us! <br> We will get in
-                touch with
-                you shortly.</p>
-              <button class="tab-btn query-btn" @click="resetForm">Have a new query ?</button>
-            </div>
-            <div v-show="!(submitStatus === 'OK' && !emailSending)" class="contact-filling">
-              <h4>Enough about us! <i>Let’s talk about you.</i></h4>
-              <form @submit.prevent="submit()">
-                <div class="form-group" v-if="step >= 1">
-                  <label for="form_nme">What’s your name?</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="e.g. John Doe"
-                    ref="name"
-                    v-model.trim="$v.name.$model"
-                  />
-                  <div class="error name-error" :class="{'shake' : this.$v.name.$invalid}" v-if="!$v.name.required">You must enter your name to proceed.</div>
-                  <div class="error name-error" :class="{'shake' : this.$v.name.$invalid}" v-if="!$v.name.minLength">Your name must have at least {{$v.name.$params.minLength.min}} letters.</div>
-                </div>
-                <transition name="fade">
-                  <div class="form-group" v-if="step >= 2">
-                    <label for="form_help"
-                      >It’s great connecting with you <i>{{ firstName }}.</i> What can we
-                      help you with?</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="e.g. I have a website requirement."
-                      ref="message"
-                      v-model.trim="$v.message.$model"
-                    ></input>
-                    <div class="error message-error" :class="{'shake' : this.$v.message.$invalid}" v-if="!$v.message.required">A message is required to help you.</div>
-                    <div class="error message-error" :class="{'shake' : this.$v.message.$invalid}" v-if="!$v.message.minLength">Your message must have at least {{$v.message.$params.minLength.min}} letters.</div>
-                  </div>
-                </transition>
-                <transition name="fade">
-                  <div class="form-group" v-if="step >= 3">
-                    <label for="form_email"
-                      >Wonderful! What’s your email address?</label
-                    >
-                    <input
-                      type="email"
-                      class="form-control"
-                      placeholder="e.g. johndoe@example.com"
-                      ref="email"
-                      v-model.trim="$v.email.$model"
-                    />
-                    <div class="error email-error" :class="{'shake' : this.$v.email.$invalid}" v-if="!$v.email.required">Please provide your email address to help you with the query.</div>
-                    <div class="error email-error" :class="{'shake' : this.$v.email.$invalid}" v-if="!$v.email.maxLength">Your email is of {{$v.email.$params.maxLength.max}} letters. Too long to proceed.</div>
-                    <div class="error email-error" :class="{'shake' : this.$v.email.$invalid}" v-if="!$v.email.email">This email address is not valid.</div>
-                  </div>
-                </transition>
-                <div class="form-group">
-                  <transition name="fade">
-                    <div class="form-group" v-if="step >= 4">
-                      <label for="form_phone">We’ll be happy to reach out to you on call.</label>
-                      <input v-if="step >= 4" type="tel" class="form-control" placeholder="e.g. +91 9956022342" ref="phone"
-                        v-model.trim="$v.phone.$model" />
-                      <div class="error phone-error" :class="{'shake' : this.$v.phone.$invalid }" v-if="!$v.phone.required">A phone number is required to
-                        serve you better.</div>
-                      <div class="error phone-error" :class="{'shake' : !this.isAPhoneNumber && this.phone !== ''}" v-if="!this.isAPhoneNumber && this.phone !== ''">Please provide a valid phone
-                        number (minimum 10 digits).</div>
-                    </div>
-                    </transition>
-                  <div class="tab-btn-container">
-                    <button
-                      class="tab-btn"
-                      v-show="step < 4"
-                      @click.prevent="next()"
-                    >
-                      Next
-                    </button>
-                    <button
-                      class="tab-btn send-btn align-items-center"
-                      v-show="step >= 4"
-                      @click.prevent="submit()"
-                    >
-                    <div v-if="submitStatus === 'PENDING'" class="spinner-border" role="status">
-                      <span class="sr-only">Loading...</span>
-                    </div>
-                      <div v-else class="d-flex align-items-center">
-                        <img src="assets/images/contact/send.svg" class="img-fluid" alt="Send Message" />
-                        <span>Send</span>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
+            <contact-form></contact-form>
           </div>
           <div class="d-flex social_content">
             <a href="#">hello@toutclout.com</a>
@@ -251,6 +160,102 @@
     ></script>
     <script src="assets/vendor/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+    <script type="text/x-template" id="contact-form-template">
+      <div>
+        <div class="success_block" v-show="submitStatus === 'OK' && !emailSending">
+          <p class="typo__p">Thank you for reaching out to us! <br> We will get in
+            touch with
+            you shortly.</p>
+          <button class="tab-btn query-btn" @click="resetForm">Have a new query ?</button>
+        </div>
+        <div v-show="!(submitStatus === 'OK' && !emailSending)" class="contact-filling">
+          <h4>Enough about us! <i>Let’s talk about you.</i></h4>
+          <form @submit.prevent="submit()">
+            <div class="form-group" v-if="step >= 1">
+              <label for="form_nme">What’s your name?</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="e.g. John Doe"
+                ref="name"
+                v-model.trim="$v.name.$model"
+              />
+              <div class="error name-error" :class="{'shake' : this.$v.name.$invalid}" v-if="!$v.name.required">You must enter your name to proceed.</div>
+              <div class="error name-error" :class="{'shake' : this.$v.name.$invalid}" v-if="!$v.name.minLength">Your name must have at least {{$v.name.$params.minLength.min}} letters.</div>
+            </div>
+            <transition name="fade">
+              <div class="form-group" v-if="step >= 2">
+                <label for="form_help"
+                  >It’s great connecting with you <i>{{ firstName }}.</i> What can we
+                  help you with?</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="e.g. I have a website requirement."
+                  ref="message"
+                  v-model.trim="$v.message.$model"
+                ></input>
+                <div class="error message-error" :class="{'shake' : this.$v.message.$invalid}" v-if="!$v.message.required">A message is required to help you.</div>
+                <div class="error message-error" :class="{'shake' : this.$v.message.$invalid}" v-if="!$v.message.minLength">Your message must have at least {{$v.message.$params.minLength.min}} letters.</div>
+              </div>
+            </transition>
+            <transition name="fade">
+              <div class="form-group" v-if="step >= 3">
+                <label for="form_email"
+                  >Wonderful! What’s your email address?</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="e.g. johndoe@example.com"
+                  ref="email"
+                  v-model.trim="$v.email.$model"
+                />
+                <div class="error email-error" :class="{'shake' : this.$v.email.$invalid}" v-if="!$v.email.required">Please provide your email address to help you with the query.</div>
+                <div class="error email-error" :class="{'shake' : this.$v.email.$invalid}" v-if="!$v.email.maxLength">Your email is of {{$v.email.$params.maxLength.max}} letters. Too long to proceed.</div>
+                <div class="error email-error" :class="{'shake' : this.$v.email.$invalid}" v-if="!$v.email.email">This email address is not valid.</div>
+              </div>
+            </transition>
+            <div class="form-group">
+              <transition name="fade">
+                <div class="form-group" v-if="step >= 4">
+                  <label for="form_phone">We’ll be happy to reach out to you on call.</label>
+                  <input v-if="step >= 4" type="tel" class="form-control" placeholder="e.g. +91 9956022342" ref="phone"
+                    v-model.trim="$v.phone.$model" />
+                  <div class="error phone-error" :class="{'shake' : this.$v.phone.$invalid }" v-if="!$v.phone.required">A phone number is required to
+                    serve you better.</div>
+                  <div class="error phone-error" :class="{'shake' : !this.isAPhoneNumber && this.phone !== ''}" v-if="!this.isAPhoneNumber && this.phone !== ''">Please provide a valid phone
+                    number (minimum 10 digits).</div>
+                </div>
+                </transition>
+              <div class="tab-btn-container">
+                <button
+                  class="tab-btn"
+                  v-show="step < 4"
+                  @click.prevent="next()"
+                >
+                  Next
+                </button>
+                <button
+                  class="tab-btn send-btn align-items-center"
+                  v-show="step >= 4"
+                  @click.prevent="submit()"
+                >
+                <div v-if="submitStatus === 'PENDING'" class="spinner-border" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+                  <div v-else class="d-flex align-items-center">
+                    <img src="assets/images/contact/send.svg" class="img-fluid" alt="Send Message" />
+                    <span>Send</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/formHandler.js"></script>
     <script src="assets/js/talkToUs.js"></script>
