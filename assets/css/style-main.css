@@ -2484,7 +2484,7 @@ ul.brand-listing li {
 }
 
 .enquireForm__body .floating-label-group textarea {
-  padding: 0.375rem;
+  padding: 0.375em 0.6em;
   border: 0.3px solid #2e2f3030;
   font-family: "Playfair Display", serif;
   color: #2e2f30;
@@ -2572,6 +2572,7 @@ ul.brand-listing li {
 
 .floating-label-group:nth-child(5) {
   margin-bottom: 3em;
+  margin-top: 23px;
 }
 
 .floating-label-group .floating-label {
@@ -2586,7 +2587,9 @@ ul.brand-listing li {
 }
 
 .floating-label-group input:focus ~ .floating-label,
-.floating-label-group input:not(:focus):valid ~ .floating-label {
+.floating-label-group input:not(:focus):valid ~ .floating-label,
+.floating-label-group textarea:focus ~ .floating-label,
+.floating-label-group textarea:not(:focus):valid ~ .floating-label {
   top: -15px;
   bottom: 0px;
   left: 0px;
