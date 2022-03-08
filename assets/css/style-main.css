@@ -1443,8 +1443,10 @@ body a {
 .top_header li.dropdown-toggle .dropdown-menu .dropdown-item {
   color: #fff;
 }
-.top_header li.dropdown-toggle .dropdown-menu .dropdown-item:hover {
+.top_header li.dropdown-toggle .dropdown-menu .dropdown-item:hover,
+.top_header li.dropdown-toggle .dropdown-menu .dropdown-item:focus {
   color: #eaad67 !important;
+  background: transparent;
 }
 .top_header li.dropdown-toggle:hover .dropdown-menu {
   display: block;
