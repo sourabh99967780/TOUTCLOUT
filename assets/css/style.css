@@ -97,14 +97,6 @@ h6 {
   color: #fff;
 }
 
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
-}
 /* about */
 .about h6 {
   color: #d8974d;
@@ -551,11 +543,20 @@ section {
   margin: 0;
   font-size: 0.75rem;
 }
+.no-scroll {
+  overflow: hidden;
+}
 /* footer css end */
 
 /* media query start */
 
-@media (max-width: 991px) {
+/* Extra large devices (large laptops and desktops, 1200px and down) */
+@media only screen and (max-width: 1200px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and down) */
+@media only screen and (max-width: 992px) {
   .about h4 br {
     display: none;
   }
@@ -570,19 +571,26 @@ section {
   }
 }
 
-@media (max-width: 768px) {
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+  /*--------------------------------------------------------------
+  # Disable aos animation delay on mobile devices
+  --------------------------------------------------------------*/
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+
   #footer .copyright,
   #footer .credits {
     float: none;
     text-align: center;
     padding: 2px 0;
   }
+  
   #about .top_content p {
     max-width: 100%;
   }
-}
 
-@media (max-width: 768px) {
   #footer .footer-top h4 {
     text-align: center !important;
   }
@@ -625,8 +633,10 @@ section {
     font-size: 16px;
   }
 }
-/* media query end */
 
-.no-scroll {
-  overflow: hidden;
+/* Small devices (portrait tablets and large phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
 }
+
+/* media query end */
