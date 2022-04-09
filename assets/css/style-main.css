@@ -521,6 +521,11 @@ body a {
   margin: 0 auto 20px;
   height: 80px;
 }
+.values_contant .content .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .values_contant .content .description h4 {
   font-size: 20px;
   font-weight: 600;
@@ -529,6 +534,7 @@ body a {
 .values_contant .content .description p {
   color: #797b7e;
   margin-bottom: 0;
+  width: 65%;
 }
 .values_contant .row {
   justify-content: center;
@@ -2077,7 +2083,7 @@ ul.brand-listing li {
   .branding__graphic,
   .web__graphic,
   .aboutUs__graphic {
-    width: 25.25em;
+    width: 20.25em;
   }
 }
 
@@ -2085,7 +2091,10 @@ ul.brand-listing li {
 @media only screen and (max-width: 992px) {
   .img_text_container .right_part {
     padding-top: 0;
-    margin-top: 4em;
+  }
+
+  .img_text_container {
+    padding: 8em 50px;
   }
   
   .img_text_container .heading h3 {
@@ -2110,7 +2119,46 @@ ul.brand-listing li {
   }
   
   .values_contant {
-    top: -108px;
+    top: -2.25em;
+  }
+
+  .stagger-visualizer {
+    width: 5em;
+    height: 5em;
+  }
+
+  .values_contant {
+    padding: 8em 50px;
+    padding-top: 12em;
+  }
+
+  .approach_contant {
+    padding: 8em 50px;
+    padding-top: 4em;
+  }
+  
+  .values_contant .content .description p {
+    width: 90%;
+  }
+
+  .story_contant {
+    padding: 8em 50px;
+  }
+
+  #footer {
+    padding: 4em 25px !important;
+  }
+
+  #footer .footer-top .social-links {
+    justify-content: center !important;
+  }
+
+  #footer .footer-top .footer-contact p {
+    margin-left: 4.8em !important;
+  }
+
+  #footer .circle-links {
+    padding: 0 !important;
   }
 }
 
@@ -2118,6 +2166,11 @@ ul.brand-listing li {
 @media only screen and (max-width: 768px) {
   .values_contant .row .col-md-4:nth-child(3) {
     margin-top: 50px;
+  }
+
+  .stagger-visualizer {
+    width: 5em;
+    height: 5em;
   }
   
   #our_process .col-md-4:nth-child(3) .pro_content .icon:before {
@@ -2358,6 +2411,10 @@ ul.brand-listing li {
     margin-bottom: 4em;
   }
 
+  .img_text_container .right_part {
+    padding-top: 4.375em;
+  }
+
   .menu .menu-link {
     padding-left: 2rem;
   }
@@ -2512,6 +2569,7 @@ ul.brand-listing li {
 
   .values_contant .content .description p {
     font-size: 15px;
+    width: 80%;
   }
 
   .story_contant {
@@ -2554,6 +2612,10 @@ ul.brand-listing li {
 
   #footer {
     padding: 4em 40px !important;
+  }
+
+  #footer .footer-top .footer-contact p {
+    margin-left: 0 !important;
   }
 
   .about,
