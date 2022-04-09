@@ -2185,6 +2185,15 @@ ul.brand-listing li {
   #services .mobile_slider div:not(:nth-child(3)) {
     border-right: 1px solid #26272815;
   }
+
+  #website_design {
+    padding: 8em 50px;
+    padding-top: 12em;
+  }
+
+  #website_design .top_content {
+    margin-bottom: 8em;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and down) */
@@ -2648,6 +2657,10 @@ ul.brand-listing li {
     padding: 8em 40px;
   }
 
+  #website_design {
+    padding-bottom: 1em;
+  }
+
   #about .top_content h2,
   #website_design .top_content h2 {
     font-size: 22px;
@@ -2744,11 +2757,11 @@ ul.brand-listing li {
   }
 
   #website_design .top_content {
-    margin-bottom: 30px;
+    margin-bottom: 5em;
   }
 
   #our_process {
-    padding: 30px 0;
+    padding: 8em 50px;
   }
 
   #our_process .title h2 {
