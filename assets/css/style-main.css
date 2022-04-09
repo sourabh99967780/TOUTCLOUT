@@ -1699,53 +1699,6 @@ ul.brand-listing li {
   background-color: #aaaaaa;
 }
 
-@media screen and (max-width: 1366px) {
-  .values_contant .content .description h4,
-  .approach_contant .description h4,
-  .story_contant .description h4 {
-    font-size: 18px;
-  }
-
-  .innovation__anim {
-    width: 5em;
-  }
-
-  .simplicity__anim {
-    width: 7em;
-  }
-
-  .integration__anim {
-    width: 8.5em;
-  }
-
-  .agility__anim {
-    width: 5em;
-  }
-
-  .integrity__anim {
-    width: 11em;
-  }
-
-  .curiosity__anim,
-  .discovery__anim,
-  .creation__anim,
-  .ignition__anim {
-    width: 10em;
-  }
-
-  .ignition__anim {
-    margin-top: 0.5em;
-    margin-bottom: 3em;
-  }
-
-  .digital__graphic,
-  .branding__graphic,
-  .web__graphic,
-  .aboutUs__graphic {
-    width: 25.25em;
-  }
-}
-
 .branding__services-heading {
   font-weight: 400;
 }
@@ -2081,6 +2034,51 @@ ul.brand-listing li {
   .container-xl {
     max-width: 1000px;
   }
+
+  .values_contant .content .description h4,
+  .approach_contant .description h4,
+  .story_contant .description h4 {
+    font-size: 18px;
+  }
+  
+  .innovation__anim {
+    width: 5em;
+  }
+  
+  .simplicity__anim {
+    width: 7em;
+  }
+  
+  .integration__anim {
+    width: 8.5em;
+  }
+  
+  .agility__anim {
+    width: 5em;
+  }
+  
+  .integrity__anim {
+    width: 11em;
+  }
+  
+  .curiosity__anim,
+  .discovery__anim,
+  .creation__anim,
+  .ignition__anim {
+    width: 10em;
+  }
+  
+  .ignition__anim {
+    margin-top: 0.5em;
+    margin-bottom: 3em;
+  }
+  
+  .digital__graphic,
+  .branding__graphic,
+  .web__graphic,
+  .aboutUs__graphic {
+    width: 25.25em;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and down) */
@@ -2261,15 +2259,9 @@ ul.brand-listing li {
     display: none;
   }
   
-  .img_text_container .heading,
-  .img_text_container .row {
-    margin: 0px 0 4em;
-    text-align: center;
-  }
-  
   .values_contant {
     padding-top: 38%;
-    margin-top: 18.5em;
+    margin-top: 0;
   }
   
   .img_text_container .heading h1 {
@@ -2350,10 +2342,6 @@ ul.brand-listing li {
     padding-top: 150px;
   }
   
-  .approach_contant {
-    margin-top: 100px;
-  }
-  
   #digital_box .icon-box {
     padding: 30px 0 0;
   }
@@ -2365,6 +2353,11 @@ ul.brand-listing li {
 
 /* Small devices (portrait tablets and large phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .approach_contant .col-lg-3:first-child .content,
+  .approach_contant .col-lg-3:nth-child(2) .content {
+    margin-bottom: 4em;
+  }
+
   .menu .menu-link {
     padding-left: 2rem;
   }
@@ -2442,11 +2435,12 @@ ul.brand-listing li {
   }
 
   .approach_contant .content {
-    margin-bottom: 30px;
+    margin-bottom: 4em;
   }
 
   .approach_contant {
-    padding-bottom: 0;
+    padding: 8em 40px;
+    padding-bottom: 4em;
   }
 
   #our_process .pro_content {
@@ -2458,7 +2452,13 @@ ul.brand-listing li {
   }
 
   .img_text_container .heading {
-    margin: 0px 0 30px;
+    margin: 4em 0;
+    text-align: center;
+  }
+
+  .img_text_container .row {
+    margin: 0;
+    text-align: center;
   }
 
   .img_text_container .right_part p {
@@ -2468,8 +2468,8 @@ ul.brand-listing li {
 
   section.img_text_container {
     padding: 8em 40px;
-    padding-bottom: 3em;
     bottom: 0;
+    overflow-x: hidden;
   }
 
   .values_contant .title h2 {
@@ -2478,7 +2478,7 @@ ul.brand-listing li {
   }
 
   .values_contant {
-    padding: 14em 0 2em 0;
+    padding: 8em 0;
   }
 
   .values_contant .row .col-md-4:nth-child(3) {
@@ -2495,7 +2495,7 @@ ul.brand-listing li {
   }
 
   .values_contant .row {
-    margin-top: 35px;
+    margin-top: 2em;
   }
 
   .values_contant .content {
@@ -2514,23 +2514,20 @@ ul.brand-listing li {
     font-size: 15px;
   }
 
-  .approach_contant {
-    padding-top: 0em;
-  }
-
   .story_contant {
-    margin-top: 30px;
-    padding: 30px 0;
-    padding-top: 7em;
+    padding: 8em 40px;
+    padding-bottom: 4.875em;
+    padding-top: 6em;
   }
 
   .approach_contant .title h2 {
     font-size: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 3em;
   }
 
   .story_contant .title h2 {
     font-size: 30px;
+    margin-bottom: 1em;
   }
 
   .story_contant .title p {
@@ -2556,7 +2553,7 @@ ul.brand-listing li {
   }
 
   #footer {
-    padding: 30px 0 30px !important;
+    padding: 4em 40px !important;
   }
 
   .about,
@@ -2612,7 +2609,12 @@ ul.brand-listing li {
   }
 
   .stagger__pattern {
-    display: none !important;
+    transform: translateX(5em) translateY(0em);
+  }
+
+  .stagger-visualizer {
+    width: 5em;
+    height: 5em;
   }
 
   .services {

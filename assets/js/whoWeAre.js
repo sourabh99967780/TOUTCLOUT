@@ -246,7 +246,11 @@ integrityElem.addEventListener("mouseout", (event) => {
 
 const staggerVisualizerEl = document.querySelector('.stagger-visualizer');
 const fragment = document.createDocumentFragment();
-const grid = [10, 10];
+const isItAMobileDevice = checkIfItIsMobile();
+let grid = [10, 10];
+if (isItAMobileDevice) {
+  grid = [5, 5];
+}
 const col = grid[0];
 const row = grid[1];
 const numberOfElements = col * row;
