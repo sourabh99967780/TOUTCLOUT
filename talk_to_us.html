@@ -164,7 +164,7 @@
         <div v-show="!(submitStatus === 'OK' && !emailSending)" class="contact-filling">
           <h4>Enough about us! <i>Let’s talk about you.</i></h4>
           <form @submit.prevent="submit()">
-            <div class="form-group" v-if="step >= 1">
+            <div class="form-group" v-if="isItAMobileDevice ? step === 1 : step >= 1">
               <label for="form_nme">What’s your name?</label>
               <input
                 type="text"
@@ -177,7 +177,7 @@
               <div class="error name-error" :class="{'shake' : this.$v.name.$invalid}" v-if="!$v.name.minLength">Your name must have at least {{$v.name.$params.minLength.min}} letters.</div>
             </div>
             <transition name="fade">
-              <div class="form-group" v-if="step >= 2">
+              <div class="form-group" v-if="isItAMobileDevice ? step === 2 : step >= 2">
                 <label for="form_help"
                   >It’s great connecting with you <i>{{ firstName }}.</i> What can we
                   help you with?</label
@@ -194,7 +194,7 @@
               </div>
             </transition>
             <transition name="fade">
-              <div class="form-group" v-if="step >= 3">
+              <div class="form-group" v-if="isItAMobileDevice ? step === 3 : step >= 3">
                 <label for="form_email"
                   >Wonderful! What’s your email address?</label
                 >
@@ -212,7 +212,7 @@
             </transition>
             <div class="form-group">
               <transition name="fade">
-                <div class="form-group" v-if="step >= 4">
+                <div class="form-group" v-if="isItAMobileDevice ? step === 4 : step >= 4">
                   <label for="form_phone">We’ll be happy to reach out to you on call.</label>
                   <input v-if="step >= 4" type="tel" class="form-control" placeholder="e.g. +91 9956022342" ref="phone"
                     v-model.trim="$v.phone.$model" />
