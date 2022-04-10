@@ -2499,8 +2499,9 @@ ul.brand-listing li {
   }
 
   .contact_us .social_content {
-    display: block !important;
-    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    bottom: 5%;
   }
 
   .contact_us .social_content ul {
@@ -2508,13 +2509,13 @@ ul.brand-listing li {
   }
 
   .contact_us .social_content > a {
-    display: inline-block;
-    padding: 0 5px;
+    padding: 0;
+    margin-right: 0;
   }
 
   .contact_us .flex_item {
-    width: 85vw;
     margin: 0 auto;
+    padding: 0 10%;
   }
 
   .story_top,
@@ -2532,7 +2533,7 @@ ul.brand-listing li {
   }
 
   .contact_us .flex_item h4 {
-    margin-top: 40px;
+    margin-bottom: 1.8em;
   }
 
   .img_text_container .heading h1 {
