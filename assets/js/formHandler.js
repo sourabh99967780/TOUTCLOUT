@@ -4,7 +4,7 @@ const contactForm = document.querySelector("#contact-form");
 Vue.use(window.vuelidate.default);
 const { required, minLength, maxLength, email } = window.validators;
 
-Vue.component('contact-form', {
+Vue.component("contact-form", {
   data() {
     return {
       step: 1,
@@ -17,30 +17,30 @@ Vue.component('contact-form', {
         1: "name",
         2: "message",
         3: "email",
-        4: "phone",
+        4: "phone"
       },
-      submitStatus: "",
+      submitStatus: ""
     };
   },
   template: `#contact-form-template`,
   validations: {
     name: {
       required,
-      minLength: minLength(3),
+      minLength: minLength(3)
     },
     message: {
       required,
       minLength: minLength(6),
-      maxLength: maxLength(10000),
+      maxLength: maxLength(10000)
     },
     email: {
       required,
       maxLength: maxLength(320),
-      email,
+      email
     },
     phone: {
-      required,
-    },
+      required
+    }
   },
   computed: {
     firstName() {
@@ -53,6 +53,16 @@ Vue.component('contact-form', {
       );
       return match;
     },
+
+    isItAMobileDevice() {
+      if (
+        window.matchMedia("(max-width: 767px)").matches ||
+        window.matchMedia("(max-width: 1024px)").matches
+      ) {
+        return true;
+      }
+      return false;
+    }
   },
   methods: {
     resetForm() {
@@ -133,7 +143,7 @@ Vue.component('contact-form', {
         name: this.name,
         email: this.email,
         phone: this.phone,
-        message: this.message,
+        message: this.message
       };
 
       const response = await fetch(`${baseUrl}/db/insert-enquiry`, {
@@ -142,12 +152,12 @@ Vue.component('contact-form', {
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
         credentials: "same-origin", // include, *same-origin, omit
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         redirect: "follow", // manual, *follow, error
         referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-        body: JSON.stringify(data), // body data type must match "Content-Type" header
+        body: JSON.stringify(data) // body data type must match "Content-Type" header
       });
     },
 
@@ -156,7 +166,7 @@ Vue.component('contact-form', {
         name: this.name,
         email: this.email,
         message: this.message,
-        phone: this.phone,
+        phone: this.phone
       };
       const response = await fetch(`${baseUrl}/email`, {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
@@ -164,12 +174,12 @@ Vue.component('contact-form', {
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
         credentials: "same-origin", // include, *same-origin, omit
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         redirect: "follow", // manual, *follow, error
         referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-        body: JSON.stringify(data), // body data type must match "Content-Type" header
+        body: JSON.stringify(data) // body data type must match "Content-Type" header
       });
     },
 
@@ -190,14 +200,14 @@ Vue.component('contact-form', {
         this.submitStatus = "OK";
         this.emailSending = false;
       }
-    },
+    }
   },
 
   mounted() {
     this.$refs.name.focus();
-  },
-})
+  }
+});
 
 var vueApp = new Vue({
-  el: "#contact-form",
+  el: "#contact-form"
 });
