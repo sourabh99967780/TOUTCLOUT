@@ -407,8 +407,7 @@ body a {
   right: 0;
   bottom: 0;
   left: 0;
-  min-width: 100vw;
-  height: 50vh;
+  height: 50%;
   overflow: hidden;
   opacity: 1;
   background-color: #fff;
@@ -2706,7 +2705,8 @@ ul.brand-listing li {
   }
 
   #about .top_content {
-    margin-bottom: 50px;
+    margin-bottom: 6em;
+    margin-top: 4em;
   }
 
   .about h6,
@@ -2791,7 +2791,8 @@ ul.brand-listing li {
   }
 
   #website_design .top_content {
-    margin-bottom: 5em;
+    margin-bottom: 6em;
+    margin-top: 4em;
   }
 
   #our_process {
