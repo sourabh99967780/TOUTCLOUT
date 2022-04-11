@@ -180,23 +180,41 @@ let showCursor = false;
 let group, stuckX, stuckY, fillOuterCursor;
 initCanvas("rgba(38,39,40,0.5)", "#262728");
 
-// process animation customisation
-document.addEventListener("DOMContentLoaded", () => {
-  LottieInteractivity.create({
-    player: "#website__process",
-    mode: "scroll",
-    container: "#sticky__process",
-    actions: [
-      {
-        visibility: [0, 0.1],
-        type: 'stop',
-        frames: [0],
-      },
-      {
-        visibility: [0.1, 1.0],
-        type: "seek",
-        frames: [0, 2160],
-      },
-    ],
-  });
-});
+// dynamic load player instance
+var processApp = new Vue({
+  el: '#sticky__process',
+  
+  computed: {
+    isItMobileDevice() {
+      if (
+          window.matchMedia("(max-width: 767px)").matches ||
+          window.matchMedia("(max-width: 1024px)").matches
+      ) {
+          return true;
+      }
+      return false;
+    }
+  },
+
+  mounted() {
+    this.$refs['website__process'].addEventListener('load', () => {
+      LottieInteractivity.create({
+        player: "#website__process",
+        mode: "scroll",
+        container: "#sticky__process",
+        actions: [
+          {
+            visibility: [0, 0.1],
+            type: 'stop',
+            frames: [0],
+          },
+          {
+            visibility: [0.1, 1.0],
+            type: "seek",
+            frames: [0, 2160],
+          },
+        ],
+      });
+    })
+  }
+})

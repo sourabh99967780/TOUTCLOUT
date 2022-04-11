@@ -2217,6 +2217,16 @@ ul.brand-listing li {
   #digital_box .mobile_slider>div:nth-child(6) {
     border-bottom: 1px solid #26272815;
   }
+
+  .website__process {
+    width: 75vmin;
+    padding-left: unset;
+    margin-top: 8em;
+  }
+
+  #our_process {
+    height: 110vh;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and down) */
@@ -2786,6 +2796,7 @@ ul.brand-listing li {
 
   #our_process {
     padding: 8em 50px;
+    height: 105vh;
   }
 
   #our_process .title h2 {
@@ -2829,5 +2840,14 @@ ul.brand-listing li {
   #digital_box .section-title p {
     max-width: 100%;
     margin-bottom: 4em;
+  }
+
+  .website__process {
+    width: 93vmin;
+    margin-left: -3.25em;
+    margin-bottom: 0;
+    margin-top: 5em;
+    margin-right: unset;
+    padding-left: 0;
   }
 }
