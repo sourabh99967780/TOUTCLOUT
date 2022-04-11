@@ -2851,4 +2851,8 @@ ul.brand-listing li {
     margin-right: unset;
     padding-left: 0;
   }
+
+  .enquireForm {
+    width: 300px;
+  }
 }
