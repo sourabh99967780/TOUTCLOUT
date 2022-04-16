@@ -15,7 +15,7 @@ var loadingPage = document.querySelector(".loading-page");
 
 
 if (window.matchMedia("(max-width: 600px)").matches) {
-  homePageVideo.src = './assets/videos/splash_mobile.mp4';
+  homePageVideo.src = './assets/videos/splash_mobile_new.mp4';
 } else {
   homePageVideo.src = './assets/videos/splash_original.mp4';
 }
