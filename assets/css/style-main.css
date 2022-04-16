@@ -2536,9 +2536,49 @@ ul.brand-listing li {
     height: 64%;
   }
 
-  .contact_us .site_container .left_img,
-  .contact_us .site_container .right_img {
-    opacity: 0.3;
+  .contact_us .flex_item .left_img img:first-child {
+    width: 2vw;
+    top: 64%;
+  }
+
+  .contact_us .flex_item .left_img img:nth-child(2) {
+    width: 5.8vw;
+    bottom: 26%;
+  }
+
+  .contact_us .flex_item .left_img img:nth-child(3) {
+    width: 5.8vw;
+    bottom: 25.5%;
+  }
+
+  .contact_us .flex_item .left_img img:nth-child(5) {
+    bottom: -5%;
+    left: 8%;
+    width: 10vw;
+  }
+
+  .contact_us .flex_item .left_img img:nth-child(6) {
+    width: 12vw;
+    bottom: 2.2%;
+    left: 14.5%;
+  }
+
+  .contact_us .flex_item .right_img img:nth-child(1) {
+    width: 12vw;
+  }
+
+  .contact_us .flex_item .right_img img:nth-child(2) {
+    right: 4.5%;
+    bottom: 0%;
+    width: 3vw;
+  }
+
+  .contact_us .flex_item .right_img img:nth-child(5) {
+    width: 2vw;
+  }
+
+  .contact_us .flex_item .right_img img:nth-child(6) {
+    width: 12vw;
   }
 
   .contact_us .flex_item h4 {
