@@ -178,7 +178,7 @@ $('.enquireForm__tab').click(() => {
 
 // handle the function of enquire Form
 if (!isItContactUsPage && !isItTheHomePage) {
-  const baseUrl = "http://3.145.21.71:81/api";
+  const baseUrl = "http://toutclout.abadboot.com/api";
   Vue.use(window.vuelidate.default);
   const { required, minLength, maxLength, email } = window.validators;
 

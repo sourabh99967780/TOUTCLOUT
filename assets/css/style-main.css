@@ -117,6 +117,10 @@ body a {
   transform-origin: 3px 1px;
 }
 
+.about p {
+  max-width: 50%;
+}
+
 .home_page .bun,
 .home_page .upperBurger,
 .home_page .lowerBurger__firstHalf,
@@ -2353,6 +2357,11 @@ ul.brand-listing li {
     left: 50% !important;
     transform: translateX(-50%) !important;
     top: 0 !important;
+    margin-top: -0.9em;
+  }
+
+  .contact_us li.dropdown-toggle .dropdown-menu .dropdown-item {
+    font-size: 1.1rem;
   }
 
   .contact_us li.dropdown-toggle::after {
@@ -2451,6 +2460,7 @@ ul.brand-listing li {
     transform: translateX(-50%) !important;
     top: 0 !important;
     background-color: transparent;
+    margin-top: -0.9em;
   }
 
   .home_page li.dropdown-toggle::after {
@@ -2596,6 +2606,7 @@ ul.brand-listing li {
   }
 
   .contact_us .flex_item h4 {
+    max-width: 10em;
     margin-bottom: 1.8em;
   }
 
@@ -2777,6 +2788,7 @@ ul.brand-listing li {
 
   .about p {
     font-size: 18px;
+    max-width: 100%;
   }
 
   .about img,
@@ -2851,7 +2863,7 @@ ul.brand-listing li {
 
   #our_process {
     padding: 8em 50px;
-    height: 110vh;
+    height: 56em;
   }
 
   #our_process .title h2 {
@@ -2898,7 +2910,7 @@ ul.brand-listing li {
   }
 
   .website__process {
-    width: 22.8em;
+    width: 140%;
     margin-left: -3.25em;
     margin-bottom: 0;
     margin-top: 5em;
