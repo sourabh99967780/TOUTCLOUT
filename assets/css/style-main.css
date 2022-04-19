@@ -2539,6 +2539,7 @@ ul.brand-listing li {
 
   .contact_us .social_content ul {
     justify-content: center;
+    margin-top: 1em;
   }
 
   .contact_us .social_content > a {
@@ -2925,11 +2926,11 @@ ul.brand-listing li {
   #footer .foote_img img:first-child {
     position: absolute;
     bottom: 0;
-    width: 98%;
+    width: 96%;
     max-width: 1200px;
     transform: translateX(-50%);
     left: 50%;
-    top: 35px;
+    top: 6%;
   }
 
   #footer .footer-top .footer-links > div div:nth-child(2) > div {
