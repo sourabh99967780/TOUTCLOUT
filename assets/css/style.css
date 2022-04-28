@@ -496,11 +496,11 @@ section {
 #footer .foote_img img:first-child {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 225%;
   max-width: 1200px;
   transform: translateX(-50%);
   left: 50%;
-  top: 10px;
+  top: 30px;
 }
 #footer .foote_img img:nth-child(2) {
   position: absolute;
