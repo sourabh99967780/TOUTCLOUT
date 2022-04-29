@@ -496,11 +496,11 @@ section {
 #footer .foote_img img:first-child {
   position: absolute;
   bottom: 0;
-  width: 225%;
+  width: 100%;
   max-width: 1200px;
   transform: translateX(-50%);
   left: 50%;
-  top: 30px;
+  top: 10px;
 }
 #footer .foote_img img:nth-child(2) {
   position: absolute;
@@ -552,7 +552,6 @@ section {
 
 /* Extra large devices (large laptops and desktops, 1200px and down) */
 @media only screen and (max-width: 1200px) {
-
 }
 
 /* Large devices (laptops/desktops, 992px and down) */
@@ -586,7 +585,7 @@ section {
     text-align: center;
     padding: 2px 0;
   }
-  
+
   #about .top_content p {
     max-width: 100%;
   }
@@ -636,7 +635,15 @@ section {
 
 /* Small devices (portrait tablets and large phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
+  #footer .foote_img img:first-child {
+    position: absolute;
+    bottom: 0;
+    width: 225%;
+    max-width: 1200px;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 30px;
+  }
 }
 
 /* media query end */
