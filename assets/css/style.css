@@ -765,12 +765,12 @@ section {
   #footer .foote_img img:first-child {
     position: absolute;
     bottom: 0;
-    width: 225%;
+    width: 96%;
     max-width: 1200px;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     left: 50%;
-    top: 30px;
+    top: 6%;
   }
 }
 
