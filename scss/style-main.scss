@@ -2745,6 +2745,11 @@ ul.brand-listing li {
 
   .story_contant .description h4 {
     font-size: 18px;
+    margin-block-end: 0.3em;
+  }
+
+  .story_contant .description:nth-child(2) h4 {
+    margin-block-end: 0.28em;
   }
 
   #footer {
