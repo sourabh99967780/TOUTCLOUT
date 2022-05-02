@@ -24,6 +24,23 @@ function setNavigation() {
   })
 }
 
+// handle touch events on mobile and tablet
+function mobileTouchHandler() {
+  const flipperElements = document.querySelectorAll('.flipper');
+  flipperElements.forEach(flipElement => {
+    flipElement.addEventListener('touchstart', () => {
+      const classAttached = flipElement.children[0].classList;
+      const isFlipped = classAttached.contains('flip-transform');
+      if (isFlipped) {
+        flipElement.children[0].classList.remove('flip-transform');
+      } else {
+        flipElement.children[0].classList.add('flip-transform');
+      }
+    })
+  })
+}
+document.addEventListener("DOMContentLoaded", mobileTouchHandler);
+
 // check if it is a mobile screen
 function checkIfItIsMobile() {
   if (

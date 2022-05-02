@@ -1194,9 +1194,15 @@ body a {
   opacity: 0.9;
 }
 
-#digital_box .flipper:hover .main_box {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+@media (hover: hover) {
+  #digital_box .flipper:hover .main_box {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  #services .flipper:hover .main_box {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
 }
 
 #digital_box .flipper .main_box {
@@ -3285,5 +3291,10 @@ ul.brand-listing li {
   #website_design .top_content h2 {
     margin-bottom: 1em;
   }
+}
+
+.flip-transform {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 /*# sourceMappingURL=style-main.css.map */

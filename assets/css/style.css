@@ -319,11 +319,6 @@ h6 {
   width: 100%;
 }
 
-#services .flipper:hover .main_box {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
 /* servies section end*/
 /* footer css start */
 #footer .footer-newsletter h4 {
