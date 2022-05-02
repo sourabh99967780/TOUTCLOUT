@@ -877,13 +877,15 @@ body a {
   object-fit: contain;
   margin-bottom: 20px;
 }
-#digital_box .icon-box .flip-icon {
+#digital_box .icon-box .flip-icon, #digital_box .back_content .flip-icon,
+#services .icon-box .flip-icon, #services .back_content .flip-icon {
   display: block;
   position: absolute;
   top: 10px;
   right: 10px;
   width: 25px;
   height: 25px;
+  opacity: 0.2;
 }
 #digital_box .icon-box h4 {
   font-weight: 700;
