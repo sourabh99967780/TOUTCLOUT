@@ -33,7 +33,6 @@ function isTouchDevice() {
 // handle touch events on mobile and tablet
 function mobileTouchHandler() {
   const flipperElements = document.querySelectorAll('.flipper');
-
   if (isTouchDevice()) {
     flipperElements.forEach(flipElement => {
       flipElement.addEventListener('mouseover', () => {
@@ -44,15 +43,6 @@ function mobileTouchHandler() {
         } else {
           flipElement.children[0].classList.add('flip-transform');
         }
-      })
-    })
-  } else {
-    flipperElements.forEach(flipElement => {
-      flipElement.addEventListener('mouseover', () => {
-        flipElement.children[0].classList.add('flip-transform')
-      })
-      flipElement.addEventListener('mouseout', () => {
-        flipElement.children[0].classList.remove('flip-transform')
       })
     })
   }

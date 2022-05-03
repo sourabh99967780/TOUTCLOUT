@@ -2043,6 +2043,15 @@ ul.brand-listing li {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  #digital_box .flipper:hover .main_box {
+    transform: rotateY(180deg);
+  }
+  #services .flipper:hover .main_box {
+    transform: rotateY(180deg);
+  }
+}
+
 /* Extra large devices (large laptops and desktops, 1200px and down) */
 @media only screen and (max-width: 1200px) {
   #our_process .col-md-4:nth-child(3) .pro_content .icon:before {
