@@ -972,14 +972,6 @@ body a {
   width: 100%;
   opacity: 0.9;
 }
-@media (hover: hover) {
-  #digital_box .flipper:hover .main_box {
-    transform: rotateY(180deg);
-  }
-  #services .flipper:hover .main_box {
-    transform: rotateY(180deg);
-  }
-}
 #digital_box .flipper .main_box {
   transition: 0.6s;
   transform-style: preserve-3d;

@@ -24,20 +24,38 @@ function setNavigation() {
   })
 }
 
+function isTouchDevice() {
+  return (('ontouchstart' in window) ||
+     (navigator.maxTouchPoints > 0) ||
+     (navigator.msMaxTouchPoints > 0));
+}
+
 // handle touch events on mobile and tablet
 function mobileTouchHandler() {
   const flipperElements = document.querySelectorAll('.flipper');
-  flipperElements.forEach(flipElement => {
-    flipElement.addEventListener('touchstart', () => {
-      const classAttached = flipElement.children[0].classList;
-      const isFlipped = classAttached.contains('flip-transform');
-      if (isFlipped) {
-        flipElement.children[0].classList.remove('flip-transform');
-      } else {
-        flipElement.children[0].classList.add('flip-transform');
-      }
+
+  if (isTouchDevice()) {
+    flipperElements.forEach(flipElement => {
+      flipElement.addEventListener('mouseover', () => {
+        const classAttached = flipElement.children[0].classList;
+        const isFlipped = classAttached.contains('flip-transform');
+        if (isFlipped) {
+          flipElement.children[0].classList.remove('flip-transform');
+        } else {
+          flipElement.children[0].classList.add('flip-transform');
+        }
+      })
     })
-  })
+  } else {
+    flipperElements.forEach(flipElement => {
+      flipElement.addEventListener('mouseover', () => {
+        flipElement.children[0].classList.add('flip-transform')
+      })
+      flipElement.addEventListener('mouseout', () => {
+        flipElement.children[0].classList.remove('flip-transform')
+      })
+    })
+  }
 }
 document.addEventListener("DOMContentLoaded", mobileTouchHandler);
 
