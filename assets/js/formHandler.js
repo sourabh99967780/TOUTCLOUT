@@ -1,4 +1,4 @@
-const baseUrl = "http://toutclout.abadboot.com:3300/api";
+const baseUrl = "https://www.toutclout.com/api";
 const contactForm = document.querySelector("#contact-form");
 
 Vue.use(window.vuelidate.default);
