@@ -14,7 +14,7 @@ var italicised_string = `Great <span class="home_content_title--italic">idea</sp
 var loadingPage = document.querySelector(".loading-page");
 
 
-if (window.matchMedia("(max-width: 600px)").matches) {
+if (window.matchMedia("(max-width: 1080px)").matches) {
   homePageVideo.src = './assets/videos/splash_mobile.mp4';
   homePageVideo.playbackRate = 0.85;
 } else {
