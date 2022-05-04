@@ -421,6 +421,11 @@ body a {
   display: none;
 }
 
+.half-part_video {
+  width: 100%;
+  height: auto;
+}
+
 .home_page li.dropdown-toggle::after {
   border-top: 0.3em solid #ddd;
   margin-top: 7px;
@@ -2514,11 +2519,6 @@ ul.brand-listing li {
   .approach_contant .col-lg-3:first-child .content,
   .approach_contant .col-lg-3:nth-child(2) .content {
     margin-bottom: 4em;
-  }
-
-  .half-part_video {
-    width: auto;
-    height: 100%;
   }
 
   .story_contant .content img {
