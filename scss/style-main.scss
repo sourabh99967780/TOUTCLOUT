@@ -417,11 +417,6 @@ body a {
   width: 100%;
 }
 
-.half-part_video {
-  width: auto;
-  height: 100%;
-}
-
 .half-part_video--hidden {
   display: none;
 }
@@ -2519,6 +2514,11 @@ ul.brand-listing li {
   .approach_contant .col-lg-3:first-child .content,
   .approach_contant .col-lg-3:nth-child(2) .content {
     margin-bottom: 4em;
+  }
+
+  .half-part_video {
+    width: auto;
+    height: 100%;
   }
 
   .story_contant .content img {
