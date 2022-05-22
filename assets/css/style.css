@@ -660,6 +660,44 @@ section {
   overflow: hidden;
 }
 
+.tc_pp_section {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.85);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.privacy__policy-content,
+.terms__and__conditions-content {
+  width: 85%;
+  height: 85%;
+  margin: auto;
+  overflow: auto;
+  background: white;
+  border-radius: 15px;
+  padding: 3em;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 5%;
+  right: 2.5%;
+  font-size: 1.2rem;
+}
+
 /* footer css end */
 /* media query start */
 /* Extra large devices (large laptops and desktops, 1200px and down) */

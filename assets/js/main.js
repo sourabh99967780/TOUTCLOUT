@@ -10,41 +10,43 @@ $(window).on("load", function () {
 
 $(function () {
   setNavigation();
-})
+});
 
 // set footer menu color based on web url
 function setNavigation() {
   var path = window.location.pathname;
   const menuName = path.split("/").pop();
-  $('#footer .footer-top .footer-links a').each(function () {
-    var href = $(this).attr('href');
+  $("#footer .footer-top .footer-links a").each(function () {
+    var href = $(this).attr("href");
     if (href === menuName) {
-      $(this).addClass('active');
+      $(this).addClass("active");
     }
-  })
+  });
 }
 
 function isTouchDevice() {
-  return (('ontouchstart' in window) ||
-     (navigator.maxTouchPoints > 0) ||
-     (navigator.msMaxTouchPoints > 0));
+  return (
+    "ontouchstart" in window ||
+    navigator.maxTouchPoints > 0 ||
+    navigator.msMaxTouchPoints > 0
+  );
 }
 
 // handle touch events on mobile and tablet
 function mobileTouchHandler() {
-  const flipperElements = document.querySelectorAll('.flipper');
+  const flipperElements = document.querySelectorAll(".flipper");
   if (isTouchDevice()) {
-    flipperElements.forEach(flipElement => {
-      flipElement.addEventListener('mouseover', () => {
+    flipperElements.forEach((flipElement) => {
+      flipElement.addEventListener("mouseover", () => {
         const classAttached = flipElement.children[0].classList;
-        const isFlipped = classAttached.contains('flip-transform');
+        const isFlipped = classAttached.contains("flip-transform");
         if (isFlipped) {
-          flipElement.children[0].classList.remove('flip-transform');
+          flipElement.children[0].classList.remove("flip-transform");
         } else {
-          flipElement.children[0].classList.add('flip-transform');
+          flipElement.children[0].classList.add("flip-transform");
         }
-      })
-    })
+      });
+    });
   }
 }
 document.addEventListener("DOMContentLoaded", mobileTouchHandler);
@@ -82,7 +84,7 @@ hamburgerMenu.addEventListener("click", function () {
   upperBurger.style.width = "26px";
   $(".menu").toggleClass("active");
   $("body").toggleClass("no-scroll");
-  $('.enquireForm').toggleClass('display-none');
+  $(".enquireForm").toggleClass("display-none");
 });
 
 if (!isAMobileDevice) {
@@ -115,32 +117,36 @@ if (!isAMobileDevice) {
 
 // check if it is the home page
 const isItTheHomePage = !!document.querySelector(".home_page");
-const isItContactUsPage = !!document.querySelector('.contact_us');
+const isItContactUsPage = !!document.querySelector(".contact_us");
 
 // highlight menu top when menu dropdown items are hovered
-$('.menu-inner .dropdown .dropdown-item').mouseover(() => {
+$(".menu-inner .dropdown .dropdown-item").mouseover(() => {
   if (isItContactUsPage) {
-    document.querySelector('#what_we_do').style.color = '#262728';
+    document.querySelector("#what_we_do").style.color = "#262728";
   } else {
-    document.querySelector('#what_we_do').style.color = '#eaad67';
+    document.querySelector("#what_we_do").style.color = "#eaad67";
   }
-})
+});
 
-$('.menu-inner .dropdown .dropdown-item').mouseout(() => {
+$(".menu-inner .dropdown .dropdown-item").mouseout(() => {
   if (isItTheHomePage || isItContactUsPage) {
-    document.querySelector('#what_we_do').style.color = '#f7f7f7';
+    document.querySelector("#what_we_do").style.color = "#f7f7f7";
   } else {
-    document.querySelector('#what_we_do').style.color = '#262728';
+    document.querySelector("#what_we_do").style.color = "#262728";
   }
-})
+});
 
 // Also highlight what we do menu item based on route
 function hightLightMenuItem() {
   var path = window.location.pathname;
-  const menuName = path.split('/').pop();
-  if (menuName === 'branding' || menuName === 'website_design' || menuName === 'digital') {
-    document.querySelector('#what_we_do').style.color = '#eaad67';
-    document.querySelector('.footer-what-we-do').style.color = '#eaad67';
+  const menuName = path.split("/").pop();
+  if (
+    menuName === "branding" ||
+    menuName === "website_design" ||
+    menuName === "digital"
+  ) {
+    document.querySelector("#what_we_do").style.color = "#eaad67";
+    document.querySelector(".footer-what-we-do").style.color = "#eaad67";
   }
 }
 
@@ -151,10 +157,15 @@ hightLightMenuItem();
 var mybutton = document.getElementById("backToTop");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+  scrollFunction();
+};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+  if (
+    document.body.scrollTop > 120 ||
+    document.documentElement.scrollTop > 120
+  ) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
@@ -168,38 +179,55 @@ function topFunction() {
 }
 
 function openEnquireForm() {
-  const enquireFormElement = document.querySelector('.enquireForm');
+  const enquireFormElement = document.querySelector(".enquireForm");
   enquireFormElement.style.transform = `translateY(0px)`;
 }
 
 function closeEnquireForm() {
-  const enquireFormElement = document.querySelector('.enquireForm');
-  const enquireFormTabElement = document.querySelector('.enquireForm__tab');
+  const enquireFormElement = document.querySelector(".enquireForm");
+  const enquireFormTabElement = document.querySelector(".enquireForm__tab");
 
   const enquireFormTabHeight = enquireFormTabElement.offsetHeight;
   const enquireFormOffsetHeight = enquireFormElement.offsetHeight;
-  enquireFormElement.style.transform = `translateY(${enquireFormOffsetHeight - enquireFormTabHeight}px)`;
+  enquireFormElement.style.transform = `translateY(${
+    enquireFormOffsetHeight - enquireFormTabHeight
+  }px)`;
 }
 
 // enquiry form open close trigger
 let counter = 0;
-$('.enquireForm__tab').click(() => {
-  $('.enquireForm').toggleClass('form-open');
+$(".enquireForm__tab").click(() => {
+  $(".enquireForm").toggleClass("form-open");
   if (counter === 0) {
-    document.querySelector('.enquireForm__form').style.maxHeight = '530px';
+    document.querySelector(".enquireForm__form").style.maxHeight = "530px";
   } else {
-    document.querySelector('.enquireForm__form').style.maxHeight = 'unset';
+    document.querySelector(".enquireForm__form").style.maxHeight = "unset";
   }
-  const isFormOpen = $('.enquireForm').hasClass('form-open');
+  const isFormOpen = $(".enquireForm").hasClass("form-open");
   if (isFormOpen) {
     openEnquireForm();
-    $('.enquireForm__tab-icon').addClass('enquireForm__tab-icon-rotate');
+    $(".enquireForm__tab-icon").addClass("enquireForm__tab-icon-rotate");
   } else {
     closeEnquireForm();
-    $('.enquireForm__tab-icon').removeClass('enquireForm__tab-icon-rotate');
+    $(".enquireForm__tab-icon").removeClass("enquireForm__tab-icon-rotate");
   }
   counter += 1;
-})
+});
+
+function toggleModal(elemName) {
+  const tcPpContainer = document.querySelector("#tc_pp_container");
+  const privacyPolicy = document.querySelector(".privacy__policy-content");
+  const termsAndConditions = document.querySelector(
+    ".terms__and__conditions-content"
+  );
+
+  tcPpContainer.classList.toggle("display-none");
+  if (elemName === "privacy-policy") {
+    privacyPolicy.classList.toggle("display-none");
+  } else {
+    termsAndConditions.classList.toggle("display-none");
+  }
+}
 
 // handle the function of enquire Form
 if (!isItContactUsPage && !isItTheHomePage) {
@@ -208,12 +236,13 @@ if (!isItContactUsPage && !isItTheHomePage) {
   const { required, minLength, maxLength, email } = window.validators;
 
   function isAPhoneNumber(phone) {
-    const match =
-      /^\+?\d{0,3}[\(\- ]?\d{3}\)?[\- ]?\d{3,4}[\- ]?\d{4}/.test(phone);
+    const match = /^\+?\d{0,3}[\(\- ]?\d{3}\)?[\- ]?\d{3,4}[\- ]?\d{4}/.test(
+      phone
+    );
     return match;
   }
 
-  Vue.component('enquire-form', {
+  const enquireForm = {
     directives: { focus: focus },
     data() {
       return {
@@ -227,10 +256,10 @@ if (!isItContactUsPage && !isItTheHomePage) {
           name: false,
           email: false,
           phone: false,
-          message: false
+          message: false,
         },
         areAnyElementsHovered: false,
-      }
+      };
     },
 
     template: `<div class="enquireForm__body">
@@ -335,14 +364,13 @@ if (!isItContactUsPage && !isItTheHomePage) {
       },
       phone: {
         required,
-        isAPhoneNumber
+        isAPhoneNumber,
       },
     },
 
     methods: {
       resetForm() {
-        this.name = "",
-        this.message = "";
+        (this.name = ""), (this.message = "");
         this.email = "";
         this.phone = "";
         this.emailSending = false;
@@ -377,7 +405,7 @@ if (!isItContactUsPage && !isItTheHomePage) {
         });
       },
 
-       async sendEmail() {
+      async sendEmail() {
         const data = {
           name: this.name,
           email: this.email,
@@ -398,20 +426,26 @@ if (!isItContactUsPage && !isItTheHomePage) {
           body: JSON.stringify(data), // body data type must match "Content-Type" header
         });
       },
-       
+
       async submit() {
         this.$v.$touch();
         if (this.$v.$invalid || !this.$v.phone.isAPhoneNumber) {
-          const invalidFields = Object.keys(this.$v.$params).filter(fieldName => this.$v[fieldName].$invalid);
-          invalidFields.forEach(field => {
+          const invalidFields = Object.keys(this.$v.$params).filter(
+            (fieldName) => this.$v[fieldName].$invalid
+          );
+          invalidFields.forEach((field) => {
             this.isElementFocused[field] = true;
             setTimeout(() => {
-              document.querySelector(`.${field}-error`).classList.remove('shake');
-                setTimeout(() => {
-                  document.querySelector(`.${field}-error`).classList.add('shake');
-                }, 100)
-            }, 100)
-          })
+              document
+                .querySelector(`.${field}-error`)
+                .classList.remove("shake");
+              setTimeout(() => {
+                document
+                  .querySelector(`.${field}-error`)
+                  .classList.add("shake");
+              }, 100);
+            }, 100);
+          });
           this.submitStatus = "ERROR";
         } else {
           // do your submit logic here
@@ -427,14 +461,18 @@ if (!isItContactUsPage && !isItTheHomePage) {
 
     watch: {
       areAnyElementsHovered(newValue, oldValue) {
-        document.querySelectorAll('.cursor').forEach(elem => {
-          elem.classList.toggle('display-none', newValue);
-        })
-      }
+        document.querySelectorAll(".cursor").forEach((elem) => {
+          elem.classList.toggle("display-none", newValue);
+        });
+      },
     },
-  })
+  };
 
   var vueApp = new Vue({
-    el: '#enquireForm__form'
-  })
+    el: "#enquireForm__form",
+
+    components: {
+      "enquire-form": enquireForm,
+    },
+  });
 }
