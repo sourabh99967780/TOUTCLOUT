@@ -222,6 +222,7 @@ function toggleModal(elemName) {
   );
 
   tcPpContainer.classList.toggle("display-none");
+  document.querySelector("body").classList.toggle("no-scroll");
   if (elemName === "privacy-policy") {
     privacyPolicy.classList.toggle("display-none");
   } else {
