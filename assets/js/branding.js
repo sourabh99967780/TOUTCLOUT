@@ -219,6 +219,6 @@ modalCloseElements.forEach((item) => {
   item.addEventListener("click", () => {
     setTimeout(() => {
       initCanvas("rgba(38,39,40,0.5)", "#262728");
-    }, 1);
+    }, 10);
   });
 });

@@ -204,6 +204,15 @@ document
     initCanvas("rgba(221,221,221,0.5)", "#dddddd");
   });
 
+const modalCloseElements = document.querySelectorAll(".modal-close");
+modalCloseElements.forEach((item) => {
+  item.addEventListener("click", () => {
+    setTimeout(() => {
+      initCanvas("rgba(38,39,40,0.5)", "#262728");
+    }, 10);
+  });
+});
+
 // dynamic load player instance
 var processApp = new Vue({
   el: "#sticky__process",
