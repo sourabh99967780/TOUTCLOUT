@@ -222,3 +222,22 @@ modalCloseElements.forEach((item) => {
     }, 10);
   });
 });
+
+$(document).keydown(function (event) {
+  if (event.keyCode == 27) {
+    // check if privacy policy or terms and conditioons is open
+    const isPrivacyPolicyClosed = document
+      .querySelector(".privacy__policy-content")
+      .classList.contains("display-none");
+
+    const termsAndConditionsClosed = document
+      .querySelector(".privacy__policy-content")
+      .classList.contains("display-none");
+
+    if (isPrivacyPolicyClosed || termsAndConditionsClosed) {
+      setTimeout(() => {
+        initCanvas("rgba(38,39,40,0.5)", "#262728");
+      }, 10);
+    }
+  }
+});
