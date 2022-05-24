@@ -700,6 +700,7 @@ section {
   /* Internet Explorer 10+ */
   scrollbar-width: none;
   /* Firefox */
+  border-radius: 5px;
 }
 
 .pp__section,
