@@ -38,12 +38,12 @@ const initHovers = () => {
   });
 
   // add event listener to button
-  const buttonElements = document.querySelectorAll('button');
+  const buttonElements = document.querySelectorAll("button");
   buttonElements.forEach((item) => {
-    item.addEventListener('mouseenter', handleMouseEnter);
-    item.addEventListener('mouseleave', handleMouseLeave);
-    item.addEventListener('click', handleMouseLeave);
-  })
+    item.addEventListener("mouseenter", handleMouseEnter);
+    item.addEventListener("mouseleave", handleMouseLeave);
+    item.addEventListener("click", handleMouseLeave);
+  });
 };
 
 const initCanvas = (strokeColor, cursorBackground) => {
@@ -180,24 +180,48 @@ let showCursor = false;
 let group, stuckX, stuckY, fillOuterCursor;
 initCanvas("rgba(38,39,40,0.5)", "#262728");
 
+document
+  .querySelector(".privacy__policy-content")
+  .addEventListener("mouseover", () => {
+    initCanvas("rgba(38,39,40,0.5)", "#262728");
+  });
+
+document
+  .querySelector(".privacy__policy-content")
+  .addEventListener("mouseout", () => {
+    initCanvas("rgba(221,221,221,0.5)", "#dddddd");
+  });
+
+document
+  .querySelector(".terms__and__conditions-content")
+  .addEventListener("mouseover", () => {
+    initCanvas("rgba(38,39,40,0.5)", "#262728");
+  });
+
+document
+  .querySelector(".terms__and__conditions-content")
+  .addEventListener("mouseout", () => {
+    initCanvas("rgba(221,221,221,0.5)", "#dddddd");
+  });
+
 // dynamic load player instance
 var processApp = new Vue({
-  el: '#sticky__process',
-  
+  el: "#sticky__process",
+
   computed: {
     isItMobileDevice() {
       if (
-          window.matchMedia("(max-width: 767px)").matches ||
-          window.matchMedia("(max-width: 1024px)").matches
+        window.matchMedia("(max-width: 767px)").matches ||
+        window.matchMedia("(max-width: 1024px)").matches
       ) {
-          return true;
+        return true;
       }
       return false;
-    }
+    },
   },
 
   mounted() {
-    this.$refs['website__process'].addEventListener('load', () => {
+    this.$refs["website__process"].addEventListener("load", () => {
       LottieInteractivity.create({
         player: "#website__process",
         mode: "scroll",
@@ -205,7 +229,7 @@ var processApp = new Vue({
         actions: [
           {
             visibility: [0, 0.1],
-            type: 'stop',
+            type: "stop",
             frames: [0],
           },
           {
@@ -215,6 +239,6 @@ var processApp = new Vue({
           },
         ],
       });
-    })
-  }
-})
+    });
+  },
+});

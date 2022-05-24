@@ -8,7 +8,7 @@ const initCursor = () => {
   // transform the innerCursor to the current mouse position
   // use requestAnimationFrame() for smooth performance
   const render = () => {
-    innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;;
+    innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
     requestAnimationFrame(render);
   };
   requestAnimationFrame(render);
@@ -38,18 +38,18 @@ const initHovers = () => {
   });
 
   // add event listener to button
-  const buttonElements = document.querySelectorAll('button');
+  const buttonElements = document.querySelectorAll("button");
   buttonElements.forEach((item) => {
-    item.addEventListener('mouseenter', handleMouseEnter);
-    item.addEventListener('mouseleave', handleMouseLeave);
-    item.addEventListener('click', handleMouseLeave);
-  })
+    item.addEventListener("mouseenter", handleMouseEnter);
+    item.addEventListener("mouseleave", handleMouseLeave);
+    item.addEventListener("click", handleMouseLeave);
+  });
 };
 
 const initCanvas = (strokeColor, cursorBackground) => {
   paper.clear();
   const canvas = document.querySelector(".cursor--canvas");
-  const cursorSmall = document.querySelector('.cursor--small');
+  const cursorSmall = document.querySelector(".cursor--small");
 
   // set cursor background
   cursorSmall.style.background = cursorBackground;
@@ -178,16 +178,40 @@ let lastY = 0;
 let isStuck = false;
 let showCursor = false;
 let group, stuckX, stuckY, fillOuterCursor;
-initCanvas("rgba(38,39,40,0.5)", '#262728');
+initCanvas("rgba(38,39,40,0.5)", "#262728");
 
 // change cursor color on our story
-const storyTop = document.querySelector('.story_top_transparent');
-storyTop.addEventListener('mouseover', (event) => {
-    initCanvas("rgba(221,221,221,0.5)", '#dddddd');
-  })
-storyTop.addEventListener('mouseout', (event) => {
-  initCanvas("rgba(38,39,40,0.5)", '#262728');
-})
+const storyTop = document.querySelector(".story_top_transparent");
+storyTop.addEventListener("mouseover", (event) => {
+  initCanvas("rgba(221,221,221,0.5)", "#dddddd");
+});
+storyTop.addEventListener("mouseout", (event) => {
+  initCanvas("rgba(38,39,40,0.5)", "#262728");
+});
+
+document
+  .querySelector(".privacy__policy-content")
+  .addEventListener("mouseover", () => {
+    initCanvas("rgba(38,39,40,0.5)", "#262728");
+  });
+
+document
+  .querySelector(".privacy__policy-content")
+  .addEventListener("mouseout", () => {
+    initCanvas("rgba(221,221,221,0.5)", "#dddddd");
+  });
+
+document
+  .querySelector(".terms__and__conditions-content")
+  .addEventListener("mouseover", () => {
+    initCanvas("rgba(38,39,40,0.5)", "#262728");
+  });
+
+document
+  .querySelector(".terms__and__conditions-content")
+  .addEventListener("mouseout", () => {
+    initCanvas("rgba(221,221,221,0.5)", "#dddddd");
+  });
 
 // innovation element
 var innovationElem = document.querySelector(".innovation__hoverblock");
@@ -244,7 +268,7 @@ integrityElem.addEventListener("mouseout", (event) => {
   integrityPlayer.stop();
 });
 
-const staggerVisualizerEl = document.querySelector('.stagger-visualizer');
+const staggerVisualizerEl = document.querySelector(".stagger-visualizer");
 const fragment = document.createDocumentFragment();
 const isItAMobileDevice = checkIfItIsMobile();
 let grid = [10, 10];
@@ -256,61 +280,94 @@ const row = grid[1];
 const numberOfElements = col * row;
 
 for (let i = 0; i < numberOfElements; i++) {
-  fragment.appendChild(document.createElement('div'));
+  fragment.appendChild(document.createElement("div"));
 }
 
 staggerVisualizerEl.appendChild(fragment);
 
-const staggersAnimation = anime.timeline({
-  targets: '.stagger-visualizer div',
-  easing: 'easeInOutSine',
-  delay: anime.stagger(50),
-  loop: true,
-  autoplay: false
-})
-.add({
-  translateX: [
-    {value: anime.stagger('-.1rem', {grid: grid, from: 'center', axis: 'x'}) },
-    {value: anime.stagger('.1rem', {grid: grid, from: 'center', axis: 'x'}) }
-  ],
-  translateY: [
-    {value: anime.stagger('-.1rem', {grid: grid, from: 'center', axis: 'y'}) },
-    {value: anime.stagger('.1rem', {grid: grid, from: 'center', axis: 'y'}) }
-  ],
-  duration: 2000,
-  scale: .5,
-  delay: anime.stagger(100, {grid: grid, from: 'center'})
-})
-.add({
-  translateX: () => anime.random(-10, 10),
-  translateY: () => anime.random(-10, 10),
-  delay: anime.stagger(8, {from: 'last'})
-})
-.add({
-  translateX: anime.stagger('.25rem', {grid: grid, from: 'center', axis: 'x'}),
-  translateY: anime.stagger('.25rem', {grid: grid, from: 'center', axis: 'y'}),
-  rotate: 0,
-  scaleX: 2.5,
-  scaleY: .25,
-  delay: anime.stagger(4, {from: 'center'})
-})
-.add({
-  rotate: anime.stagger([90, 0], {grid: grid, from: 'center'}),
-  delay: anime.stagger(50, {grid: grid, from: 'center'})
-})
-.add({
-  translateX: 0,
-  translateY: 0,
-  scale: .5,
-  scaleX: 1,
-  rotate: 180,
-  duration: 2000,
-  delay: anime.stagger(100, {grid: grid, from: 'center'})
-})
-.add({
-  scaleY: 1,
-  scale: 1,
-  delay: anime.stagger(20, {grid: grid, from: 'center'})
-})
+const staggersAnimation = anime
+  .timeline({
+    targets: ".stagger-visualizer div",
+    easing: "easeInOutSine",
+    delay: anime.stagger(50),
+    loop: true,
+    autoplay: false,
+  })
+  .add({
+    translateX: [
+      {
+        value: anime.stagger("-.1rem", {
+          grid: grid,
+          from: "center",
+          axis: "x",
+        }),
+      },
+      {
+        value: anime.stagger(".1rem", {
+          grid: grid,
+          from: "center",
+          axis: "x",
+        }),
+      },
+    ],
+    translateY: [
+      {
+        value: anime.stagger("-.1rem", {
+          grid: grid,
+          from: "center",
+          axis: "y",
+        }),
+      },
+      {
+        value: anime.stagger(".1rem", {
+          grid: grid,
+          from: "center",
+          axis: "y",
+        }),
+      },
+    ],
+    duration: 2000,
+    scale: 0.5,
+    delay: anime.stagger(100, { grid: grid, from: "center" }),
+  })
+  .add({
+    translateX: () => anime.random(-10, 10),
+    translateY: () => anime.random(-10, 10),
+    delay: anime.stagger(8, { from: "last" }),
+  })
+  .add({
+    translateX: anime.stagger(".25rem", {
+      grid: grid,
+      from: "center",
+      axis: "x",
+    }),
+    translateY: anime.stagger(".25rem", {
+      grid: grid,
+      from: "center",
+      axis: "y",
+    }),
+    rotate: 0,
+    scaleX: 2.5,
+    scaleY: 0.25,
+    delay: anime.stagger(4, { from: "center" }),
+  })
+  .add({
+    rotate: anime.stagger([90, 0], { grid: grid, from: "center" }),
+    delay: anime.stagger(50, { grid: grid, from: "center" }),
+  })
+  .add({
+    translateX: 0,
+    translateY: 0,
+    scale: 0.5,
+    scaleX: 1,
+    rotate: 180,
+    duration: 2000,
+    delay: anime.stagger(100, { grid: grid, from: "center" }),
+  })
+  .add({
+    scaleY: 1,
+    scale: 1,
+    delay: anime.stagger(20, { grid: grid, from: "center" }),
+  });
 
 staggersAnimation.play();

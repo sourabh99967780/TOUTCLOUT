@@ -8,7 +8,7 @@ const initCursor = () => {
   // transform the innerCursor to the current mouse position
   // use requestAnimationFrame() for smooth performance
   const render = () => {
-    innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;;
+    innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
     requestAnimationFrame(render);
   };
   requestAnimationFrame(render);
@@ -38,18 +38,18 @@ const initHovers = () => {
   });
 
   // add event listener to button
-  const buttonElements = document.querySelectorAll('button');
+  const buttonElements = document.querySelectorAll("button");
   buttonElements.forEach((item) => {
-    item.addEventListener('mouseenter', handleMouseEnter);
-    item.addEventListener('mouseleave', handleMouseLeave);
-    item.addEventListener('click', handleMouseLeave);
-  })
+    item.addEventListener("mouseenter", handleMouseEnter);
+    item.addEventListener("mouseleave", handleMouseLeave);
+    item.addEventListener("click", handleMouseLeave);
+  });
 };
 
 const initCanvas = (strokeColor, cursorBackground) => {
   paper.clear();
-  const canvas = document.querySelector('.cursor--canvas');
-  const cursorSmall = document.querySelector('.cursor--small');
+  const canvas = document.querySelector(".cursor--canvas");
+  const cursorSmall = document.querySelector(".cursor--small");
 
   // set cursor background
   cursorSmall.style.background = cursorBackground;
@@ -178,14 +178,38 @@ let lastY = 0;
 let isStuck = false;
 let showCursor = false;
 let group, stuckX, stuckY, fillOuterCursor;
-initCanvas("rgba(38,39,40,0.5)", '#262728');
+initCanvas("rgba(38,39,40,0.5)", "#262728");
 
 // change cursor color on flip
-document.querySelectorAll('.flipper').forEach(item => {
-  item.addEventListener('mouseover', (event) => {
-    initCanvas("rgba(221,221,221,0.5)", '#dddddd');
-  })
-  item.addEventListener('mouseout', (event) => {
-    initCanvas("rgba(38,39,40,0.5)", '#262728');
-  })
-})
+document.querySelectorAll(".flipper").forEach((item) => {
+  item.addEventListener("mouseover", (event) => {
+    initCanvas("rgba(221,221,221,0.5)", "#dddddd");
+  });
+  item.addEventListener("mouseout", (event) => {
+    initCanvas("rgba(38,39,40,0.5)", "#262728");
+  });
+});
+
+document
+  .querySelector(".privacy__policy-content")
+  .addEventListener("mouseover", () => {
+    initCanvas("rgba(38,39,40,0.5)", "#262728");
+  });
+
+document
+  .querySelector(".privacy__policy-content")
+  .addEventListener("mouseout", () => {
+    initCanvas("rgba(221,221,221,0.5)", "#dddddd");
+  });
+
+document
+  .querySelector(".terms__and__conditions-content")
+  .addEventListener("mouseover", () => {
+    initCanvas("rgba(38,39,40,0.5)", "#262728");
+  });
+
+document
+  .querySelector(".terms__and__conditions-content")
+  .addEventListener("mouseout", () => {
+    initCanvas("rgba(221,221,221,0.5)", "#dddddd");
+  });

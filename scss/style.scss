@@ -584,7 +584,7 @@ section {
   margin-bottom: 2rem;
 }
 
-.pp__seventh {
+.pp__eightth {
   a {
     display: inline;
   }
@@ -603,15 +603,18 @@ section {
 .modal-close {
   position: sticky;
   float: right;
-  top: 0;
+  top: 1em;
   right: 0;
   height: 2em;
   background: white;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 2em;
   font-size: 1.2rem;
+
+  i {
+    padding: 2em;
+  }
 }
 /* footer css end */
 
