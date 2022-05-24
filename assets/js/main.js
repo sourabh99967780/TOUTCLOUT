@@ -230,6 +230,28 @@ function toggleModal(elemName) {
   }
 }
 
+$(document).keydown(function (event) {
+  if (event.keyCode == 27) {
+    // check if privacy policy or terms and conditioons is open
+    const isPrivacyPolicyClosed = document
+      .querySelector(".privacy__policy-content")
+      .classList.contains("display-none");
+
+    // close the privacy policy or terms and conditions
+    document.querySelector("#tc_pp_container").classList.add("display-none");
+
+    if (!isPrivacyPolicyClosed) {
+      document
+        .querySelector(".privacy__policy-content")
+        .classList.add("display-none");
+    } else {
+      document
+        .querySelector(".terms__and__conditions-content")
+        .classList.add("display-none");
+    }
+  }
+});
+
 // handle the function of enquire Form
 if (!isItContactUsPage && !isItTheHomePage) {
   const baseUrl = "https://www.toutclout.com/api";

@@ -685,8 +685,7 @@ section {
 }
 
 .tc_pp_section p {
-  margin: 0;
-  padding: 0;
+  margin-bottom: 8px;
 }
 
 .privacy__policy-content,
@@ -706,6 +705,20 @@ section {
 .pp__section,
 .tc__section {
   margin-bottom: 2rem;
+}
+
+.pp__head .pp__title {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5em;
+  font-weight: bold;
+}
+
+.tc__head .tc__title {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5em;
+  font-weight: bold;
 }
 
 .pp__eightth a {
